@@ -1,0 +1,27 @@
+[
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "server.main",
+        "description": "server.main",
+        "peekOfCode": "app = FastAPI(\n    title=\"My FastAPI Project\",\n    description=\"API documentation\",\n    version=\"1.0.0\"\n)\n@app.get(\"/\")\nasync def root():\n    return {\"message\": \"Welcome to FastAPI\"}\n@app.get(\"/health\")\nasync def health_check():",
+        "detail": "server.main",
+        "documentation": {}
+    }
+]
