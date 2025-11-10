@@ -20,6 +20,11 @@ async def root():
 async def health_check():
     return {"status": "healthy"}
 
+
+# Register routers
+# app.include_router(admin_utils.router)
+
+
 # Include your routers here
 # app.include_router(your_router, prefix="/api/v1", tags=["your_tag"])
 
