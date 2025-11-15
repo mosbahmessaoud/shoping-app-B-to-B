@@ -18,21 +18,44 @@ from routers import (
 )
 
 # Import de l'initialisation de la base de données
+from server.models import test_connection
 from utils.db import create_sample_data, init_db
 
 # Événement de démarrage pour initialiser la base de données
 
 
+# @asynccontextmanager
+# async def lifespan(app: FastAPI):
+#     # Au démarrage
+#     print("🚀 Démarrage de l'application...")
+#     print("📊 Initialisation de la base de données...")
+#     init_db()
+#     print("✅ Base de données initialisée avec succès!")
+#     yield
+#     # Au arrêt
+#     print("👋 Arrêt de l'application...")
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Au démarrage
-    print("🚀 Démarrage de l'application...")
-    print("📊 Initialisation de la base de données...")
-    init_db()
-    print("✅ Base de données initialisée avec succès!")
+    # Startup
+    print("=" * 60)
+    print("🚀 Starting E-Commerce API...")
+    print("=" * 60)
+    
+    # Test database connection
+    if test_connection():
+        print("📊 Database migrations managed by Alembic")
+        print("💡 Run 'alembic upgrade head' to apply migrations")
+    else:
+        print("⚠️  Database connection failed, but continuing...")
+    
+    print("=" * 60)
     yield
-    # Au arrêt
-    print("👋 Arrêt de l'application...")
+    
+    # Shutdown
+    print("=" * 60)
+    print("👋 Shutting down E-Commerce API...")
+    print("=" * 60)
 
 # Créer l'application FastAPI
 app = FastAPI(
