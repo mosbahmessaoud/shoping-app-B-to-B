@@ -1,0 +1,3872 @@
+[
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Boolean",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Numeric",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Numeric",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Boolean",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Boolean",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Numeric",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Boolean",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Numeric",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Boolean",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "text",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Admin",
+        "importPath": "models.admin",
+        "description": "models.admin",
+        "isExtraImport": true,
+        "detail": "models.admin",
+        "documentation": {}
+    },
+    {
+        "label": "Admin",
+        "importPath": "models.admin",
+        "description": "models.admin",
+        "isExtraImport": true,
+        "detail": "models.admin",
+        "documentation": {}
+    },
+    {
+        "label": "Admin",
+        "importPath": "models.admin",
+        "description": "models.admin",
+        "isExtraImport": true,
+        "detail": "models.admin",
+        "documentation": {}
+    },
+    {
+        "label": "Admin",
+        "importPath": "models.admin",
+        "description": "models.admin",
+        "isExtraImport": true,
+        "detail": "models.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AdminCreate",
+        "importPath": "schemas.admin",
+        "description": "schemas.admin",
+        "isExtraImport": true,
+        "detail": "schemas.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AdminUpdate",
+        "importPath": "schemas.admin",
+        "description": "schemas.admin",
+        "isExtraImport": true,
+        "detail": "schemas.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AdminLogin",
+        "importPath": "schemas.admin",
+        "description": "schemas.admin",
+        "isExtraImport": true,
+        "detail": "schemas.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AdminResponse",
+        "importPath": "schemas.admin",
+        "description": "schemas.admin",
+        "isExtraImport": true,
+        "detail": "schemas.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AdminWithToken",
+        "importPath": "schemas.admin",
+        "description": "schemas.admin",
+        "isExtraImport": true,
+        "detail": "schemas.admin",
+        "documentation": {}
+    },
+    {
+        "label": "hash_password",
+        "importPath": "utils.auth",
+        "description": "utils.auth",
+        "isExtraImport": true,
+        "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "importPath": "utils.auth",
+        "description": "utils.auth",
+        "isExtraImport": true,
+        "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "importPath": "utils.auth",
+        "description": "utils.auth",
+        "isExtraImport": true,
+        "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_admin",
+        "importPath": "utils.auth",
+        "description": "utils.auth",
+        "isExtraImport": true,
+        "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_client",
+        "importPath": "utils.auth",
+        "description": "utils.auth",
+        "isExtraImport": true,
+        "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_admin",
+        "importPath": "utils.auth",
+        "description": "utils.auth",
+        "isExtraImport": true,
+        "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_admin",
+        "importPath": "utils.auth",
+        "description": "utils.auth",
+        "isExtraImport": true,
+        "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "hash_password",
+        "importPath": "utils.auth",
+        "description": "utils.auth",
+        "isExtraImport": true,
+        "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "importPath": "utils.auth",
+        "description": "utils.auth",
+        "isExtraImport": true,
+        "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "importPath": "utils.auth",
+        "description": "utils.auth",
+        "isExtraImport": true,
+        "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_client",
+        "importPath": "utils.auth",
+        "description": "utils.auth",
+        "isExtraImport": true,
+        "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_admin",
+        "importPath": "utils.auth",
+        "description": "utils.auth",
+        "isExtraImport": true,
+        "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_admin",
+        "importPath": "utils.auth",
+        "description": "utils.auth",
+        "isExtraImport": true,
+        "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_admin",
+        "importPath": "utils.auth",
+        "description": "utils.auth",
+        "isExtraImport": true,
+        "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_admin",
+        "importPath": "utils.auth",
+        "description": "utils.auth",
+        "isExtraImport": true,
+        "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_admin",
+        "importPath": "utils.auth",
+        "description": "utils.auth",
+        "isExtraImport": true,
+        "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Bill",
+        "importPath": "models.bill",
+        "description": "models.bill",
+        "isExtraImport": true,
+        "detail": "models.bill",
+        "documentation": {}
+    },
+    {
+        "label": "Bill",
+        "importPath": "models.bill",
+        "description": "models.bill",
+        "isExtraImport": true,
+        "detail": "models.bill",
+        "documentation": {}
+    },
+    {
+        "label": "Bill",
+        "importPath": "models.bill",
+        "description": "models.bill",
+        "isExtraImport": true,
+        "detail": "models.bill",
+        "documentation": {}
+    },
+    {
+        "label": "Bill",
+        "importPath": "models.bill",
+        "description": "models.bill",
+        "isExtraImport": true,
+        "detail": "models.bill",
+        "documentation": {}
+    },
+    {
+        "label": "Bill",
+        "importPath": "models.bill",
+        "description": "models.bill",
+        "isExtraImport": true,
+        "detail": "models.bill",
+        "documentation": {}
+    },
+    {
+        "label": "BillItem",
+        "importPath": "models.bill_item",
+        "description": "models.bill_item",
+        "isExtraImport": true,
+        "detail": "models.bill_item",
+        "documentation": {}
+    },
+    {
+        "label": "BillItem",
+        "importPath": "models.bill_item",
+        "description": "models.bill_item",
+        "isExtraImport": true,
+        "detail": "models.bill_item",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product",
+        "description": "models.product",
+        "isExtraImport": true,
+        "detail": "models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product",
+        "description": "models.product",
+        "isExtraImport": true,
+        "detail": "models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product",
+        "description": "models.product",
+        "isExtraImport": true,
+        "detail": "models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product",
+        "description": "models.product",
+        "isExtraImport": true,
+        "detail": "models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product",
+        "description": "models.product",
+        "isExtraImport": true,
+        "detail": "models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product",
+        "description": "models.product",
+        "isExtraImport": true,
+        "detail": "models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product",
+        "description": "models.product",
+        "isExtraImport": true,
+        "detail": "models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "models.client",
+        "description": "models.client",
+        "isExtraImport": true,
+        "detail": "models.client",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "models.client",
+        "description": "models.client",
+        "isExtraImport": true,
+        "detail": "models.client",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "models.client",
+        "description": "models.client",
+        "isExtraImport": true,
+        "detail": "models.client",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "models.client",
+        "description": "models.client",
+        "isExtraImport": true,
+        "detail": "models.client",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "models.client",
+        "description": "models.client",
+        "isExtraImport": true,
+        "detail": "models.client",
+        "documentation": {}
+    },
+    {
+        "label": "BillCreate",
+        "importPath": "schemas.bill",
+        "description": "schemas.bill",
+        "isExtraImport": true,
+        "detail": "schemas.bill",
+        "documentation": {}
+    },
+    {
+        "label": "BillResponse",
+        "importPath": "schemas.bill",
+        "description": "schemas.bill",
+        "isExtraImport": true,
+        "detail": "schemas.bill",
+        "documentation": {}
+    },
+    {
+        "label": "BillWithItems",
+        "importPath": "schemas.bill",
+        "description": "schemas.bill",
+        "isExtraImport": true,
+        "detail": "schemas.bill",
+        "documentation": {}
+    },
+    {
+        "label": "BillWithClient",
+        "importPath": "schemas.bill",
+        "description": "schemas.bill",
+        "isExtraImport": true,
+        "detail": "schemas.bill",
+        "documentation": {}
+    },
+    {
+        "label": "BillSummary",
+        "importPath": "schemas.bill",
+        "description": "schemas.bill",
+        "isExtraImport": true,
+        "detail": "schemas.bill",
+        "documentation": {}
+    },
+    {
+        "label": "check_and_create_stock_alert",
+        "importPath": "utils.stock_manager",
+        "description": "utils.stock_manager",
+        "isExtraImport": true,
+        "detail": "utils.stock_manager",
+        "documentation": {}
+    },
+    {
+        "label": "check_and_create_stock_alert",
+        "importPath": "utils.stock_manager",
+        "description": "utils.stock_manager",
+        "isExtraImport": true,
+        "detail": "utils.stock_manager",
+        "documentation": {}
+    },
+    {
+        "label": "create_bill_notification",
+        "importPath": "utils.notification_manager",
+        "description": "utils.notification_manager",
+        "isExtraImport": true,
+        "detail": "utils.notification_manager",
+        "documentation": {}
+    },
+    {
+        "label": "create_stock_alert_notification",
+        "importPath": "utils.notification_manager",
+        "description": "utils.notification_manager",
+        "isExtraImport": true,
+        "detail": "utils.notification_manager",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "models.category",
+        "description": "models.category",
+        "isExtraImport": true,
+        "detail": "models.category",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "models.category",
+        "description": "models.category",
+        "isExtraImport": true,
+        "detail": "models.category",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "models.category",
+        "description": "models.category",
+        "isExtraImport": true,
+        "detail": "models.category",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryCreate",
+        "importPath": "schemas.category",
+        "description": "schemas.category",
+        "isExtraImport": true,
+        "detail": "schemas.category",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryUpdate",
+        "importPath": "schemas.category",
+        "description": "schemas.category",
+        "isExtraImport": true,
+        "detail": "schemas.category",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryResponse",
+        "importPath": "schemas.category",
+        "description": "schemas.category",
+        "isExtraImport": true,
+        "detail": "schemas.category",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryWithCount",
+        "importPath": "schemas.category",
+        "description": "schemas.category",
+        "isExtraImport": true,
+        "detail": "schemas.category",
+        "documentation": {}
+    },
+    {
+        "label": "ClientCreate",
+        "importPath": "schemas.client",
+        "description": "schemas.client",
+        "isExtraImport": true,
+        "detail": "schemas.client",
+        "documentation": {}
+    },
+    {
+        "label": "ClientUpdate",
+        "importPath": "schemas.client",
+        "description": "schemas.client",
+        "isExtraImport": true,
+        "detail": "schemas.client",
+        "documentation": {}
+    },
+    {
+        "label": "ClientLogin",
+        "importPath": "schemas.client",
+        "description": "schemas.client",
+        "isExtraImport": true,
+        "detail": "schemas.client",
+        "documentation": {}
+    },
+    {
+        "label": "ClientResponse",
+        "importPath": "schemas.client",
+        "description": "schemas.client",
+        "isExtraImport": true,
+        "detail": "schemas.client",
+        "documentation": {}
+    },
+    {
+        "label": "ClientWithToken",
+        "importPath": "schemas.client",
+        "description": "schemas.client",
+        "isExtraImport": true,
+        "detail": "schemas.client",
+        "documentation": {}
+    },
+    {
+        "label": "ClientSummary",
+        "importPath": "schemas.client",
+        "description": "schemas.client",
+        "isExtraImport": true,
+        "detail": "schemas.client",
+        "documentation": {}
+    },
+    {
+        "label": "Notification",
+        "importPath": "models.notification",
+        "description": "models.notification",
+        "isExtraImport": true,
+        "detail": "models.notification",
+        "documentation": {}
+    },
+    {
+        "label": "Notification",
+        "importPath": "models.notification",
+        "description": "models.notification",
+        "isExtraImport": true,
+        "detail": "models.notification",
+        "documentation": {}
+    },
+    {
+        "label": "Notification",
+        "importPath": "models.notification",
+        "description": "models.notification",
+        "isExtraImport": true,
+        "detail": "models.notification",
+        "documentation": {}
+    },
+    {
+        "label": "NotificationResponse",
+        "importPath": "schemas.notification",
+        "description": "schemas.notification",
+        "isExtraImport": true,
+        "detail": "schemas.notification",
+        "documentation": {}
+    },
+    {
+        "label": "NotificationSummary",
+        "importPath": "schemas.notification",
+        "description": "schemas.notification",
+        "isExtraImport": true,
+        "detail": "schemas.notification",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "models.payment",
+        "description": "models.payment",
+        "isExtraImport": true,
+        "detail": "models.payment",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "models.payment",
+        "description": "models.payment",
+        "isExtraImport": true,
+        "detail": "models.payment",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentCreate",
+        "importPath": "schemas.payment",
+        "description": "schemas.payment",
+        "isExtraImport": true,
+        "detail": "schemas.payment",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentUpdate",
+        "importPath": "schemas.payment",
+        "description": "schemas.payment",
+        "isExtraImport": true,
+        "detail": "schemas.payment",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentResponse",
+        "importPath": "schemas.payment",
+        "description": "schemas.payment",
+        "isExtraImport": true,
+        "detail": "schemas.payment",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentHistory",
+        "importPath": "schemas.payment",
+        "description": "schemas.payment",
+        "isExtraImport": true,
+        "detail": "schemas.payment",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlert",
+        "importPath": "models.stock_alert",
+        "description": "models.stock_alert",
+        "isExtraImport": true,
+        "detail": "models.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlert",
+        "importPath": "models.stock_alert",
+        "description": "models.stock_alert",
+        "isExtraImport": true,
+        "detail": "models.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlert",
+        "importPath": "models.stock_alert",
+        "description": "models.stock_alert",
+        "isExtraImport": true,
+        "detail": "models.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlert",
+        "importPath": "models.stock_alert",
+        "description": "models.stock_alert",
+        "isExtraImport": true,
+        "detail": "models.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlert",
+        "importPath": "models.stock_alert",
+        "description": "models.stock_alert",
+        "isExtraImport": true,
+        "detail": "models.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "ProductCreate",
+        "importPath": "schemas.product",
+        "description": "schemas.product",
+        "isExtraImport": true,
+        "detail": "schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "ProductUpdate",
+        "importPath": "schemas.product",
+        "description": "schemas.product",
+        "isExtraImport": true,
+        "detail": "schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "ProductResponse",
+        "importPath": "schemas.product",
+        "description": "schemas.product",
+        "isExtraImport": true,
+        "detail": "schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "ProductWithCategory",
+        "importPath": "schemas.product",
+        "description": "schemas.product",
+        "isExtraImport": true,
+        "detail": "schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "ProductStockStatus",
+        "importPath": "schemas.product",
+        "description": "schemas.product",
+        "isExtraImport": true,
+        "detail": "schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlertResponse",
+        "importPath": "schemas.stock_alert",
+        "description": "schemas.stock_alert",
+        "isExtraImport": true,
+        "detail": "schemas.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlertWithProduct",
+        "importPath": "schemas.stock_alert",
+        "description": "schemas.stock_alert",
+        "isExtraImport": true,
+        "detail": "schemas.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlertUpdate",
+        "importPath": "schemas.stock_alert",
+        "description": "schemas.stock_alert",
+        "isExtraImport": true,
+        "detail": "schemas.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlertSummary",
+        "importPath": "schemas.stock_alert",
+        "description": "schemas.stock_alert",
+        "isExtraImport": true,
+        "detail": "schemas.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "CryptContext",
+        "importPath": "passlib.context",
+        "description": "passlib.context",
+        "isExtraImport": true,
+        "detail": "passlib.context",
+        "documentation": {}
+    },
+    {
+        "label": "JWTError",
+        "importPath": "jose",
+        "description": "jose",
+        "isExtraImport": true,
+        "detail": "jose",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "importPath": "jose",
+        "description": "jose",
+        "isExtraImport": true,
+        "detail": "jose",
+        "documentation": {}
+    },
+    {
+        "label": "OAuth2PasswordBearer",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
+        "isExtraImport": true,
+        "detail": "fastapi.security",
+        "documentation": {}
+    },
+    {
+        "label": "smtplib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "smtplib",
+        "description": "smtplib",
+        "detail": "smtplib",
+        "documentation": {}
+    },
+    {
+        "label": "MIMEText",
+        "importPath": "email.mime.text",
+        "description": "email.mime.text",
+        "isExtraImport": true,
+        "detail": "email.mime.text",
+        "documentation": {}
+    },
+    {
+        "label": "MIMEMultipart",
+        "importPath": "email.mime.multipart",
+        "description": "email.mime.multipart",
+        "isExtraImport": true,
+        "detail": "email.mime.multipart",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "asynccontextmanager",
+        "importPath": "contextlib",
+        "description": "contextlib",
+        "isExtraImport": true,
+        "detail": "contextlib",
+        "documentation": {}
+    },
+    {
+        "label": "admin_router",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "client_router",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "category_router",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "product_router",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "bill_router",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "payment_router",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "stock_alert_router",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "notification_router",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "create_sample_data",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "init_db",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "Admin",
+        "kind": 6,
+        "importPath": "server.models.admin",
+        "description": "server.models.admin",
+        "peekOfCode": "class Admin(Base):\n    __tablename__ = \"admins\"\n    id = Column(Integer, primary_key=True, index=True)\n    username = Column(String(50), unique=True, nullable=False, index=True)\n    email = Column(String(100), unique=True, nullable=False, index=True)\n    password_hash = Column(String(255), nullable=False)\n    phone_number = Column(String(20), nullable=True)\n    created_at = Column(DateTime(timezone=True), server_default=func.now())\n    updated_at = Column(DateTime(timezone=True), onupdate=func.now())\n    # Relationships",
+        "detail": "server.models.admin",
+        "documentation": {}
+    },
+    {
+        "label": "Bill",
+        "kind": 6,
+        "importPath": "server.models.bill",
+        "description": "server.models.bill",
+        "peekOfCode": "class Bill(Base):\n    __tablename__ = \"bills\"\n    id = Column(Integer, primary_key=True, index=True)\n    client_id = Column(Integer, ForeignKey(\"clients.id\"), nullable=False)\n    bill_number = Column(String(50), unique=True, nullable=False, index=True)\n    total_amount = Column(Numeric(10, 2), nullable=False, default=0.00)\n    total_paid = Column(Numeric(10, 2), nullable=False, default=0.00)\n    total_remaining = Column(Numeric(10, 2), nullable=False, default=0.00)\n    status = Column(String(20), nullable=False, default=\"not paid\")  # \"paid\" or \"not paid\"\n    created_at = Column(DateTime(timezone=True), server_default=func.now())",
+        "detail": "server.models.bill",
+        "documentation": {}
+    },
+    {
+        "label": "BillItem",
+        "kind": 6,
+        "importPath": "server.models.bill_item",
+        "description": "server.models.bill_item",
+        "peekOfCode": "class BillItem(Base):\n    __tablename__ = \"bill_items\"\n    id = Column(Integer, primary_key=True, index=True)\n    bill_id = Column(Integer, ForeignKey(\"bills.id\"), nullable=False)\n    product_id = Column(Integer, ForeignKey(\"products.id\"), nullable=False)\n    product_name = Column(String(200), nullable=False)  # Store product name at time of purchase\n    unit_price = Column(Numeric(10, 2), nullable=False)\n    quantity = Column(Integer, nullable=False)\n    subtotal = Column(Numeric(10, 2), nullable=False)\n    created_at = Column(DateTime(timezone=True), server_default=func.now())",
+        "detail": "server.models.bill_item",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "kind": 6,
+        "importPath": "server.models.category",
+        "description": "server.models.category",
+        "peekOfCode": "class Category(Base):\n    __tablename__ = \"categories\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String(100), unique=True, nullable=False, index=True)\n    description = Column(String(500), nullable=True)\n    created_at = Column(DateTime(timezone=True), server_default=func.now())\n    # Relationships\n    products = relationship(\"Product\", back_populates=\"category\", cascade=\"all, delete-orphan\")\n    def __repr__(self):\n        return f\"<Category(id={self.id}, name='{self.name}')>\"",
+        "detail": "server.models.category",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "kind": 6,
+        "importPath": "server.models.client",
+        "description": "server.models.client",
+        "peekOfCode": "class Client(Base):\n    __tablename__ = \"clients\"\n    id = Column(Integer, primary_key=True, index=True)\n    username = Column(String(50), unique=True, nullable=False, index=True)\n    email = Column(String(100), unique=True, nullable=False, index=True)\n    password_hash = Column(String(255), nullable=False)\n    phone_number = Column(String(20), nullable=True)\n    address = Column(String(255), nullable=True)\n    city = Column(String(100), nullable=True)\n    created_at = Column(DateTime(timezone=True), server_default=func.now())",
+        "detail": "server.models.client",
+        "documentation": {}
+    },
+    {
+        "label": "Notification",
+        "kind": 6,
+        "importPath": "server.models.notification",
+        "description": "server.models.notification",
+        "peekOfCode": "class Notification(Base):\n    __tablename__ = \"notifications\"\n    id = Column(Integer, primary_key=True, index=True)\n    admin_id = Column(Integer, ForeignKey(\"admins.id\"), nullable=True)\n    client_id = Column(Integer, ForeignKey(\"clients.id\"), nullable=True)\n    bill_id = Column(Integer, ForeignKey(\"bills.id\"), nullable=True)\n    stock_alert_id = Column(Integer, ForeignKey(\"stock_alerts.id\"), nullable=True)\n    notification_type = Column(String(50), nullable=False)  # e.g., \"new_bill\", \"stock_alert\", \"payment_received\"\n    channel = Column(String(20), nullable=False)  # \"email\" or \"whatsapp\"\n    message = Column(String(1000), nullable=False)",
+        "detail": "server.models.notification",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "kind": 6,
+        "importPath": "server.models.payment",
+        "description": "server.models.payment",
+        "peekOfCode": "class Payment(Base):\n    __tablename__ = \"payments\"\n    id = Column(Integer, primary_key=True, index=True)\n    bill_id = Column(Integer, ForeignKey(\"bills.id\"), nullable=False)\n    admin_id = Column(Integer, ForeignKey(\"admins.id\"), nullable=False)\n    amount_paid = Column(Numeric(10, 2), nullable=False)\n    payment_method = Column(String(50), nullable=True)  # e.g., \"cash\", \"bank transfer\", etc.\n    notes = Column(String(500), nullable=True)\n    payment_date = Column(DateTime(timezone=True), nullable=False)\n    created_at = Column(DateTime(timezone=True), server_default=func.now())",
+        "detail": "server.models.payment",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "kind": 6,
+        "importPath": "server.models.product",
+        "description": "server.models.product",
+        "peekOfCode": "class Product(Base):\n    __tablename__ = \"products\"\n    id = Column(Integer, primary_key=True, index=True)\n    category_id = Column(Integer, ForeignKey(\"categories.id\"), nullable=False)\n    admin_id = Column(Integer, ForeignKey(\"admins.id\"), nullable=False)\n    name = Column(String(200), nullable=False, index=True)\n    description = Column(String(1000), nullable=True)\n    price = Column(Numeric(10, 2), nullable=False)\n    quantity_in_stock = Column(Integer, nullable=False, default=0)\n    minimum_stock_level = Column(Integer, nullable=False, default=10)",
+        "detail": "server.models.product",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlert",
+        "kind": 6,
+        "importPath": "server.models.stock_alert",
+        "description": "server.models.stock_alert",
+        "peekOfCode": "class StockAlert(Base):\n    __tablename__ = \"stock_alerts\"\n    id = Column(Integer, primary_key=True, index=True)\n    product_id = Column(Integer, ForeignKey(\"products.id\"), nullable=False)\n    alert_type = Column(String(50), nullable=False, default=\"low_stock\")  # e.g., \"low_stock\", \"out_of_stock\"\n    message = Column(String(500), nullable=False)\n    is_resolved = Column(Boolean, default=False)\n    created_at = Column(DateTime(timezone=True), server_default=func.now())\n    resolved_at = Column(DateTime(timezone=True), nullable=True)\n    # Relationships",
+        "detail": "server.models.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "login_admin",
+        "kind": 2,
+        "importPath": "server.routers.admin",
+        "description": "server.routers.admin",
+        "peekOfCode": "def login_admin(login_data: AdminLogin, db: Session = Depends(get_db)):\n    \"\"\"Connexion administrateur\"\"\"\n    admin = db.query(Admin).filter(Admin.email == login_data.email).first()\n    if not admin or not verify_password(login_data.password, admin.password_hash):\n        raise HTTPException(\n            status_code=status.HTTP_401_UNAUTHORIZED,\n            detail=\"Email ou mot de passe incorrect\"\n        )\n    access_token = create_access_token(data={\"sub\": str(admin.id), \"type\": \"admin\"})\n    return {",
+        "detail": "server.routers.admin",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_admin_info",
+        "kind": 2,
+        "importPath": "server.routers.admin",
+        "description": "server.routers.admin",
+        "peekOfCode": "def get_current_admin_info(current_admin: Admin = Depends(get_current_admin)):\n    \"\"\"Obtenir les informations de l'administrateur connecté\"\"\"\n    return current_admin\n@router.put(\"/me\", response_model=AdminResponse)\ndef update_admin_profile(\n    admin_data: AdminUpdate,\n    current_admin: Admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Mettre à jour le profil de l'administrateur\"\"\"",
+        "detail": "server.routers.admin",
+        "documentation": {}
+    },
+    {
+        "label": "update_admin_profile",
+        "kind": 2,
+        "importPath": "server.routers.admin",
+        "description": "server.routers.admin",
+        "peekOfCode": "def update_admin_profile(\n    admin_data: AdminUpdate,\n    current_admin: Admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Mettre à jour le profil de l'administrateur\"\"\"\n    # Vérifier si le nouvel email existe déjà\n    if admin_data.email and admin_data.email != current_admin.email:\n        existing = db.query(Admin).filter(Admin.email == admin_data.email).first()\n        if existing:",
+        "detail": "server.routers.admin",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_admins",
+        "kind": 2,
+        "importPath": "server.routers.admin",
+        "description": "server.routers.admin",
+        "peekOfCode": "def get_all_admins(\n    skip: int = 0,\n    limit: int = 100,\n    current_admin: Admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir la liste de tous les administrateurs\"\"\"\n    admins = db.query(Admin).offset(skip).limit(limit).all()\n    return admins\n@router.delete(\"/{admin_id}\", status_code=status.HTTP_204_NO_CONTENT)",
+        "detail": "server.routers.admin",
+        "documentation": {}
+    },
+    {
+        "label": "delete_admin",
+        "kind": 2,
+        "importPath": "server.routers.admin",
+        "description": "server.routers.admin",
+        "peekOfCode": "def delete_admin(\n    admin_id: int,\n    current_admin: Admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Supprimer un administrateur\"\"\"\n    if admin_id == current_admin.id:\n        raise HTTPException(\n            status_code=status.HTTP_400_BAD_REQUEST,\n            detail=\"Vous ne pouvez pas supprimer votre propre compte\"",
+        "detail": "server.routers.admin",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "server.routers.admin",
+        "description": "server.routers.admin",
+        "peekOfCode": "router = APIRouter(prefix=\"/admin\", tags=[\"Admin\"])\n@router.post(\"/login\", response_model=AdminWithToken)\ndef login_admin(login_data: AdminLogin, db: Session = Depends(get_db)):\n    \"\"\"Connexion administrateur\"\"\"\n    admin = db.query(Admin).filter(Admin.email == login_data.email).first()\n    if not admin or not verify_password(login_data.password, admin.password_hash):\n        raise HTTPException(\n            status_code=status.HTTP_401_UNAUTHORIZED,\n            detail=\"Email ou mot de passe incorrect\"\n        )",
+        "detail": "server.routers.admin",
+        "documentation": {}
+    },
+    {
+        "label": "create_bill",
+        "kind": 2,
+        "importPath": "server.routers.bill",
+        "description": "server.routers.bill",
+        "peekOfCode": "def create_bill(\n    bill_data: BillCreate,\n    current_client = Depends(get_current_client),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Créer une nouvelle facture (client seulement)\"\"\"\n    # Générer un numéro de facture unique\n    bill_count = db.query(Bill).count()\n    bill_number = f\"BILL-{datetime.now().strftime('%Y%m%d')}-{bill_count + 1:04d}\"\n    # Créer la facture",
+        "detail": "server.routers.bill",
+        "documentation": {}
+    },
+    {
+        "label": "get_my_bills",
+        "kind": 2,
+        "importPath": "server.routers.bill",
+        "description": "server.routers.bill",
+        "peekOfCode": "def get_my_bills(\n    skip: int = 0,\n    limit: int = 100,\n    current_client = Depends(get_current_client),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir toutes les factures du client connecté\"\"\"\n    bills = db.query(Bill).filter(Bill.client_id == current_client.id).offset(skip).limit(limit).all()\n    result = []\n    for bill in bills:",
+        "detail": "server.routers.bill",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_bills",
+        "kind": 2,
+        "importPath": "server.routers.bill",
+        "description": "server.routers.bill",
+        "peekOfCode": "def get_all_bills(\n    skip: int = 0,\n    limit: int = 100,\n    status_filter: str = None,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir toutes les factures (admin seulement)\"\"\"\n    query = db.query(Bill)\n    if status_filter:",
+        "detail": "server.routers.bill",
+        "documentation": {}
+    },
+    {
+        "label": "get_bill_summary",
+        "kind": 2,
+        "importPath": "server.routers.bill",
+        "description": "server.routers.bill",
+        "peekOfCode": "def get_bill_summary(\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir le résumé des factures (admin seulement)\"\"\"\n    total_bills = db.query(Bill).count()\n    total_revenue = db.query(func.sum(Bill.total_amount)).scalar() or Decimal('0.00')\n    total_paid = db.query(func.sum(Bill.total_paid)).scalar() or Decimal('0.00')\n    total_pending = db.query(func.sum(Bill.total_remaining)).scalar() or Decimal('0.00')\n    paid_bills = db.query(Bill).filter(Bill.status == \"paid\").count()",
+        "detail": "server.routers.bill",
+        "documentation": {}
+    },
+    {
+        "label": "get_bill_by_id",
+        "kind": 2,
+        "importPath": "server.routers.bill",
+        "description": "server.routers.bill",
+        "peekOfCode": "def get_bill_by_id(\n    bill_id: int,\n    current_client = Depends(get_current_client),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir une facture par son ID\"\"\"\n    bill = db.query(Bill).filter(Bill.id == bill_id).first()\n    if not bill:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "detail": "server.routers.bill",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "server.routers.bill",
+        "description": "server.routers.bill",
+        "peekOfCode": "router = APIRouter(prefix=\"/bill\", tags=[\"Bill\"])\n@router.post(\"/\", response_model=BillWithItems, status_code=status.HTTP_201_CREATED)\ndef create_bill(\n    bill_data: BillCreate,\n    current_client = Depends(get_current_client),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Créer une nouvelle facture (client seulement)\"\"\"\n    # Générer un numéro de facture unique\n    bill_count = db.query(Bill).count()",
+        "detail": "server.routers.bill",
+        "documentation": {}
+    },
+    {
+        "label": "create_category",
+        "kind": 2,
+        "importPath": "server.routers.category",
+        "description": "server.routers.category",
+        "peekOfCode": "def create_category(\n    category_data: CategoryCreate,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Créer une nouvelle catégorie (admin seulement)\"\"\"\n    # Vérifier si la catégorie existe déjà\n    existing_category = db.query(Category).filter(Category.name == category_data.name).first()\n    if existing_category:\n        raise HTTPException(",
+        "detail": "server.routers.category",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_categories",
+        "kind": 2,
+        "importPath": "server.routers.category",
+        "description": "server.routers.category",
+        "peekOfCode": "def get_all_categories(\n    skip: int = 0,\n    limit: int = 100,\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir toutes les catégories avec le nombre de produits\"\"\"\n    categories = db.query(\n        Category,\n        func.count(Product.id).label('product_count')\n    ).outerjoin(Product).group_by(Category.id).offset(skip).limit(limit).all()",
+        "detail": "server.routers.category",
+        "documentation": {}
+    },
+    {
+        "label": "get_category_by_id",
+        "kind": 2,
+        "importPath": "server.routers.category",
+        "description": "server.routers.category",
+        "peekOfCode": "def get_category_by_id(\n    category_id: int,\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir une catégorie par son ID\"\"\"\n    category = db.query(Category).filter(Category.id == category_id).first()\n    if not category:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,\n            detail=\"Catégorie non trouvée\"",
+        "detail": "server.routers.category",
+        "documentation": {}
+    },
+    {
+        "label": "update_category",
+        "kind": 2,
+        "importPath": "server.routers.category",
+        "description": "server.routers.category",
+        "peekOfCode": "def update_category(\n    category_id: int,\n    category_data: CategoryUpdate,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Mettre à jour une catégorie (admin seulement)\"\"\"\n    category = db.query(Category).filter(Category.id == category_id).first()\n    if not category:\n        raise HTTPException(",
+        "detail": "server.routers.category",
+        "documentation": {}
+    },
+    {
+        "label": "delete_category",
+        "kind": 2,
+        "importPath": "server.routers.category",
+        "description": "server.routers.category",
+        "peekOfCode": "def delete_category(\n    category_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Supprimer une catégorie (admin seulement)\"\"\"\n    category = db.query(Category).filter(Category.id == category_id).first()\n    if not category:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "detail": "server.routers.category",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "server.routers.category",
+        "description": "server.routers.category",
+        "peekOfCode": "router = APIRouter(prefix=\"/category\", tags=[\"Category\"])\n@router.post(\"/\", response_model=CategoryResponse, status_code=status.HTTP_201_CREATED)\ndef create_category(\n    category_data: CategoryCreate,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Créer une nouvelle catégorie (admin seulement)\"\"\"\n    # Vérifier si la catégorie existe déjà\n    existing_category = db.query(Category).filter(Category.name == category_data.name).first()",
+        "detail": "server.routers.category",
+        "documentation": {}
+    },
+    {
+        "label": "register_client",
+        "kind": 2,
+        "importPath": "server.routers.client",
+        "description": "server.routers.client",
+        "peekOfCode": "def register_client(client_data: ClientCreate, db: Session = Depends(get_db)):\n    \"\"\"Enregistrer un nouveau client\"\"\"\n    # Vérifier si l'email existe déjà\n    existing_client = db.query(Client).filter(Client.email == client_data.email).first()\n    if existing_client:\n        raise HTTPException(\n            status_code=status.HTTP_400_BAD_REQUEST,\n            detail=\"Cet email est déjà utilisé\"\n        )\n    # Vérifier si le nom d'utilisateur existe déjà",
+        "detail": "server.routers.client",
+        "documentation": {}
+    },
+    {
+        "label": "login_client",
+        "kind": 2,
+        "importPath": "server.routers.client",
+        "description": "server.routers.client",
+        "peekOfCode": "def login_client(login_data: ClientLogin, db: Session = Depends(get_db)):\n    \"\"\"Connexion client\"\"\"\n    client = db.query(Client).filter(Client.email == login_data.email).first()\n    if not client or not verify_password(login_data.password, client.password_hash):\n        raise HTTPException(\n            status_code=status.HTTP_401_UNAUTHORIZED,\n            detail=\"Email ou mot de passe incorrect\"\n        )\n    if not client.is_active:\n        raise HTTPException(",
+        "detail": "server.routers.client",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_client_info",
+        "kind": 2,
+        "importPath": "server.routers.client",
+        "description": "server.routers.client",
+        "peekOfCode": "def get_current_client_info(current_client: Client = Depends(get_current_client)):\n    \"\"\"Obtenir les informations du client connecté\"\"\"\n    return current_client\n@router.put(\"/me\", response_model=ClientResponse)\ndef update_client_profile(\n    client_data: ClientUpdate,\n    current_client: Client = Depends(get_current_client),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Mettre à jour le profil du client\"\"\"",
+        "detail": "server.routers.client",
+        "documentation": {}
+    },
+    {
+        "label": "update_client_profile",
+        "kind": 2,
+        "importPath": "server.routers.client",
+        "description": "server.routers.client",
+        "peekOfCode": "def update_client_profile(\n    client_data: ClientUpdate,\n    current_client: Client = Depends(get_current_client),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Mettre à jour le profil du client\"\"\"\n    # Vérifier si le nouvel email existe déjà\n    if client_data.email and client_data.email != current_client.email:\n        existing = db.query(Client).filter(Client.email == client_data.email).first()\n        if existing:",
+        "detail": "server.routers.client",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_clients",
+        "kind": 2,
+        "importPath": "server.routers.client",
+        "description": "server.routers.client",
+        "peekOfCode": "def get_all_clients(\n    skip: int = 0,\n    limit: int = 100,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir la liste de tous les clients (admin seulement)\"\"\"\n    clients = db.query(\n        Client,\n        func.count(Bill.id).label('total_bills'),",
+        "detail": "server.routers.client",
+        "documentation": {}
+    },
+    {
+        "label": "get_client_by_id",
+        "kind": 2,
+        "importPath": "server.routers.client",
+        "description": "server.routers.client",
+        "peekOfCode": "def get_client_by_id(\n    client_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir un client par son ID (admin seulement)\"\"\"\n    client = db.query(Client).filter(Client.id == client_id).first()\n    if not client:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "detail": "server.routers.client",
+        "documentation": {}
+    },
+    {
+        "label": "toggle_client_active",
+        "kind": 2,
+        "importPath": "server.routers.client",
+        "description": "server.routers.client",
+        "peekOfCode": "def toggle_client_active(\n    client_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Activer/désactiver un client (admin seulement)\"\"\"\n    client = db.query(Client).filter(Client.id == client_id).first()\n    if not client:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "detail": "server.routers.client",
+        "documentation": {}
+    },
+    {
+        "label": "delete_client",
+        "kind": 2,
+        "importPath": "server.routers.client",
+        "description": "server.routers.client",
+        "peekOfCode": "def delete_client(\n    client_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Supprimer un client (admin seulement)\"\"\"\n    client = db.query(Client).filter(Client.id == client_id).first()\n    if not client:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "detail": "server.routers.client",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "server.routers.client",
+        "description": "server.routers.client",
+        "peekOfCode": "router = APIRouter(prefix=\"/client\", tags=[\"Client\"])\n@router.post(\"/register\", response_model=ClientResponse, status_code=status.HTTP_201_CREATED)\ndef register_client(client_data: ClientCreate, db: Session = Depends(get_db)):\n    \"\"\"Enregistrer un nouveau client\"\"\"\n    # Vérifier si l'email existe déjà\n    existing_client = db.query(Client).filter(Client.email == client_data.email).first()\n    if existing_client:\n        raise HTTPException(\n            status_code=status.HTTP_400_BAD_REQUEST,\n            detail=\"Cet email est déjà utilisé\"",
+        "detail": "server.routers.client",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_notifications",
+        "kind": 2,
+        "importPath": "server.routers.notification",
+        "description": "server.routers.notification",
+        "peekOfCode": "def get_all_notifications(\n    skip: int = 0,\n    limit: int = 100,\n    is_sent: bool = None,\n    notification_type: str = None,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir toutes les notifications (admin seulement)\"\"\"\n    query = db.query(Notification)",
+        "detail": "server.routers.notification",
+        "documentation": {}
+    },
+    {
+        "label": "get_pending_notifications",
+        "kind": 2,
+        "importPath": "server.routers.notification",
+        "description": "server.routers.notification",
+        "peekOfCode": "def get_pending_notifications(\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir les notifications en attente d'envoi (admin seulement)\"\"\"\n    notifications = db.query(Notification).filter(\n        Notification.is_sent == False\n    ).order_by(Notification.created_at.desc()).all()\n    return notifications\n@router.get(\"/summary\", response_model=NotificationSummary)",
+        "detail": "server.routers.notification",
+        "documentation": {}
+    },
+    {
+        "label": "get_notification_summary",
+        "kind": 2,
+        "importPath": "server.routers.notification",
+        "description": "server.routers.notification",
+        "peekOfCode": "def get_notification_summary(\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir le résumé des notifications (admin seulement)\"\"\"\n    total_notifications = db.query(Notification).count()\n    sent_notifications = db.query(Notification).filter(Notification.is_sent == True).count()\n    pending_notifications = db.query(Notification).filter(Notification.is_sent == False).count()\n    email_notifications = db.query(Notification).filter(Notification.channel == \"email\").count()\n    whatsapp_notifications = db.query(Notification).filter(Notification.channel == \"whatsapp\").count()",
+        "detail": "server.routers.notification",
+        "documentation": {}
+    },
+    {
+        "label": "get_notification_by_id",
+        "kind": 2,
+        "importPath": "server.routers.notification",
+        "description": "server.routers.notification",
+        "peekOfCode": "def get_notification_by_id(\n    notification_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir une notification par son ID (admin seulement)\"\"\"\n    notification = db.query(Notification).filter(Notification.id == notification_id).first()\n    if not notification:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "detail": "server.routers.notification",
+        "documentation": {}
+    },
+    {
+        "label": "mark_notification_sent",
+        "kind": 2,
+        "importPath": "server.routers.notification",
+        "description": "server.routers.notification",
+        "peekOfCode": "def mark_notification_sent(\n    notification_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Marquer une notification comme envoyée (admin seulement)\"\"\"\n    from datetime import datetime\n    notification = db.query(Notification).filter(Notification.id == notification_id).first()\n    if not notification:\n        raise HTTPException(",
+        "detail": "server.routers.notification",
+        "documentation": {}
+    },
+    {
+        "label": "delete_notification",
+        "kind": 2,
+        "importPath": "server.routers.notification",
+        "description": "server.routers.notification",
+        "peekOfCode": "def delete_notification(\n    notification_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Supprimer une notification (admin seulement)\"\"\"\n    notification = db.query(Notification).filter(Notification.id == notification_id).first()\n    if not notification:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "detail": "server.routers.notification",
+        "documentation": {}
+    },
+    {
+        "label": "send_pending_notifications",
+        "kind": 2,
+        "importPath": "server.routers.notification",
+        "description": "server.routers.notification",
+        "peekOfCode": "def send_pending_notifications(\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Envoyer toutes les notifications en attente (admin seulement)\"\"\"\n    from datetime import datetime\n    pending_notifications = db.query(Notification).filter(\n        Notification.is_sent == False\n    ).all()\n    sent_count = 0",
+        "detail": "server.routers.notification",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "server.routers.notification",
+        "description": "server.routers.notification",
+        "peekOfCode": "router = APIRouter(prefix=\"/notification\", tags=[\"Notification\"])\n@router.get(\"/\", response_model=List[NotificationResponse])\ndef get_all_notifications(\n    skip: int = 0,\n    limit: int = 100,\n    is_sent: bool = None,\n    notification_type: str = None,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):",
+        "detail": "server.routers.notification",
+        "documentation": {}
+    },
+    {
+        "label": "create_payment",
+        "kind": 2,
+        "importPath": "server.routers.payment",
+        "description": "server.routers.payment",
+        "peekOfCode": "def create_payment(\n    payment_data: PaymentCreate,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Créer un nouveau paiement (admin seulement)\"\"\"\n    # Vérifier si la facture existe\n    bill = db.query(Bill).filter(Bill.id == payment_data.bill_id).first()\n    if not bill:\n        raise HTTPException(",
+        "detail": "server.routers.payment",
+        "documentation": {}
+    },
+    {
+        "label": "get_bill_payment_history",
+        "kind": 2,
+        "importPath": "server.routers.payment",
+        "description": "server.routers.payment",
+        "peekOfCode": "def get_bill_payment_history(\n    bill_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir l'historique des paiements d'une facture (admin seulement)\"\"\"\n    bill = db.query(Bill).filter(Bill.id == bill_id).first()\n    if not bill:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "detail": "server.routers.payment",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_payments",
+        "kind": 2,
+        "importPath": "server.routers.payment",
+        "description": "server.routers.payment",
+        "peekOfCode": "def get_all_payments(\n    skip: int = 0,\n    limit: int = 100,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir tous les paiements (admin seulement)\"\"\"\n    payments = db.query(Payment).offset(skip).limit(limit).all()\n    return payments\n@router.get(\"/{payment_id}\", response_model=PaymentResponse)",
+        "detail": "server.routers.payment",
+        "documentation": {}
+    },
+    {
+        "label": "get_payment_by_id",
+        "kind": 2,
+        "importPath": "server.routers.payment",
+        "description": "server.routers.payment",
+        "peekOfCode": "def get_payment_by_id(\n    payment_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir un paiement par son ID (admin seulement)\"\"\"\n    payment = db.query(Payment).filter(Payment.id == payment_id).first()\n    if not payment:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "detail": "server.routers.payment",
+        "documentation": {}
+    },
+    {
+        "label": "update_payment",
+        "kind": 2,
+        "importPath": "server.routers.payment",
+        "description": "server.routers.payment",
+        "peekOfCode": "def update_payment(\n    payment_id: int,\n    payment_data: PaymentUpdate,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Mettre à jour un paiement (admin seulement)\"\"\"\n    payment = db.query(Payment).filter(Payment.id == payment_id).first()\n    if not payment:\n        raise HTTPException(",
+        "detail": "server.routers.payment",
+        "documentation": {}
+    },
+    {
+        "label": "delete_payment",
+        "kind": 2,
+        "importPath": "server.routers.payment",
+        "description": "server.routers.payment",
+        "peekOfCode": "def delete_payment(\n    payment_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Supprimer un paiement (admin seulement)\"\"\"\n    payment = db.query(Payment).filter(Payment.id == payment_id).first()\n    if not payment:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "detail": "server.routers.payment",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "server.routers.payment",
+        "description": "server.routers.payment",
+        "peekOfCode": "router = APIRouter(prefix=\"/payment\", tags=[\"Payment\"])\n@router.post(\"/\", response_model=PaymentResponse, status_code=status.HTTP_201_CREATED)\ndef create_payment(\n    payment_data: PaymentCreate,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Créer un nouveau paiement (admin seulement)\"\"\"\n    # Vérifier si la facture existe\n    bill = db.query(Bill).filter(Bill.id == payment_data.bill_id).first()",
+        "detail": "server.routers.payment",
+        "documentation": {}
+    },
+    {
+        "label": "create_product",
+        "kind": 2,
+        "importPath": "server.routers.product",
+        "description": "server.routers.product",
+        "peekOfCode": "def create_product(\n    product_data: ProductCreate,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Créer un nouveau produit (admin seulement)\"\"\"\n    # Vérifier si la catégorie existe\n    category = db.query(Category).filter(Category.id == product_data.category_id).first()\n    if not category:\n        raise HTTPException(",
+        "detail": "server.routers.product",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_products",
+        "kind": 2,
+        "importPath": "server.routers.product",
+        "description": "server.routers.product",
+        "peekOfCode": "def get_all_products(\n    skip: int = 0,\n    limit: int = 100,\n    category_id: Optional[int] = None,\n    is_active: Optional[bool] = None,\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir tous les produits\"\"\"\n    query = db.query(Product).join(Category)\n    if category_id:",
+        "detail": "server.routers.product",
+        "documentation": {}
+    },
+    {
+        "label": "get_low_stock_products",
+        "kind": 2,
+        "importPath": "server.routers.product",
+        "description": "server.routers.product",
+        "peekOfCode": "def get_low_stock_products(\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir les produits avec un stock faible (admin seulement)\"\"\"\n    products = db.query(Product).filter(\n        Product.quantity_in_stock <= Product.minimum_stock_level\n    ).all()\n    result = []\n    for product in products:",
+        "detail": "server.routers.product",
+        "documentation": {}
+    },
+    {
+        "label": "get_product_by_id",
+        "kind": 2,
+        "importPath": "server.routers.product",
+        "description": "server.routers.product",
+        "peekOfCode": "def get_product_by_id(\n    product_id: int,\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir un produit par son ID\"\"\"\n    product = db.query(Product).filter(Product.id == product_id).first()\n    if not product:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,\n            detail=\"Produit non trouvé\"",
+        "detail": "server.routers.product",
+        "documentation": {}
+    },
+    {
+        "label": "update_product",
+        "kind": 2,
+        "importPath": "server.routers.product",
+        "description": "server.routers.product",
+        "peekOfCode": "def update_product(\n    product_id: int,\n    product_data: ProductUpdate,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Mettre à jour un produit (admin seulement)\"\"\"\n    product = db.query(Product).filter(Product.id == product_id).first()\n    if not product:\n        raise HTTPException(",
+        "detail": "server.routers.product",
+        "documentation": {}
+    },
+    {
+        "label": "update_product_stock",
+        "kind": 2,
+        "importPath": "server.routers.product",
+        "description": "server.routers.product",
+        "peekOfCode": "def update_product_stock(\n    product_id: int,\n    quantity: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Mettre à jour le stock d'un produit (admin seulement)\"\"\"\n    product = db.query(Product).filter(Product.id == product_id).first()\n    if not product:\n        raise HTTPException(",
+        "detail": "server.routers.product",
+        "documentation": {}
+    },
+    {
+        "label": "delete_product",
+        "kind": 2,
+        "importPath": "server.routers.product",
+        "description": "server.routers.product",
+        "peekOfCode": "def delete_product(\n    product_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Supprimer un produit (admin seulement)\"\"\"\n    product = db.query(Product).filter(Product.id == product_id).first()\n    if not product:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "detail": "server.routers.product",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "server.routers.product",
+        "description": "server.routers.product",
+        "peekOfCode": "router = APIRouter(prefix=\"/product\", tags=[\"Product\"])\n@router.post(\"/\", response_model=ProductResponse, status_code=status.HTTP_201_CREATED)\ndef create_product(\n    product_data: ProductCreate,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Créer un nouveau produit (admin seulement)\"\"\"\n    # Vérifier si la catégorie existe\n    category = db.query(Category).filter(Category.id == product_data.category_id).first()",
+        "detail": "server.routers.product",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_stock_alerts",
+        "kind": 2,
+        "importPath": "server.routers.stock_alert",
+        "description": "server.routers.stock_alert",
+        "peekOfCode": "def get_all_stock_alerts(\n    skip: int = 0,\n    limit: int = 100,\n    is_resolved: bool = None,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir toutes les alertes de stock (admin seulement)\"\"\"\n    query = db.query(StockAlert).join(Product)\n    if is_resolved is not None:",
+        "detail": "server.routers.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "get_unresolved_stock_alerts",
+        "kind": 2,
+        "importPath": "server.routers.stock_alert",
+        "description": "server.routers.stock_alert",
+        "peekOfCode": "def get_unresolved_stock_alerts(\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir les alertes de stock non résolues (admin seulement)\"\"\"\n    alerts = db.query(StockAlert).join(Product).filter(\n        StockAlert.is_resolved == False\n    ).order_by(StockAlert.created_at.desc()).all()\n    result = []\n    for alert in alerts:",
+        "detail": "server.routers.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "get_stock_alert_summary",
+        "kind": 2,
+        "importPath": "server.routers.stock_alert",
+        "description": "server.routers.stock_alert",
+        "peekOfCode": "def get_stock_alert_summary(\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir le résumé des alertes de stock (admin seulement)\"\"\"\n    total_alerts = db.query(StockAlert).count()\n    unresolved_alerts = db.query(StockAlert).filter(StockAlert.is_resolved == False).count()\n    resolved_alerts = db.query(StockAlert).filter(StockAlert.is_resolved == True).count()\n    critical_products = db.query(Product).filter(Product.quantity_in_stock == 0).count()\n    return StockAlertSummary(",
+        "detail": "server.routers.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "get_stock_alert_by_id",
+        "kind": 2,
+        "importPath": "server.routers.stock_alert",
+        "description": "server.routers.stock_alert",
+        "peekOfCode": "def get_stock_alert_by_id(\n    alert_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir une alerte de stock par son ID (admin seulement)\"\"\"\n    alert = db.query(StockAlert).filter(StockAlert.id == alert_id).first()\n    if not alert:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "detail": "server.routers.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "resolve_stock_alert",
+        "kind": 2,
+        "importPath": "server.routers.stock_alert",
+        "description": "server.routers.stock_alert",
+        "peekOfCode": "def resolve_stock_alert(\n    alert_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Résoudre une alerte de stock (admin seulement)\"\"\"\n    alert = db.query(StockAlert).filter(StockAlert.id == alert_id).first()\n    if not alert:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "detail": "server.routers.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "unresolve_stock_alert",
+        "kind": 2,
+        "importPath": "server.routers.stock_alert",
+        "description": "server.routers.stock_alert",
+        "peekOfCode": "def unresolve_stock_alert(\n    alert_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Marquer une alerte comme non résolue (admin seulement)\"\"\"\n    alert = db.query(StockAlert).filter(StockAlert.id == alert_id).first()\n    if not alert:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "detail": "server.routers.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "delete_stock_alert",
+        "kind": 2,
+        "importPath": "server.routers.stock_alert",
+        "description": "server.routers.stock_alert",
+        "peekOfCode": "def delete_stock_alert(\n    alert_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Supprimer une alerte de stock (admin seulement)\"\"\"\n    alert = db.query(StockAlert).filter(StockAlert.id == alert_id).first()\n    if not alert:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "detail": "server.routers.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "server.routers.stock_alert",
+        "description": "server.routers.stock_alert",
+        "peekOfCode": "router = APIRouter(prefix=\"/stock-alert\", tags=[\"Stock Alert\"])\n@router.get(\"/\", response_model=List[StockAlertWithProduct])\ndef get_all_stock_alerts(\n    skip: int = 0,\n    limit: int = 100,\n    is_resolved: bool = None,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir toutes les alertes de stock (admin seulement)\"\"\"",
+        "detail": "server.routers.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "AdminBase",
+        "kind": 6,
+        "importPath": "server.schemas.admin",
+        "description": "server.schemas.admin",
+        "peekOfCode": "class AdminBase(BaseModel):\n    username: str = Field(..., min_length=3, max_length=50)\n    email: EmailStr\n    phone_number: Optional[str] = Field(None, max_length=20)\n# Admin Create Schema (for registration)\nclass AdminCreate(AdminBase):\n    password: str = Field(..., min_length=8)\n# Admin Update Schema\nclass AdminUpdate(BaseModel):\n    username: Optional[str] = Field(None, min_length=3, max_length=50)",
+        "detail": "server.schemas.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AdminCreate",
+        "kind": 6,
+        "importPath": "server.schemas.admin",
+        "description": "server.schemas.admin",
+        "peekOfCode": "class AdminCreate(AdminBase):\n    password: str = Field(..., min_length=8)\n# Admin Update Schema\nclass AdminUpdate(BaseModel):\n    username: Optional[str] = Field(None, min_length=3, max_length=50)\n    email: Optional[EmailStr] = None\n    phone_number: Optional[str] = Field(None, max_length=20)\n    password: Optional[str] = Field(None, min_length=8)\n# Admin Login Schema\nclass AdminLogin(BaseModel):",
+        "detail": "server.schemas.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AdminUpdate",
+        "kind": 6,
+        "importPath": "server.schemas.admin",
+        "description": "server.schemas.admin",
+        "peekOfCode": "class AdminUpdate(BaseModel):\n    username: Optional[str] = Field(None, min_length=3, max_length=50)\n    email: Optional[EmailStr] = None\n    phone_number: Optional[str] = Field(None, max_length=20)\n    password: Optional[str] = Field(None, min_length=8)\n# Admin Login Schema\nclass AdminLogin(BaseModel):\n    email: EmailStr\n    password: str\n# Admin Response Schema",
+        "detail": "server.schemas.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AdminLogin",
+        "kind": 6,
+        "importPath": "server.schemas.admin",
+        "description": "server.schemas.admin",
+        "peekOfCode": "class AdminLogin(BaseModel):\n    email: EmailStr\n    password: str\n# Admin Response Schema\nclass AdminResponse(AdminBase):\n    id: int\n    created_at: datetime\n    updated_at: Optional[datetime]\n    class Config:\n        from_attributes = True",
+        "detail": "server.schemas.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AdminResponse",
+        "kind": 6,
+        "importPath": "server.schemas.admin",
+        "description": "server.schemas.admin",
+        "peekOfCode": "class AdminResponse(AdminBase):\n    id: int\n    created_at: datetime\n    updated_at: Optional[datetime]\n    class Config:\n        from_attributes = True\n# Admin with Token (after login)\nclass AdminWithToken(BaseModel):\n    admin: AdminResponse\n    access_token: str",
+        "detail": "server.schemas.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AdminWithToken",
+        "kind": 6,
+        "importPath": "server.schemas.admin",
+        "description": "server.schemas.admin",
+        "peekOfCode": "class AdminWithToken(BaseModel):\n    admin: AdminResponse\n    access_token: str\n    token_type: str = \"bearer\"",
+        "detail": "server.schemas.admin",
+        "documentation": {}
+    },
+    {
+        "label": "BillItemCreate",
+        "kind": 6,
+        "importPath": "server.schemas.bill",
+        "description": "server.schemas.bill",
+        "peekOfCode": "class BillItemCreate(BaseModel):\n    product_id: int\n    quantity: int = Field(..., gt=0)\n# Bill Item Response Schema\nclass BillItemResponse(BaseModel):\n    id: int\n    product_id: int\n    product_name: str\n    unit_price: Decimal\n    quantity: int",
+        "detail": "server.schemas.bill",
+        "documentation": {}
+    },
+    {
+        "label": "BillItemResponse",
+        "kind": 6,
+        "importPath": "server.schemas.bill",
+        "description": "server.schemas.bill",
+        "peekOfCode": "class BillItemResponse(BaseModel):\n    id: int\n    product_id: int\n    product_name: str\n    unit_price: Decimal\n    quantity: int\n    subtotal: Decimal\n    created_at: datetime\n    class Config:\n        from_attributes = True",
+        "detail": "server.schemas.bill",
+        "documentation": {}
+    },
+    {
+        "label": "BillCreate",
+        "kind": 6,
+        "importPath": "server.schemas.bill",
+        "description": "server.schemas.bill",
+        "peekOfCode": "class BillCreate(BaseModel):\n    items: List[BillItemCreate] = Field(..., min_length=1)\n# Bill Base Schema\nclass BillBase(BaseModel):\n    bill_number: str\n    total_amount: Decimal\n    total_paid: Decimal\n    total_remaining: Decimal\n    status: str  # \"paid\" or \"not paid\"\n# Bill Response Schema",
+        "detail": "server.schemas.bill",
+        "documentation": {}
+    },
+    {
+        "label": "BillBase",
+        "kind": 6,
+        "importPath": "server.schemas.bill",
+        "description": "server.schemas.bill",
+        "peekOfCode": "class BillBase(BaseModel):\n    bill_number: str\n    total_amount: Decimal\n    total_paid: Decimal\n    total_remaining: Decimal\n    status: str  # \"paid\" or \"not paid\"\n# Bill Response Schema\nclass BillResponse(BillBase):\n    id: int\n    client_id: int",
+        "detail": "server.schemas.bill",
+        "documentation": {}
+    },
+    {
+        "label": "BillResponse",
+        "kind": 6,
+        "importPath": "server.schemas.bill",
+        "description": "server.schemas.bill",
+        "peekOfCode": "class BillResponse(BillBase):\n    id: int\n    client_id: int\n    created_at: datetime\n    updated_at: Optional[datetime]\n    notification_sent: bool\n    class Config:\n        from_attributes = True\n# Bill with Items (detailed view)\nclass BillWithItems(BillResponse):",
+        "detail": "server.schemas.bill",
+        "documentation": {}
+    },
+    {
+        "label": "BillWithItems",
+        "kind": 6,
+        "importPath": "server.schemas.bill",
+        "description": "server.schemas.bill",
+        "peekOfCode": "class BillWithItems(BillResponse):\n    items: List[BillItemResponse] = []\n    class Config:\n        from_attributes = True\n# Bill with Client Info (for admin view)\nclass BillWithClient(BillWithItems):\n    client_name: str\n    client_email: str\n    client_phone: Optional[str]\n    class Config:",
+        "detail": "server.schemas.bill",
+        "documentation": {}
+    },
+    {
+        "label": "BillWithClient",
+        "kind": 6,
+        "importPath": "server.schemas.bill",
+        "description": "server.schemas.bill",
+        "peekOfCode": "class BillWithClient(BillWithItems):\n    client_name: str\n    client_email: str\n    client_phone: Optional[str]\n    class Config:\n        from_attributes = True\n# Bill Summary\nclass BillSummary(BaseModel):\n    total_bills: int\n    total_revenue: Decimal",
+        "detail": "server.schemas.bill",
+        "documentation": {}
+    },
+    {
+        "label": "BillSummary",
+        "kind": 6,
+        "importPath": "server.schemas.bill",
+        "description": "server.schemas.bill",
+        "peekOfCode": "class BillSummary(BaseModel):\n    total_bills: int\n    total_revenue: Decimal\n    total_paid: Decimal\n    total_pending: Decimal\n    paid_bills: int\n    unpaid_bills: int\n    class Config:\n        from_attributes = True",
+        "detail": "server.schemas.bill",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryBase",
+        "kind": 6,
+        "importPath": "server.schemas.category",
+        "description": "server.schemas.category",
+        "peekOfCode": "class CategoryBase(BaseModel):\n    name: str = Field(..., min_length=2, max_length=100)\n    description: Optional[str] = Field(None, max_length=500)\n# Category Create Schema\nclass CategoryCreate(CategoryBase):\n    pass\n# Category Update Schema\nclass CategoryUpdate(BaseModel):\n    name: Optional[str] = Field(None, min_length=2, max_length=100)\n    description: Optional[str] = Field(None, max_length=500)",
+        "detail": "server.schemas.category",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryCreate",
+        "kind": 6,
+        "importPath": "server.schemas.category",
+        "description": "server.schemas.category",
+        "peekOfCode": "class CategoryCreate(CategoryBase):\n    pass\n# Category Update Schema\nclass CategoryUpdate(BaseModel):\n    name: Optional[str] = Field(None, min_length=2, max_length=100)\n    description: Optional[str] = Field(None, max_length=500)\n# Category Response Schema\nclass CategoryResponse(CategoryBase):\n    id: int\n    created_at: datetime",
+        "detail": "server.schemas.category",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryUpdate",
+        "kind": 6,
+        "importPath": "server.schemas.category",
+        "description": "server.schemas.category",
+        "peekOfCode": "class CategoryUpdate(BaseModel):\n    name: Optional[str] = Field(None, min_length=2, max_length=100)\n    description: Optional[str] = Field(None, max_length=500)\n# Category Response Schema\nclass CategoryResponse(CategoryBase):\n    id: int\n    created_at: datetime\n    class Config:\n        from_attributes = True\n# Category with Product Count",
+        "detail": "server.schemas.category",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryResponse",
+        "kind": 6,
+        "importPath": "server.schemas.category",
+        "description": "server.schemas.category",
+        "peekOfCode": "class CategoryResponse(CategoryBase):\n    id: int\n    created_at: datetime\n    class Config:\n        from_attributes = True\n# Category with Product Count\nclass CategoryWithCount(CategoryResponse):\n    product_count: int = 0\n    class Config:\n        from_attributes = True",
+        "detail": "server.schemas.category",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryWithCount",
+        "kind": 6,
+        "importPath": "server.schemas.category",
+        "description": "server.schemas.category",
+        "peekOfCode": "class CategoryWithCount(CategoryResponse):\n    product_count: int = 0\n    class Config:\n        from_attributes = True",
+        "detail": "server.schemas.category",
+        "documentation": {}
+    },
+    {
+        "label": "ClientBase",
+        "kind": 6,
+        "importPath": "server.schemas.client",
+        "description": "server.schemas.client",
+        "peekOfCode": "class ClientBase(BaseModel):\n    username: str = Field(..., min_length=3, max_length=50)\n    email: EmailStr\n    phone_number: Optional[str] = Field(None, max_length=20)\n    address: Optional[str] = Field(None, max_length=255)\n    city: Optional[str] = Field(None, max_length=100)\n# Client Create Schema (for registration)\nclass ClientCreate(ClientBase):\n    password: str = Field(..., min_length=8)\n# Client Update Schema",
+        "detail": "server.schemas.client",
+        "documentation": {}
+    },
+    {
+        "label": "ClientCreate",
+        "kind": 6,
+        "importPath": "server.schemas.client",
+        "description": "server.schemas.client",
+        "peekOfCode": "class ClientCreate(ClientBase):\n    password: str = Field(..., min_length=8)\n# Client Update Schema\nclass ClientUpdate(BaseModel):\n    username: Optional[str] = Field(None, min_length=3, max_length=50)\n    email: Optional[EmailStr] = None\n    phone_number: Optional[str] = Field(None, max_length=20)\n    address: Optional[str] = Field(None, max_length=255)\n    city: Optional[str] = Field(None, max_length=100)\n    password: Optional[str] = Field(None, min_length=8)",
+        "detail": "server.schemas.client",
+        "documentation": {}
+    },
+    {
+        "label": "ClientUpdate",
+        "kind": 6,
+        "importPath": "server.schemas.client",
+        "description": "server.schemas.client",
+        "peekOfCode": "class ClientUpdate(BaseModel):\n    username: Optional[str] = Field(None, min_length=3, max_length=50)\n    email: Optional[EmailStr] = None\n    phone_number: Optional[str] = Field(None, max_length=20)\n    address: Optional[str] = Field(None, max_length=255)\n    city: Optional[str] = Field(None, max_length=100)\n    password: Optional[str] = Field(None, min_length=8)\n    is_active: Optional[bool] = None\n# Client Login Schema\nclass ClientLogin(BaseModel):",
+        "detail": "server.schemas.client",
+        "documentation": {}
+    },
+    {
+        "label": "ClientLogin",
+        "kind": 6,
+        "importPath": "server.schemas.client",
+        "description": "server.schemas.client",
+        "peekOfCode": "class ClientLogin(BaseModel):\n    email: EmailStr\n    password: str\n# Client Response Schema\nclass ClientResponse(ClientBase):\n    id: int\n    is_active: bool\n    created_at: datetime\n    updated_at: Optional[datetime]\n    class Config:",
+        "detail": "server.schemas.client",
+        "documentation": {}
+    },
+    {
+        "label": "ClientResponse",
+        "kind": 6,
+        "importPath": "server.schemas.client",
+        "description": "server.schemas.client",
+        "peekOfCode": "class ClientResponse(ClientBase):\n    id: int\n    is_active: bool\n    created_at: datetime\n    updated_at: Optional[datetime]\n    class Config:\n        from_attributes = True\n# Client with Token (after login)\nclass ClientWithToken(BaseModel):\n    client: ClientResponse",
+        "detail": "server.schemas.client",
+        "documentation": {}
+    },
+    {
+        "label": "ClientWithToken",
+        "kind": 6,
+        "importPath": "server.schemas.client",
+        "description": "server.schemas.client",
+        "peekOfCode": "class ClientWithToken(BaseModel):\n    client: ClientResponse\n    access_token: str\n    token_type: str = \"bearer\"\n# Client Summary (for admin view)\nclass ClientSummary(BaseModel):\n    id: int\n    username: str\n    email: EmailStr\n    phone_number: Optional[str]",
+        "detail": "server.schemas.client",
+        "documentation": {}
+    },
+    {
+        "label": "ClientSummary",
+        "kind": 6,
+        "importPath": "server.schemas.client",
+        "description": "server.schemas.client",
+        "peekOfCode": "class ClientSummary(BaseModel):\n    id: int\n    username: str\n    email: EmailStr\n    phone_number: Optional[str]\n    city: Optional[str]\n    total_bills: int = 0\n    total_debt: float = 0.0\n    is_active: bool\n    class Config:",
+        "detail": "server.schemas.client",
+        "documentation": {}
+    },
+    {
+        "label": "NotificationBase",
+        "kind": 6,
+        "importPath": "server.schemas.notification",
+        "description": "server.schemas.notification",
+        "peekOfCode": "class NotificationBase(BaseModel):\n    notification_type: str = Field(..., max_length=50)  # \"new_bill\", \"stock_alert\", \"payment_received\"\n    channel: str = Field(..., max_length=20)  # \"email\" or \"whatsapp\"\n    message: str = Field(..., max_length=1000)\n# Notification Create Schema\nclass NotificationCreate(NotificationBase):\n    admin_id: Optional[int] = None\n    client_id: Optional[int] = None\n    bill_id: Optional[int] = None\n    stock_alert_id: Optional[int] = None",
+        "detail": "server.schemas.notification",
+        "documentation": {}
+    },
+    {
+        "label": "NotificationCreate",
+        "kind": 6,
+        "importPath": "server.schemas.notification",
+        "description": "server.schemas.notification",
+        "peekOfCode": "class NotificationCreate(NotificationBase):\n    admin_id: Optional[int] = None\n    client_id: Optional[int] = None\n    bill_id: Optional[int] = None\n    stock_alert_id: Optional[int] = None\n# Notification Update Schema\nclass NotificationUpdate(BaseModel):\n    is_sent: bool\n    sent_at: Optional[datetime] = None\n# Notification Response Schema",
+        "detail": "server.schemas.notification",
+        "documentation": {}
+    },
+    {
+        "label": "NotificationUpdate",
+        "kind": 6,
+        "importPath": "server.schemas.notification",
+        "description": "server.schemas.notification",
+        "peekOfCode": "class NotificationUpdate(BaseModel):\n    is_sent: bool\n    sent_at: Optional[datetime] = None\n# Notification Response Schema\nclass NotificationResponse(NotificationBase):\n    id: int\n    admin_id: Optional[int]\n    client_id: Optional[int]\n    bill_id: Optional[int]\n    stock_alert_id: Optional[int]",
+        "detail": "server.schemas.notification",
+        "documentation": {}
+    },
+    {
+        "label": "NotificationResponse",
+        "kind": 6,
+        "importPath": "server.schemas.notification",
+        "description": "server.schemas.notification",
+        "peekOfCode": "class NotificationResponse(NotificationBase):\n    id: int\n    admin_id: Optional[int]\n    client_id: Optional[int]\n    bill_id: Optional[int]\n    stock_alert_id: Optional[int]\n    is_sent: bool\n    sent_at: Optional[datetime]\n    created_at: datetime\n    class Config:",
+        "detail": "server.schemas.notification",
+        "documentation": {}
+    },
+    {
+        "label": "NotificationWithDetails",
+        "kind": 6,
+        "importPath": "server.schemas.notification",
+        "description": "server.schemas.notification",
+        "peekOfCode": "class NotificationWithDetails(NotificationResponse):\n    recipient_name: Optional[str] = None\n    recipient_email: Optional[str] = None\n    recipient_phone: Optional[str] = None\n    class Config:\n        from_attributes = True\n# Notification Summary\nclass NotificationSummary(BaseModel):\n    total_notifications: int\n    sent_notifications: int",
+        "detail": "server.schemas.notification",
+        "documentation": {}
+    },
+    {
+        "label": "NotificationSummary",
+        "kind": 6,
+        "importPath": "server.schemas.notification",
+        "description": "server.schemas.notification",
+        "peekOfCode": "class NotificationSummary(BaseModel):\n    total_notifications: int\n    sent_notifications: int\n    pending_notifications: int\n    email_notifications: int\n    whatsapp_notifications: int\n    class Config:\n        from_attributes = True",
+        "detail": "server.schemas.notification",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentBase",
+        "kind": 6,
+        "importPath": "server.schemas.payment",
+        "description": "server.schemas.payment",
+        "peekOfCode": "class PaymentBase(BaseModel):\n    amount_paid: Decimal = Field(..., gt=0, decimal_places=2)\n    payment_method: Optional[str] = Field(None, max_length=50)\n    notes: Optional[str] = Field(None, max_length=500)\n    payment_date: datetime\n# Payment Create Schema\nclass PaymentCreate(PaymentBase):\n    bill_id: int\n# Payment Update Schema\nclass PaymentUpdate(BaseModel):",
+        "detail": "server.schemas.payment",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentCreate",
+        "kind": 6,
+        "importPath": "server.schemas.payment",
+        "description": "server.schemas.payment",
+        "peekOfCode": "class PaymentCreate(PaymentBase):\n    bill_id: int\n# Payment Update Schema\nclass PaymentUpdate(BaseModel):\n    amount_paid: Optional[Decimal] = Field(None, gt=0, decimal_places=2)\n    payment_method: Optional[str] = Field(None, max_length=50)\n    notes: Optional[str] = Field(None, max_length=500)\n    payment_date: Optional[datetime] = None\n# Payment Response Schema\nclass PaymentResponse(PaymentBase):",
+        "detail": "server.schemas.payment",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentUpdate",
+        "kind": 6,
+        "importPath": "server.schemas.payment",
+        "description": "server.schemas.payment",
+        "peekOfCode": "class PaymentUpdate(BaseModel):\n    amount_paid: Optional[Decimal] = Field(None, gt=0, decimal_places=2)\n    payment_method: Optional[str] = Field(None, max_length=50)\n    notes: Optional[str] = Field(None, max_length=500)\n    payment_date: Optional[datetime] = None\n# Payment Response Schema\nclass PaymentResponse(PaymentBase):\n    id: int\n    bill_id: int\n    admin_id: int",
+        "detail": "server.schemas.payment",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentResponse",
+        "kind": 6,
+        "importPath": "server.schemas.payment",
+        "description": "server.schemas.payment",
+        "peekOfCode": "class PaymentResponse(PaymentBase):\n    id: int\n    bill_id: int\n    admin_id: int\n    created_at: datetime\n    class Config:\n        from_attributes = True\n# Payment with Bill Info\nclass PaymentWithBillInfo(PaymentResponse):\n    bill_number: str",
+        "detail": "server.schemas.payment",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentWithBillInfo",
+        "kind": 6,
+        "importPath": "server.schemas.payment",
+        "description": "server.schemas.payment",
+        "peekOfCode": "class PaymentWithBillInfo(PaymentResponse):\n    bill_number: str\n    client_name: str\n    bill_total: Decimal\n    bill_remaining: Decimal\n    class Config:\n        from_attributes = True\n# Payment History for a Bill\nclass PaymentHistory(BaseModel):\n    bill_id: int",
+        "detail": "server.schemas.payment",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentHistory",
+        "kind": 6,
+        "importPath": "server.schemas.payment",
+        "description": "server.schemas.payment",
+        "peekOfCode": "class PaymentHistory(BaseModel):\n    bill_id: int\n    bill_number: str\n    total_amount: Decimal\n    total_paid: Decimal\n    total_remaining: Decimal\n    payments: list[PaymentResponse] = []\n    class Config:\n        from_attributes = True",
+        "detail": "server.schemas.payment",
+        "documentation": {}
+    },
+    {
+        "label": "ProductBase",
+        "kind": 6,
+        "importPath": "server.schemas.product",
+        "description": "server.schemas.product",
+        "peekOfCode": "class ProductBase(BaseModel):\n    name: str = Field(..., min_length=2, max_length=200)\n    description: Optional[str] = Field(None, max_length=1000)\n    price: Decimal = Field(..., gt=0, decimal_places=2)\n    quantity_in_stock: int = Field(..., ge=0)\n    minimum_stock_level: int = Field(default=10, ge=0)\n    image_url: Optional[str] = Field(None, max_length=500)\n    category_id: int\n    is_active: bool = True\n# Product Create Schema",
+        "detail": "server.schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "ProductCreate",
+        "kind": 6,
+        "importPath": "server.schemas.product",
+        "description": "server.schemas.product",
+        "peekOfCode": "class ProductCreate(ProductBase):\n    pass\n# Product Update Schema\nclass ProductUpdate(BaseModel):\n    name: Optional[str] = Field(None, min_length=2, max_length=200)\n    description: Optional[str] = Field(None, max_length=1000)\n    price: Optional[Decimal] = Field(None, gt=0, decimal_places=2)\n    quantity_in_stock: Optional[int] = Field(None, ge=0)\n    minimum_stock_level: Optional[int] = Field(None, ge=0)\n    image_url: Optional[str] = Field(None, max_length=500)",
+        "detail": "server.schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "ProductUpdate",
+        "kind": 6,
+        "importPath": "server.schemas.product",
+        "description": "server.schemas.product",
+        "peekOfCode": "class ProductUpdate(BaseModel):\n    name: Optional[str] = Field(None, min_length=2, max_length=200)\n    description: Optional[str] = Field(None, max_length=1000)\n    price: Optional[Decimal] = Field(None, gt=0, decimal_places=2)\n    quantity_in_stock: Optional[int] = Field(None, ge=0)\n    minimum_stock_level: Optional[int] = Field(None, ge=0)\n    image_url: Optional[str] = Field(None, max_length=500)\n    category_id: Optional[int] = None\n    is_active: Optional[bool] = None\n# Product Response Schema",
+        "detail": "server.schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "ProductResponse",
+        "kind": 6,
+        "importPath": "server.schemas.product",
+        "description": "server.schemas.product",
+        "peekOfCode": "class ProductResponse(ProductBase):\n    id: int\n    admin_id: int\n    created_at: datetime\n    updated_at: Optional[datetime]\n    class Config:\n        from_attributes = True\n# Product with Category Name\nclass ProductWithCategory(ProductResponse):\n    category_name: str",
+        "detail": "server.schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "ProductWithCategory",
+        "kind": 6,
+        "importPath": "server.schemas.product",
+        "description": "server.schemas.product",
+        "peekOfCode": "class ProductWithCategory(ProductResponse):\n    category_name: str\n    class Config:\n        from_attributes = True\n# Product Stock Status\nclass ProductStockStatus(BaseModel):\n    id: int\n    name: str\n    quantity_in_stock: int\n    minimum_stock_level: int",
+        "detail": "server.schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "ProductStockStatus",
+        "kind": 6,
+        "importPath": "server.schemas.product",
+        "description": "server.schemas.product",
+        "peekOfCode": "class ProductStockStatus(BaseModel):\n    id: int\n    name: str\n    quantity_in_stock: int\n    minimum_stock_level: int\n    is_low_stock: bool\n    stock_percentage: float\n    class Config:\n        from_attributes = True",
+        "detail": "server.schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlertBase",
+        "kind": 6,
+        "importPath": "server.schemas.stock_alert",
+        "description": "server.schemas.stock_alert",
+        "peekOfCode": "class StockAlertBase(BaseModel):\n    product_id: int\n    alert_type: str = Field(default=\"low_stock\", max_length=50)\n    message: str = Field(..., max_length=500)\n# Stock Alert Create Schema\nclass StockAlertCreate(StockAlertBase):\n    pass\n# Stock Alert Update Schema\nclass StockAlertUpdate(BaseModel):\n    is_resolved: bool",
+        "detail": "server.schemas.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlertCreate",
+        "kind": 6,
+        "importPath": "server.schemas.stock_alert",
+        "description": "server.schemas.stock_alert",
+        "peekOfCode": "class StockAlertCreate(StockAlertBase):\n    pass\n# Stock Alert Update Schema\nclass StockAlertUpdate(BaseModel):\n    is_resolved: bool\n    resolved_at: Optional[datetime] = None\n# Stock Alert Response Schema\nclass StockAlertResponse(StockAlertBase):\n    id: int\n    is_resolved: bool",
+        "detail": "server.schemas.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlertUpdate",
+        "kind": 6,
+        "importPath": "server.schemas.stock_alert",
+        "description": "server.schemas.stock_alert",
+        "peekOfCode": "class StockAlertUpdate(BaseModel):\n    is_resolved: bool\n    resolved_at: Optional[datetime] = None\n# Stock Alert Response Schema\nclass StockAlertResponse(StockAlertBase):\n    id: int\n    is_resolved: bool\n    created_at: datetime\n    resolved_at: Optional[datetime]\n    class Config:",
+        "detail": "server.schemas.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlertResponse",
+        "kind": 6,
+        "importPath": "server.schemas.stock_alert",
+        "description": "server.schemas.stock_alert",
+        "peekOfCode": "class StockAlertResponse(StockAlertBase):\n    id: int\n    is_resolved: bool\n    created_at: datetime\n    resolved_at: Optional[datetime]\n    class Config:\n        from_attributes = True\n# Stock Alert with Product Info\nclass StockAlertWithProduct(StockAlertResponse):\n    product_name: str",
+        "detail": "server.schemas.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlertWithProduct",
+        "kind": 6,
+        "importPath": "server.schemas.stock_alert",
+        "description": "server.schemas.stock_alert",
+        "peekOfCode": "class StockAlertWithProduct(StockAlertResponse):\n    product_name: str\n    quantity_in_stock: int\n    minimum_stock_level: int\n    category_name: str\n    class Config:\n        from_attributes = True\n# Stock Alert Summary\nclass StockAlertSummary(BaseModel):\n    total_alerts: int",
+        "detail": "server.schemas.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlertSummary",
+        "kind": 6,
+        "importPath": "server.schemas.stock_alert",
+        "description": "server.schemas.stock_alert",
+        "peekOfCode": "class StockAlertSummary(BaseModel):\n    total_alerts: int\n    unresolved_alerts: int\n    resolved_alerts: int\n    critical_products: int  # Products with 0 stock\n    class Config:\n        from_attributes = True",
+        "detail": "server.schemas.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "hash_password",
+        "kind": 2,
+        "importPath": "server.utils.auth",
+        "description": "server.utils.auth",
+        "peekOfCode": "def hash_password(password: str) -> str:\n    \"\"\"Hacher un mot de passe\"\"\"\n    return pwd_context.hash(password)\ndef verify_password(plain_password: str, hashed_password: str) -> bool:\n    \"\"\"Vérifier un mot de passe\"\"\"\n    return pwd_context.verify(plain_password, hashed_password)\ndef create_access_token(data: dict, expires_delta: timedelta = None) -> str:\n    \"\"\"Créer un token JWT\"\"\"\n    to_encode = data.copy()\n    if expires_delta:",
+        "detail": "server.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "kind": 2,
+        "importPath": "server.utils.auth",
+        "description": "server.utils.auth",
+        "peekOfCode": "def verify_password(plain_password: str, hashed_password: str) -> bool:\n    \"\"\"Vérifier un mot de passe\"\"\"\n    return pwd_context.verify(plain_password, hashed_password)\ndef create_access_token(data: dict, expires_delta: timedelta = None) -> str:\n    \"\"\"Créer un token JWT\"\"\"\n    to_encode = data.copy()\n    if expires_delta:\n        expire = datetime.utcnow() + expires_delta\n    else:\n        expire = datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)",
+        "detail": "server.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "kind": 2,
+        "importPath": "server.utils.auth",
+        "description": "server.utils.auth",
+        "peekOfCode": "def create_access_token(data: dict, expires_delta: timedelta = None) -> str:\n    \"\"\"Créer un token JWT\"\"\"\n    to_encode = data.copy()\n    if expires_delta:\n        expire = datetime.utcnow() + expires_delta\n    else:\n        expire = datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)\n    to_encode.update({\"exp\": expire})\n    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)\n    return encoded_jwt",
+        "detail": "server.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_user",
+        "kind": 2,
+        "importPath": "server.utils.auth",
+        "description": "server.utils.auth",
+        "peekOfCode": "def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):\n    \"\"\"Obtenir l'utilisateur actuel (admin ou client) à partir du token\"\"\"\n    credentials_exception = HTTPException(\n        status_code=status.HTTP_401_UNAUTHORIZED,\n        detail=\"Impossible de valider les identifiants\",\n        headers={\"WWW-Authenticate\": \"Bearer\"},\n    )\n    try:\n        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])\n        user_id: str = payload.get(\"sub\")",
+        "detail": "server.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_admin",
+        "kind": 2,
+        "importPath": "server.utils.auth",
+        "description": "server.utils.auth",
+        "peekOfCode": "def get_current_admin(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)) -> Admin:\n    \"\"\"Obtenir l'admin actuel (uniquement pour les routes admin)\"\"\"\n    credentials_exception = HTTPException(\n        status_code=status.HTTP_401_UNAUTHORIZED,\n        detail=\"Impossible de valider les identifiants\",\n        headers={\"WWW-Authenticate\": \"Bearer\"},\n    )\n    forbidden_exception = HTTPException(\n        status_code=status.HTTP_403_FORBIDDEN,\n        detail=\"Accès refusé. Droits administrateur requis\"",
+        "detail": "server.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_client",
+        "kind": 2,
+        "importPath": "server.utils.auth",
+        "description": "server.utils.auth",
+        "peekOfCode": "def get_current_client(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)) -> Client:\n    \"\"\"Obtenir le client actuel (uniquement pour les routes client)\"\"\"\n    credentials_exception = HTTPException(\n        status_code=status.HTTP_401_UNAUTHORIZED,\n        detail=\"Impossible de valider les identifiants\",\n        headers={\"WWW-Authenticate\": \"Bearer\"},\n    )\n    forbidden_exception = HTTPException(\n        status_code=status.HTTP_403_FORBIDDEN,\n        detail=\"Accès refusé. Vous devez être connecté en tant que client\"",
+        "detail": "server.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "server.utils.auth",
+        "description": "server.utils.auth",
+        "peekOfCode": "SECRET_KEY = \"votre_clé_secrète_très_sécurisée_changez_moi_en_production\"  # Changez ceci en production!\nALGORITHM = \"HS256\"\nACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24  # 24 heures\n# Context pour le hachage des mots de passe\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\n# OAuth2 scheme pour l'extraction du token\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\ndef hash_password(password: str) -> str:\n    \"\"\"Hacher un mot de passe\"\"\"\n    return pwd_context.hash(password)",
+        "detail": "server.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "ALGORITHM",
+        "kind": 5,
+        "importPath": "server.utils.auth",
+        "description": "server.utils.auth",
+        "peekOfCode": "ALGORITHM = \"HS256\"\nACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24  # 24 heures\n# Context pour le hachage des mots de passe\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\n# OAuth2 scheme pour l'extraction du token\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\ndef hash_password(password: str) -> str:\n    \"\"\"Hacher un mot de passe\"\"\"\n    return pwd_context.hash(password)\ndef verify_password(plain_password: str, hashed_password: str) -> bool:",
+        "detail": "server.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "ACCESS_TOKEN_EXPIRE_MINUTES",
+        "kind": 5,
+        "importPath": "server.utils.auth",
+        "description": "server.utils.auth",
+        "peekOfCode": "ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24  # 24 heures\n# Context pour le hachage des mots de passe\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\n# OAuth2 scheme pour l'extraction du token\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\ndef hash_password(password: str) -> str:\n    \"\"\"Hacher un mot de passe\"\"\"\n    return pwd_context.hash(password)\ndef verify_password(plain_password: str, hashed_password: str) -> bool:\n    \"\"\"Vérifier un mot de passe\"\"\"",
+        "detail": "server.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "pwd_context",
+        "kind": 5,
+        "importPath": "server.utils.auth",
+        "description": "server.utils.auth",
+        "peekOfCode": "pwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\n# OAuth2 scheme pour l'extraction du token\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\ndef hash_password(password: str) -> str:\n    \"\"\"Hacher un mot de passe\"\"\"\n    return pwd_context.hash(password)\ndef verify_password(plain_password: str, hashed_password: str) -> bool:\n    \"\"\"Vérifier un mot de passe\"\"\"\n    return pwd_context.verify(plain_password, hashed_password)\ndef create_access_token(data: dict, expires_delta: timedelta = None) -> str:",
+        "detail": "server.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "oauth2_scheme",
+        "kind": 5,
+        "importPath": "server.utils.auth",
+        "description": "server.utils.auth",
+        "peekOfCode": "oauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\ndef hash_password(password: str) -> str:\n    \"\"\"Hacher un mot de passe\"\"\"\n    return pwd_context.hash(password)\ndef verify_password(plain_password: str, hashed_password: str) -> bool:\n    \"\"\"Vérifier un mot de passe\"\"\"\n    return pwd_context.verify(plain_password, hashed_password)\ndef create_access_token(data: dict, expires_delta: timedelta = None) -> str:\n    \"\"\"Créer un token JWT\"\"\"\n    to_encode = data.copy()",
+        "detail": "server.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "init_db",
+        "kind": 2,
+        "importPath": "server.utils.db",
+        "description": "server.utils.db",
+        "peekOfCode": "def init_db():\n    \"\"\"Initialiser la base de données (créer toutes les tables)\"\"\"\n    print(\"🔄 Création des tables de la base de données PostgreSQL...\")\n    try:\n        Base.metadata.create_all(bind=engine)\n        print(\"✅ Tables créées avec succès!\")\n        # Afficher les tables créées\n        with engine.connect() as conn:\n            result = conn.execute(text(\"\"\"\n                SELECT table_name ",
+        "detail": "server.utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "drop_db",
+        "kind": 2,
+        "importPath": "server.utils.db",
+        "description": "server.utils.db",
+        "peekOfCode": "def drop_db():\n    \"\"\"Supprimer toutes les tables de la base de données\"\"\"\n    print(\"⚠️  Suppression de toutes les tables...\")\n    try:\n        Base.metadata.drop_all(bind=engine)\n        print(\"✅ Tables supprimées avec succès!\")\n    except Exception as e:\n        print(f\"❌ Erreur lors de la suppression des tables: {str(e)}\")\n        raise\ndef reset_db():",
+        "detail": "server.utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "reset_db",
+        "kind": 2,
+        "importPath": "server.utils.db",
+        "description": "server.utils.db",
+        "peekOfCode": "def reset_db():\n    \"\"\"Réinitialiser la base de données (supprimer et recréer toutes les tables)\"\"\"\n    print(\"🔄 Réinitialisation de la base de données PostgreSQL...\")\n    drop_db()\n    init_db()\n    print(\"✅ Base de données réinitialisée avec succès!\")\ndef check_connection():\n    \"\"\"Vérifier la connexion à la base de données PostgreSQL\"\"\"\n    print(\"🔍 Vérification de la connexion à PostgreSQL...\")\n    try:",
+        "detail": "server.utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "check_connection",
+        "kind": 2,
+        "importPath": "server.utils.db",
+        "description": "server.utils.db",
+        "peekOfCode": "def check_connection():\n    \"\"\"Vérifier la connexion à la base de données PostgreSQL\"\"\"\n    print(\"🔍 Vérification de la connexion à PostgreSQL...\")\n    try:\n        with engine.connect() as conn:\n            result = conn.execute(text(\"SELECT version();\"))\n            version = result.scalar()\n            print(f\"✅ Connexion réussie!\")\n            print(f\"📌 Version PostgreSQL: {version}\")\n            return True",
+        "detail": "server.utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "create_sample_data",
+        "kind": 2,
+        "importPath": "server.utils.db",
+        "description": "server.utils.db",
+        "peekOfCode": "def create_sample_data():\n    \"\"\"Créer des données de test (optionnel)\"\"\"\n    from sqlalchemy.orm import Session\n    from utils.auth import hash_password\n    from decimal import Decimal\n    print(\"🎲 Création de données de test...\")\n    session = Session(bind=engine)\n    try:\n        # Créer un admin de test\n        admin = Admin(",
+        "detail": "server.utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "create_bill_notification",
+        "kind": 2,
+        "importPath": "server.utils.notification_manager",
+        "description": "server.utils.notification_manager",
+        "peekOfCode": "def create_bill_notification(db: Session, bill: Bill, client: Client) -> list:\n    \"\"\"\n    Créer des notifications pour une nouvelle facture\n    Args:\n        db: Session de base de données\n        bill: Facture créée\n        client: Client qui a créé la facture\n    Returns:\n        Liste des notifications créées\n    \"\"\"",
+        "detail": "server.utils.notification_manager",
+        "documentation": {}
+    },
+    {
+        "label": "create_stock_alert_notification",
+        "kind": 2,
+        "importPath": "server.utils.notification_manager",
+        "description": "server.utils.notification_manager",
+        "peekOfCode": "def create_stock_alert_notification(db: Session, alert: StockAlert, product: Product) -> list:\n    \"\"\"\n    Créer des notifications pour une alerte de stock\n    Args:\n        db: Session de base de données\n        alert: Alerte de stock créée\n        product: Produit concerné\n    Returns:\n        Liste des notifications créées\n    \"\"\"",
+        "detail": "server.utils.notification_manager",
+        "documentation": {}
+    },
+    {
+        "label": "create_payment_notification",
+        "kind": 2,
+        "importPath": "server.utils.notification_manager",
+        "description": "server.utils.notification_manager",
+        "peekOfCode": "def create_payment_notification(db: Session, payment, bill: Bill, client: Client, admin: Admin) -> list:\n    \"\"\"\n    Créer des notifications pour un nouveau paiement\n    Args:\n        db: Session de base de données\n        payment: Paiement créé\n        bill: Facture concernée\n        client: Client qui paye\n        admin: Admin qui enregistre le paiement\n    Returns:",
+        "detail": "server.utils.notification_manager",
+        "documentation": {}
+    },
+    {
+        "label": "send_email_notification",
+        "kind": 2,
+        "importPath": "server.utils.notification_manager",
+        "description": "server.utils.notification_manager",
+        "peekOfCode": "def send_email_notification(to_email: str, subject: str, message: str) -> bool:\n    \"\"\"\n    Envoyer une notification par email\n    Args:\n        to_email: Email du destinataire\n        subject: Sujet de l'email\n        message: Corps du message\n    Returns:\n        True si envoyé avec succès, False sinon\n    \"\"\"",
+        "detail": "server.utils.notification_manager",
+        "documentation": {}
+    },
+    {
+        "label": "send_whatsapp_notification",
+        "kind": 2,
+        "importPath": "server.utils.notification_manager",
+        "description": "server.utils.notification_manager",
+        "peekOfCode": "def send_whatsapp_notification(to_phone: str, message: str) -> bool:\n    \"\"\"\n    Envoyer une notification par WhatsApp (via Twilio)\n    Args:\n        to_phone: Numéro de téléphone du destinataire (format: +213XXXXXXXXX)\n        message: Message à envoyer\n    Returns:\n        True si envoyé avec succès, False sinon\n    \"\"\"\n    try:",
+        "detail": "server.utils.notification_manager",
+        "documentation": {}
+    },
+    {
+        "label": "send_pending_notifications",
+        "kind": 2,
+        "importPath": "server.utils.notification_manager",
+        "description": "server.utils.notification_manager",
+        "peekOfCode": "def send_pending_notifications(db: Session) -> dict:\n    \"\"\"\n    Envoyer toutes les notifications en attente\n    Args:\n        db: Session de base de données\n    Returns:\n        dict avec les statistiques d'envoi\n    \"\"\"\n    from datetime import datetime\n    # Récupérer les notifications en attente",
+        "detail": "server.utils.notification_manager",
+        "documentation": {}
+    },
+    {
+        "label": "SMTP_SERVER",
+        "kind": 5,
+        "importPath": "server.utils.notification_manager",
+        "description": "server.utils.notification_manager",
+        "peekOfCode": "SMTP_SERVER = \"smtp.gmail.com\"\nSMTP_PORT = 587\nSMTP_USERNAME = \"votre_email@gmail.com\"  # Changez ceci\nSMTP_PASSWORD = \"votre_mot_de_passe\"      # Changez ceci\nFROM_EMAIL = \"votre_email@gmail.com\"       # Changez ceci\n# Configuration WhatsApp API (exemple avec Twilio)\nWHATSAPP_API_URL = \"https://api.twilio.com/2010-04-01/Accounts/{account_sid}/Messages.json\"\nTWILIO_ACCOUNT_SID = \"votre_account_sid\"   # Changez ceci\nTWILIO_AUTH_TOKEN = \"votre_auth_token\"     # Changez ceci\nTWILIO_WHATSAPP_NUMBER = \"whatsapp:+14155238886\"  # Numéro Twilio WhatsApp",
+        "detail": "server.utils.notification_manager",
+        "documentation": {}
+    },
+    {
+        "label": "SMTP_PORT",
+        "kind": 5,
+        "importPath": "server.utils.notification_manager",
+        "description": "server.utils.notification_manager",
+        "peekOfCode": "SMTP_PORT = 587\nSMTP_USERNAME = \"votre_email@gmail.com\"  # Changez ceci\nSMTP_PASSWORD = \"votre_mot_de_passe\"      # Changez ceci\nFROM_EMAIL = \"votre_email@gmail.com\"       # Changez ceci\n# Configuration WhatsApp API (exemple avec Twilio)\nWHATSAPP_API_URL = \"https://api.twilio.com/2010-04-01/Accounts/{account_sid}/Messages.json\"\nTWILIO_ACCOUNT_SID = \"votre_account_sid\"   # Changez ceci\nTWILIO_AUTH_TOKEN = \"votre_auth_token\"     # Changez ceci\nTWILIO_WHATSAPP_NUMBER = \"whatsapp:+14155238886\"  # Numéro Twilio WhatsApp\ndef create_bill_notification(db: Session, bill: Bill, client: Client) -> list:",
+        "detail": "server.utils.notification_manager",
+        "documentation": {}
+    },
+    {
+        "label": "SMTP_USERNAME",
+        "kind": 5,
+        "importPath": "server.utils.notification_manager",
+        "description": "server.utils.notification_manager",
+        "peekOfCode": "SMTP_USERNAME = \"votre_email@gmail.com\"  # Changez ceci\nSMTP_PASSWORD = \"votre_mot_de_passe\"      # Changez ceci\nFROM_EMAIL = \"votre_email@gmail.com\"       # Changez ceci\n# Configuration WhatsApp API (exemple avec Twilio)\nWHATSAPP_API_URL = \"https://api.twilio.com/2010-04-01/Accounts/{account_sid}/Messages.json\"\nTWILIO_ACCOUNT_SID = \"votre_account_sid\"   # Changez ceci\nTWILIO_AUTH_TOKEN = \"votre_auth_token\"     # Changez ceci\nTWILIO_WHATSAPP_NUMBER = \"whatsapp:+14155238886\"  # Numéro Twilio WhatsApp\ndef create_bill_notification(db: Session, bill: Bill, client: Client) -> list:\n    \"\"\"",
+        "detail": "server.utils.notification_manager",
+        "documentation": {}
+    },
+    {
+        "label": "SMTP_PASSWORD",
+        "kind": 5,
+        "importPath": "server.utils.notification_manager",
+        "description": "server.utils.notification_manager",
+        "peekOfCode": "SMTP_PASSWORD = \"votre_mot_de_passe\"      # Changez ceci\nFROM_EMAIL = \"votre_email@gmail.com\"       # Changez ceci\n# Configuration WhatsApp API (exemple avec Twilio)\nWHATSAPP_API_URL = \"https://api.twilio.com/2010-04-01/Accounts/{account_sid}/Messages.json\"\nTWILIO_ACCOUNT_SID = \"votre_account_sid\"   # Changez ceci\nTWILIO_AUTH_TOKEN = \"votre_auth_token\"     # Changez ceci\nTWILIO_WHATSAPP_NUMBER = \"whatsapp:+14155238886\"  # Numéro Twilio WhatsApp\ndef create_bill_notification(db: Session, bill: Bill, client: Client) -> list:\n    \"\"\"\n    Créer des notifications pour une nouvelle facture",
+        "detail": "server.utils.notification_manager",
+        "documentation": {}
+    },
+    {
+        "label": "FROM_EMAIL",
+        "kind": 5,
+        "importPath": "server.utils.notification_manager",
+        "description": "server.utils.notification_manager",
+        "peekOfCode": "FROM_EMAIL = \"votre_email@gmail.com\"       # Changez ceci\n# Configuration WhatsApp API (exemple avec Twilio)\nWHATSAPP_API_URL = \"https://api.twilio.com/2010-04-01/Accounts/{account_sid}/Messages.json\"\nTWILIO_ACCOUNT_SID = \"votre_account_sid\"   # Changez ceci\nTWILIO_AUTH_TOKEN = \"votre_auth_token\"     # Changez ceci\nTWILIO_WHATSAPP_NUMBER = \"whatsapp:+14155238886\"  # Numéro Twilio WhatsApp\ndef create_bill_notification(db: Session, bill: Bill, client: Client) -> list:\n    \"\"\"\n    Créer des notifications pour une nouvelle facture\n    Args:",
+        "detail": "server.utils.notification_manager",
+        "documentation": {}
+    },
+    {
+        "label": "WHATSAPP_API_URL",
+        "kind": 5,
+        "importPath": "server.utils.notification_manager",
+        "description": "server.utils.notification_manager",
+        "peekOfCode": "WHATSAPP_API_URL = \"https://api.twilio.com/2010-04-01/Accounts/{account_sid}/Messages.json\"\nTWILIO_ACCOUNT_SID = \"votre_account_sid\"   # Changez ceci\nTWILIO_AUTH_TOKEN = \"votre_auth_token\"     # Changez ceci\nTWILIO_WHATSAPP_NUMBER = \"whatsapp:+14155238886\"  # Numéro Twilio WhatsApp\ndef create_bill_notification(db: Session, bill: Bill, client: Client) -> list:\n    \"\"\"\n    Créer des notifications pour une nouvelle facture\n    Args:\n        db: Session de base de données\n        bill: Facture créée",
+        "detail": "server.utils.notification_manager",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_ACCOUNT_SID",
+        "kind": 5,
+        "importPath": "server.utils.notification_manager",
+        "description": "server.utils.notification_manager",
+        "peekOfCode": "TWILIO_ACCOUNT_SID = \"votre_account_sid\"   # Changez ceci\nTWILIO_AUTH_TOKEN = \"votre_auth_token\"     # Changez ceci\nTWILIO_WHATSAPP_NUMBER = \"whatsapp:+14155238886\"  # Numéro Twilio WhatsApp\ndef create_bill_notification(db: Session, bill: Bill, client: Client) -> list:\n    \"\"\"\n    Créer des notifications pour une nouvelle facture\n    Args:\n        db: Session de base de données\n        bill: Facture créée\n        client: Client qui a créé la facture",
+        "detail": "server.utils.notification_manager",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_AUTH_TOKEN",
+        "kind": 5,
+        "importPath": "server.utils.notification_manager",
+        "description": "server.utils.notification_manager",
+        "peekOfCode": "TWILIO_AUTH_TOKEN = \"votre_auth_token\"     # Changez ceci\nTWILIO_WHATSAPP_NUMBER = \"whatsapp:+14155238886\"  # Numéro Twilio WhatsApp\ndef create_bill_notification(db: Session, bill: Bill, client: Client) -> list:\n    \"\"\"\n    Créer des notifications pour une nouvelle facture\n    Args:\n        db: Session de base de données\n        bill: Facture créée\n        client: Client qui a créé la facture\n    Returns:",
+        "detail": "server.utils.notification_manager",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_WHATSAPP_NUMBER",
+        "kind": 5,
+        "importPath": "server.utils.notification_manager",
+        "description": "server.utils.notification_manager",
+        "peekOfCode": "TWILIO_WHATSAPP_NUMBER = \"whatsapp:+14155238886\"  # Numéro Twilio WhatsApp\ndef create_bill_notification(db: Session, bill: Bill, client: Client) -> list:\n    \"\"\"\n    Créer des notifications pour une nouvelle facture\n    Args:\n        db: Session de base de données\n        bill: Facture créée\n        client: Client qui a créé la facture\n    Returns:\n        Liste des notifications créées",
+        "detail": "server.utils.notification_manager",
+        "documentation": {}
+    },
+    {
+        "label": "check_and_create_stock_alert",
+        "kind": 2,
+        "importPath": "server.utils.stock_manager",
+        "description": "server.utils.stock_manager",
+        "peekOfCode": "def check_and_create_stock_alert(db: Session, product: Product) -> StockAlert:\n    \"\"\"\n    Vérifier le niveau de stock d'un produit et créer une alerte si nécessaire\n    Args:\n        db: Session de base de données\n        product: Produit à vérifier\n    Returns:\n        StockAlert si une alerte a été créée, sinon None\n    \"\"\"\n    # Vérifier s'il existe déjà une alerte non résolue pour ce produit",
+        "detail": "server.utils.stock_manager",
+        "documentation": {}
+    },
+    {
+        "label": "check_product_availability",
+        "kind": 2,
+        "importPath": "server.utils.stock_manager",
+        "description": "server.utils.stock_manager",
+        "peekOfCode": "def check_product_availability(db: Session, product_id: int, quantity: int) -> dict:\n    \"\"\"\n    Vérifier si un produit est disponible en quantité suffisante\n    Args:\n        db: Session de base de données\n        product_id: ID du produit\n        quantity: Quantité demandée\n    Returns:\n        dict avec 'available' (bool) et 'message' (str)\n    \"\"\"",
+        "detail": "server.utils.stock_manager",
+        "documentation": {}
+    },
+    {
+        "label": "update_product_stock",
+        "kind": 2,
+        "importPath": "server.utils.stock_manager",
+        "description": "server.utils.stock_manager",
+        "peekOfCode": "def update_product_stock(db: Session, product_id: int, quantity_change: int, operation: str = \"decrease\") -> Product:\n    \"\"\"\n    Mettre à jour le stock d'un produit\n    Args:\n        db: Session de base de données\n        product_id: ID du produit\n        quantity_change: Quantité à ajouter ou retirer\n        operation: \"increase\" pour ajouter, \"decrease\" pour retirer\n    Returns:\n        Product mis à jour",
+        "detail": "server.utils.stock_manager",
+        "documentation": {}
+    },
+    {
+        "label": "get_low_stock_products",
+        "kind": 2,
+        "importPath": "server.utils.stock_manager",
+        "description": "server.utils.stock_manager",
+        "peekOfCode": "def get_low_stock_products(db: Session, limit: int = None) -> list:\n    \"\"\"\n    Obtenir la liste des produits avec un stock faible\n    Args:\n        db: Session de base de données\n        limit: Nombre maximum de produits à retourner (optionnel)\n    Returns:\n        Liste de produits avec stock faible\n    \"\"\"\n    query = db.query(Product).filter(",
+        "detail": "server.utils.stock_manager",
+        "documentation": {}
+    },
+    {
+        "label": "get_out_of_stock_products",
+        "kind": 2,
+        "importPath": "server.utils.stock_manager",
+        "description": "server.utils.stock_manager",
+        "peekOfCode": "def get_out_of_stock_products(db: Session) -> list:\n    \"\"\"\n    Obtenir la liste des produits en rupture de stock\n    Args:\n        db: Session de base de données\n    Returns:\n        Liste de produits en rupture de stock\n    \"\"\"\n    return db.query(Product).filter(\n        Product.quantity_in_stock == 0,",
+        "detail": "server.utils.stock_manager",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_stock_value",
+        "kind": 2,
+        "importPath": "server.utils.stock_manager",
+        "description": "server.utils.stock_manager",
+        "peekOfCode": "def calculate_stock_value(db: Session) -> dict:\n    \"\"\"\n    Calculer la valeur totale du stock\n    Args:\n        db: Session de base de données\n    Returns:\n        dict avec les statistiques de stock\n    \"\"\"\n    from sqlalchemy import func\n    from decimal import Decimal",
+        "detail": "server.utils.stock_manager",
+        "documentation": {}
+    },
+    {
+        "label": "initila_data",
+        "kind": 2,
+        "importPath": "server.main",
+        "description": "server.main",
+        "peekOfCode": "def initila_data():\n    create_sample_data()\n    return {\n        \"status\": \"seccess initialed\",\n        \"message\": \"initialed successfully\"\n    }\n# Gestionnaire d'erreurs global\n@app.exception_handler(HTTPException)\nasync def http_exception_handler(request, exc):\n    return JSONResponse(",
+        "detail": "server.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "server.main",
+        "description": "server.main",
+        "peekOfCode": "app = FastAPI(\n    title=\"Système de Gestion E-Commerce\",\n    description=\"\"\"\n    ## API de gestion e-commerce avec FastAPI\n    ### Fonctionnalités principales:\n    * **Gestion des administrateurs** - Inscription, connexion, gestion des admins\n    * **Gestion des clients** - Inscription, connexion, profils clients\n    * **Gestion des catégories** - CRUD complet des catégories de produits\n    * **Gestion des produits** - CRUD, gestion de stock, alertes automatiques\n    * **Gestion des factures** - Création, consultation, suivi des paiements",
+        "detail": "server.main",
+        "documentation": {}
+    }
+]
