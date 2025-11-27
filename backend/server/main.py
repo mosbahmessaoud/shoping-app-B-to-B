@@ -13,13 +13,16 @@ from routers import (
     payment_router,
     stock_alert_router,
     notification_router,
-    auth_router
+    auth_router,
+    otp_rout
 
 )
 
 # Import de l'initialisation de la base de données
-from server.models import test_connection
-from utils.db import create_sample_data, init_db
+from utils.db import create_sample_data, init_db, test_connection
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 # Événement de démarrage pour initialiser la base de données
 
@@ -41,17 +44,17 @@ async def lifespan(app: FastAPI):
     print("=" * 60)
     print("🚀 Starting E-Commerce API...")
     print("=" * 60)
-    
+
     # Test database connection
     if test_connection():
         print("📊 Database migrations managed by Alembic")
         print("💡 Run 'alembic upgrade head' to apply migrations")
     else:
         print("⚠️  Database connection failed, but continuing...")
-    
+
     print("=" * 60)
     yield
-    
+
     # Shutdown
     print("=" * 60)
     print("👋 Shutting down E-Commerce API...")
@@ -173,6 +176,8 @@ app.include_router(payment_router)
 app.include_router(stock_alert_router)
 app.include_router(notification_router)
 app.include_router(auth_router)
+app.include_router(otp_rout)
+
 
 # Point d'entrée pour exécuter l'application
 if __name__ == "__main__":

@@ -3,10 +3,10 @@ from sqlalchemy.orm import Session
 from sqlalchemy import func
 from typing import List
 from datetime import datetime
-from models import get_db
 from models.stock_alert import StockAlert
 from models.product import Product
 from schemas.stock_alert import StockAlertResponse, StockAlertWithProduct, StockAlertUpdate, StockAlertSummary
+from utils.db import get_db
 from utils.auth import get_current_admin
 
 router = APIRouter(prefix="/stock-alert", tags=["Stock Alert"])

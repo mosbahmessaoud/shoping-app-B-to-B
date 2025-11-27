@@ -1,3 +1,5 @@
+
+# server\routers\__init__.py
 from .admin import router as admin_router
 from .client import router as client_router
 from .category import router as category_router
@@ -7,6 +9,7 @@ from .payment import router as payment_router
 from .stock_alert import router as stock_alert_router
 from .notification import router as notification_router
 from .auth import router as auth_router
+from .otp import router as otp_rout
 
 __all__ = [
     "admin_router",
@@ -17,6 +20,7 @@ __all__ = [
     "payment_router",
     "stock_alert_router",
     "notification_router",
-    "auth_router"
+    "auth_router",
+    "otp_rout"
 
 ]

@@ -2,13 +2,59 @@ from pydoc import cli
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from typing import List
-from models import get_db
 from models.admin import Admin
 from schemas.admin import AdminCreate, AdminUpdate, AdminLogin, AdminResponse, AdminWithToken
 from models.client import Client
+from utils.db import get_db
 from utils.auth import hash_password, verify_password, create_access_token, get_current_admin
 
 router = APIRouter(prefix="/admin", tags=["Admin"])
+
+
+
+@router.post("/register", response_model=AdminWithToken, status_code=status.HTTP_201_CREATED)
+def register_admin(admin_data: AdminCreate, db: Session = Depends(get_db)):
+    """Inscription d'un nouvel administrateur"""
+    
+    # Vérifier si l'email existe déjà
+    existing_admin = db.query(Admin).filter(Admin.email == admin_data.email).first()
+    if existing_admin:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Cet email est déjà utilisé"
+        )
+    
+    # Vérifier si le nom d'utilisateur existe déjà
+    existing_username = db.query(Admin).filter(Admin.username == admin_data.username).first()
+    if existing_username:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Ce nom d'utilisateur est déjà utilisé"
+        )
+    
+    # Créer le nouvel administrateur
+    new_admin = Admin(
+        username=admin_data.username,
+        email=admin_data.email,
+        password_hash=hash_password(admin_data.password),
+        phone_number=admin_data.phone_number
+    )
+    
+    db.add(new_admin)
+    db.commit()
+    db.refresh(new_admin)
+    
+    # Créer un token d'accès pour l'administrateur nouvellement enregistré
+    access_token = create_access_token(
+        data={"sub": str(new_admin.id), "type": "admin"}
+    )
+    
+    return {
+        "admin": new_admin,
+        "access_token": access_token,
+        "token_type": "bearer"
+    }
+
 
 
 @router.post("/login", response_model=AdminWithToken)

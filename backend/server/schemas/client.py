@@ -3,6 +3,8 @@ from datetime import datetime
 from typing import Optional
 
 # Client Base Schema
+
+
 class ClientBase(BaseModel):
     username: str = Field(..., min_length=3, max_length=50)
     email: EmailStr
@@ -11,10 +13,14 @@ class ClientBase(BaseModel):
     city: Optional[str] = Field(None, max_length=100)
 
 # Client Create Schema (for registration)
+
+
 class ClientCreate(ClientBase):
     password: str = Field(..., min_length=8)
 
 # Client Update Schema
+
+
 class ClientUpdate(BaseModel):
     username: Optional[str] = Field(None, min_length=3, max_length=50)
     email: Optional[EmailStr] = None
@@ -25,11 +31,15 @@ class ClientUpdate(BaseModel):
     is_active: Optional[bool] = None
 
 # Client Login Schema
+
+
 class ClientLogin(BaseModel):
     email: EmailStr
     password: str
 
 # Client Response Schema
+
+
 class ClientResponse(ClientBase):
     id: int
     is_active: bool
@@ -40,12 +50,16 @@ class ClientResponse(ClientBase):
         from_attributes = True
 
 # Client with Token (after login)
+
+
 class ClientWithToken(BaseModel):
     client: ClientResponse
     access_token: str
     token_type: str = "bearer"
 
 # Client Summary (for admin view)
+
+
 class ClientSummary(BaseModel):
     id: int
     username: str

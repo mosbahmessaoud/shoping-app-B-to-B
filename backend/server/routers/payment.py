@@ -2,10 +2,10 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from typing import List
 from decimal import Decimal
-from models import get_db
 from models.payment import Payment
 from models.bill import Bill
 from schemas.payment import PaymentCreate, PaymentUpdate, PaymentResponse, PaymentHistory
+from utils.db import get_db
 from utils.auth import get_current_admin
 
 router = APIRouter(prefix="/payment", tags=["Payment"])

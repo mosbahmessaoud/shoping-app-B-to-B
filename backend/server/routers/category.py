@@ -2,10 +2,10 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 from typing import List
-from models import get_db
 from models.category import Category
 from models.product import Product
 from schemas.category import CategoryCreate, CategoryUpdate, CategoryResponse, CategoryWithCount
+from utils.db import get_db
 from utils.auth import get_current_admin
 
 router = APIRouter(prefix="/category", tags=["Category"])

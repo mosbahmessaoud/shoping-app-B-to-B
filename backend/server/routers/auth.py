@@ -5,11 +5,11 @@ from sys import prefix
 from fastapi import APIRouter, Depends, FastAPI, status
 from sqlalchemy.orm import Session
 
-from models import get_db
 from models.admin import Admin
 from models.client import Client
 from routers.admin import login_admin
 from schemas.admin import AdminLogin
+from utils.db import get_db
 from utils.auth import verify_password
 
 

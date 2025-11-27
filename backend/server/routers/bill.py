@@ -4,12 +4,12 @@ from sqlalchemy import func, extract
 from typing import List, Optional
 from datetime import datetime, date
 from decimal import Decimal
-from models import get_db
 from models.bill import Bill
 from models.bill_item import BillItem
 from models.product import Product
 from models.client import Client
 from schemas.bill import BillCreate, BillResponse, BillWithItems, BillWithClient, BillSummary
+from utils.db import get_db
 from utils.auth import get_current_client, get_current_admin
 from utils.stock_manager import check_and_create_stock_alert
 from utils.notification_manager import create_bill_notification

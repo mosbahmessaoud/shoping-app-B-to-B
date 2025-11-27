@@ -1,12 +1,13 @@
-from passlib.context import CryptContext
+import bcrypt
 from jose import JWTError, jwt
 from datetime import datetime, timedelta
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
-from models import get_db
 from models.admin import Admin
 from models.client import Client
+from utils.db import get_db
+import hashlib
 
 # Configuration de sécurité
 # Changez ceci en production!
@@ -14,21 +15,40 @@ SECRET_KEY = "votre_clé_secrète_très_sécurisée_changez_moii_enn_productionn
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24 * 20  # 24 heures
 
-# Context pour le hachage des mots de passe
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
 # OAuth2 scheme pour l'extraction du token
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 
 def hash_password(password: str) -> str:
-    """Hacher un mot de passe"""
-    return pwd_context.hash(password)
+    """
+    Hacher un mot de passe avec bcrypt.
+    Bcrypt a une limite de 72 octets, donc on pré-hache les mots de passe longs avec SHA256.
+    """
+    # Si le mot de passe dépasse 72 octets, on le pré-hache avec SHA256
+    if len(password.encode('utf-8')) > 72:
+        password = hashlib.sha256(password.encode('utf-8')).hexdigest()
+    
+    # Hacher avec bcrypt
+    password_bytes = password.encode('utf-8')
+    salt = bcrypt.gensalt()
+    hashed = bcrypt.hashpw(password_bytes, salt)
+    
+    return hashed.decode('utf-8')
 
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
-    """Vérifier un mot de passe"""
-    return pwd_context.verify(plain_password, hashed_password)
+    """
+    Vérifier un mot de passe.
+    Applique le même pré-hachage si nécessaire.
+    """
+    # Appliquer le même pré-hachage si le mot de passe est long
+    if len(plain_password.encode('utf-8')) > 72:
+        plain_password = hashlib.sha256(plain_password.encode('utf-8')).hexdigest()
+    
+    password_bytes = plain_password.encode('utf-8')
+    hashed_bytes = hashed_password.encode('utf-8')
+    
+    return bcrypt.checkpw(password_bytes, hashed_bytes)
 
 
 def create_access_token(data: dict, expires_delta: timedelta = None) -> str:

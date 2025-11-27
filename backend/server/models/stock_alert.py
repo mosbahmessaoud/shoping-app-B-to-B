@@ -1,7 +1,8 @@
 from sqlalchemy import Column, Integer, String, DateTime, Boolean, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from models import Base
+
+from utils.db import Base
 
 class StockAlert(Base):
     __tablename__ = "stock_alerts"
