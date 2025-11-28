@@ -1,0 +1,143 @@
+(venv) PS D:\DEV\shoping_app_project\backend\server> python drop_all_tables.py
+✅ Dropped notifications
+✅ Dropped stock_alerts
+✅ Dropped payments
+✅ Dropped bill_items
+✅ Dropped bills
+✅ Dropped products
+✅ Dropped categories
+✅ Dropped clients
+✅ Dropped admins
+✅ Dropped alembic_version
+
+🎉 All tables dropped! Now run: alembic revision --autogenerate -m 'Initial migration'
+(venv) PS D:\DEV\shoping_app_project\backend\server> alembic revision --autogenerate -m "Initial migration with all tables"
+☁️ Using production database: localhost:5432/Ecom_app
+🟢 Alembic using LOCAL development database
+📊 Alembic Database: postgresql://postgres:****@localhost:5432/Ecom_app
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.autogenerate.compare] Detected added table 'admins'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_admins_email' on '('email',)'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_admins_id' on '('id',)'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_admins_username' on '('username',)'
+INFO  [alembic.autogenerate.compare] Detected added table 'categories'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_categories_id' on '('id',)'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_categories_name' on '('name',)'
+INFO  [alembic.autogenerate.compare] Detected added table 'clients'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_clients_email' on '('email',)'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_clients_id' on '('id',)'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_clients_username' on '('username',)'
+INFO  [alembic.autogenerate.compare] Detected added table 'bills'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_bills_bill_number' on '('bill_number',)'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_bills_id' on '('id',)'
+INFO  [alembic.autogenerate.compare] Detected added table 'products'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_products_id' on '('id',)'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_products_name' on '('name',)'
+INFO  [alembic.autogenerate.compare] Detected added table 'bill_items'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_bill_items_id' on '('id',)'
+INFO  [alembic.autogenerate.compare] Detected added table 'payments'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_payments_id' on '('id',)'
+INFO  [alembic.autogenerate.compare] Detected added table 'stock_alerts'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_stock_alerts_id' on '('id',)'
+INFO  [alembic.autogenerate.compare] Detected added table 'notifications'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_notifications_id' on '('id',)'
+Generating D:\DEV\shoping_app_project\backend\server\alembic\versions\7b244ded9db7_initial_migration_with_all_tables.py ...  done
+(venv) PS D:\DEV\shoping_app_project\backend\server> alembic upgrade head
+☁️ Using production database: localhost:5432/Ecom_app
+🟢 Alembic using LOCAL development database
+📊 Alembic Database: postgresql://postgres:****@localhost:5432/Ecom_app
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> 7b244ded9db7, Initial migration with all tables
+(venv) PS D:\DEV\shoping_app_project\backend\server> alembic current
+☁️ Using production database: localhost:5432/Ecom_app
+🟢 Alembic using LOCAL development database
+📊 Alembic Database: postgresql://postgres:****@localhost:5432/Ecom_app
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+7b244ded9db7 (head)
+(venv) PS D:\DEV\shoping_app_project\backend\server> python drop_all_tables.py
+✅ Dropped notifications
+✅ Dropped stock_alerts
+✅ Dropped payments
+✅ Dropped bill_items
+✅ Dropped bills
+✅ Dropped products
+✅ Dropped categories
+✅ Dropped clients
+✅ Dropped admins
+✅ Dropped alembic_version
+
+🎉 All tables dropped! Now run: alembic revision --autogenerate -m 'Initial migration'
+(venv) PS D:\DEV\shoping_app_project\backend\server> alembic revision --autogenerate -m "Initial migration with all tables v2 "
+☁️ Using production database: localhost:5432/Ecom_app
+🟢 Alembic using LOCAL development database
+📊 Alembic Database: postgresql://postgres:****@localhost:5432/Ecom_app
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.autogenerate.compare] Detected added table 'admins'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_admins_email' on '('email',)'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_admins_id' on '('id',)'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_admins_username' on '('username',)'
+INFO  [alembic.autogenerate.compare] Detected added table 'categories'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_categories_id' on '('id',)'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_categories_name' on '('name',)'
+INFO  [alembic.autogenerate.compare] Detected added table 'clients'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_clients_email' on '('email',)'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_clients_id' on '('id',)'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_clients_username' on '('username',)'
+INFO  [alembic.autogenerate.compare] Detected added table 'otps'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_otps_email' on '('email',)'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_otps_id' on '('id',)'
+INFO  [alembic.autogenerate.compare] Detected added table 'bills'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_bills_bill_number' on '('bill_number',)'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_bills_id' on '('id',)'
+INFO  [alembic.autogenerate.compare] Detected added table 'products'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_products_id' on '('id',)'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_products_name' on '('name',)'
+INFO  [alembic.autogenerate.compare] Detected added table 'bill_items'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_bill_items_id' on '('id',)'
+INFO  [alembic.autogenerate.compare] Detected added table 'payments'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_payments_id' on '('id',)'
+INFO  [alembic.autogenerate.compare] Detected added table 'stock_alerts'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_stock_alerts_id' on '('id',)'
+INFO  [alembic.autogenerate.compare] Detected added table 'notifications'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_notifications_id' on '('id',)'
+Generating D:\DEV\shoping_app_project\backend\server\alembic\versions\9e9b1ffd9c39_initial_migration_with_all_tables_v2.py ...  done
+(venv) PS D:\DEV\shoping_app_project\backend\server> alembic upgrade head
+☁️ Using production database: localhost:5432/Ecom_app
+🟢 Alembic using LOCAL development database
+📊 Alembic Database: postgresql://postgres:****@localhost:5432/Ecom_app
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> 9e9b1ffd9c39, Initial migration with all tables v2
+(venv) PS D:\DEV\shoping_app_project\backend\server> alembic current
+☁️ Using production database: localhost:5432/Ecom_app
+🟢 Alembic using LOCAL development database
+📊 Alembic Database: postgresql://postgres:****@localhost:5432/Ecom_app
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+9e9b1ffd9c39 (head)
+(venv) PS D:\DEV\shoping_app_project\backend\server> alembic revision --autogenerate -m "updated product table and routers  "  
+☁️ Using production database: localhost:5432/Ecom_app
+🟢 Alembic using LOCAL development database
+📊 Alembic Database: postgresql://postgres:****@localhost:5432/Ecom_app
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.ddl.postgresql] Detected sequence named 'payments_id_seq' as owned by integer column 'payments(id)', assuming SERIAL and omitting
+INFO  [alembic.ddl.postgresql] Detected sequence named 'products_id_seq' as owned by integer column 'products(id)', assuming SERIAL and omitting
+INFO  [alembic.ddl.postgresql] Detected sequence named 'bill_items_id_seq' as owned by integer column 'bill_items(id)', assuming SERIAL and omitting
+INFO  [alembic.ddl.postgresql] Detected sequence named 'notifications_id_seq' as owned by integer column 'notifications(id)', assuming SERIAL and omitting
+INFO  [alembic.ddl.postgresql] Detected sequence named 'otps_id_seq' as owned by integer column 'otps(id)', assuming SERIAL and omitting
+INFO  [alembic.autogenerate.compare] Detected added column 'products.image_urls'
+INFO  [alembic.autogenerate.compare] Detected removed column 'products.image_url'
+Generating D:\DEV\shoping_app_project\backend\server\alembic\versions\944b72c992ec_updated_product_table_and_routers.py ...  done
+(venv) PS D:\DEV\shoping_app_project\backend\server> alembic upgrade head
+☁️ Using production database: localhost:5432/Ecom_app
+🟢 Alembic using LOCAL development database
+📊 Alembic Database: postgresql://postgres:****@localhost:5432/Ecom_app
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade 9e9b1ffd9c39 -> 944b72c992ec, updated product table and routers  
+(venv) PS D:\DEV\shoping_app_project\backend\server> 

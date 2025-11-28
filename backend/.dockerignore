@@ -1,19 +1,55 @@
-cat > .dockerignore << 'EOF'
-__pycache__
-*.pyc
-*.pyo
-*.pyd
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
 .Python
-env/
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
 venv/
+env/
+ENV/
 .venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment files
 .env
-.git
-.gitignore
-*.md
-.vscode
-.idea
-alembic/versions/*.pyc
+.env.local
+.env.*.local
+
+# Database
 *.db
+*.sqlite
+*.sqlite3
+
+# Logs
 *.log
-EOF
+logs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+README.md
+docs/
+
+# Alembic
+alembic.ini.example

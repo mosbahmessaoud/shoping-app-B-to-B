@@ -1,5 +1,262 @@
 [
     {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "sqlalchemy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "engine_from_config",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "pool",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "Column",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -288,6 +545,46 @@
         "documentation": {}
     },
     {
+        "label": "Boolean",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "Numeric",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -416,7 +713,47 @@
         "documentation": {}
     },
     {
+        "label": "extract",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "func",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "extract",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "and_",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "cast",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Date",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -433,6 +770,22 @@
     },
     {
         "label": "func",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -448,6 +801,665 @@
         "documentation": {}
     },
     {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "text",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "text",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "fileConfig",
+        "importPath": "logging.config",
+        "description": "logging.config",
+        "isExtraImport": true,
+        "detail": "logging.config",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "prefix",
+        "importPath": "sys",
+        "description": "sys",
+        "isExtraImport": true,
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "create_sample_data",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "init_db",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "test_connection",
+        "importPath": "utils.db",
+        "description": "utils.db",
+        "isExtraImport": true,
+        "detail": "utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "Admin",
+        "importPath": "models.admin",
+        "description": "models.admin",
+        "isExtraImport": true,
+        "detail": "models.admin",
+        "documentation": {}
+    },
+    {
+        "label": "Admin",
+        "importPath": "models.admin",
+        "description": "models.admin",
+        "isExtraImport": true,
+        "detail": "models.admin",
+        "documentation": {}
+    },
+    {
+        "label": "Admin",
+        "importPath": "models.admin",
+        "description": "models.admin",
+        "isExtraImport": true,
+        "detail": "models.admin",
+        "documentation": {}
+    },
+    {
+        "label": "Admin",
+        "importPath": "models.admin",
+        "description": "models.admin",
+        "isExtraImport": true,
+        "detail": "models.admin",
+        "documentation": {}
+    },
+    {
+        "label": "Admin",
+        "importPath": "models.admin",
+        "description": "models.admin",
+        "isExtraImport": true,
+        "detail": "models.admin",
+        "documentation": {}
+    },
+    {
+        "label": "Admin",
+        "importPath": "models.admin",
+        "description": "models.admin",
+        "isExtraImport": true,
+        "detail": "models.admin",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "models.client",
+        "description": "models.client",
+        "isExtraImport": true,
+        "detail": "models.client",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "models.client",
+        "description": "models.client",
+        "isExtraImport": true,
+        "detail": "models.client",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "models.client",
+        "description": "models.client",
+        "isExtraImport": true,
+        "detail": "models.client",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "models.client",
+        "description": "models.client",
+        "isExtraImport": true,
+        "detail": "models.client",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "models.client",
+        "description": "models.client",
+        "isExtraImport": true,
+        "detail": "models.client",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "models.client",
+        "description": "models.client",
+        "isExtraImport": true,
+        "detail": "models.client",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "models.client",
+        "description": "models.client",
+        "isExtraImport": true,
+        "detail": "models.client",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "models.client",
+        "description": "models.client",
+        "isExtraImport": true,
+        "detail": "models.client",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "models.category",
+        "description": "models.category",
+        "isExtraImport": true,
+        "detail": "models.category",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "models.category",
+        "description": "models.category",
+        "isExtraImport": true,
+        "detail": "models.category",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "models.category",
+        "description": "models.category",
+        "isExtraImport": true,
+        "detail": "models.category",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product",
+        "description": "models.product",
+        "isExtraImport": true,
+        "detail": "models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product",
+        "description": "models.product",
+        "isExtraImport": true,
+        "detail": "models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product",
+        "description": "models.product",
+        "isExtraImport": true,
+        "detail": "models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product",
+        "description": "models.product",
+        "isExtraImport": true,
+        "detail": "models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product",
+        "description": "models.product",
+        "isExtraImport": true,
+        "detail": "models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product",
+        "description": "models.product",
+        "isExtraImport": true,
+        "detail": "models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product",
+        "description": "models.product",
+        "isExtraImport": true,
+        "detail": "models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Bill",
+        "importPath": "models.bill",
+        "description": "models.bill",
+        "isExtraImport": true,
+        "detail": "models.bill",
+        "documentation": {}
+    },
+    {
+        "label": "Bill",
+        "importPath": "models.bill",
+        "description": "models.bill",
+        "isExtraImport": true,
+        "detail": "models.bill",
+        "documentation": {}
+    },
+    {
+        "label": "Bill",
+        "importPath": "models.bill",
+        "description": "models.bill",
+        "isExtraImport": true,
+        "detail": "models.bill",
+        "documentation": {}
+    },
+    {
+        "label": "Bill",
+        "importPath": "models.bill",
+        "description": "models.bill",
+        "isExtraImport": true,
+        "detail": "models.bill",
+        "documentation": {}
+    },
+    {
+        "label": "Bill",
+        "importPath": "models.bill",
+        "description": "models.bill",
+        "isExtraImport": true,
+        "detail": "models.bill",
+        "documentation": {}
+    },
+    {
+        "label": "BillItem",
+        "importPath": "models.bill_item",
+        "description": "models.bill_item",
+        "isExtraImport": true,
+        "detail": "models.bill_item",
+        "documentation": {}
+    },
+    {
+        "label": "BillItem",
+        "importPath": "models.bill_item",
+        "description": "models.bill_item",
+        "isExtraImport": true,
+        "detail": "models.bill_item",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "models.payment",
+        "description": "models.payment",
+        "isExtraImport": true,
+        "detail": "models.payment",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "models.payment",
+        "description": "models.payment",
+        "isExtraImport": true,
+        "detail": "models.payment",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlert",
+        "importPath": "models.stock_alert",
+        "description": "models.stock_alert",
+        "isExtraImport": true,
+        "detail": "models.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlert",
+        "importPath": "models.stock_alert",
+        "description": "models.stock_alert",
+        "isExtraImport": true,
+        "detail": "models.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlert",
+        "importPath": "models.stock_alert",
+        "description": "models.stock_alert",
+        "isExtraImport": true,
+        "detail": "models.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "StockAlert",
+        "importPath": "models.stock_alert",
+        "description": "models.stock_alert",
+        "isExtraImport": true,
+        "detail": "models.stock_alert",
+        "documentation": {}
+    },
+    {
+        "label": "Notification",
+        "importPath": "models.notification",
+        "description": "models.notification",
+        "isExtraImport": true,
+        "detail": "models.notification",
+        "documentation": {}
+    },
+    {
+        "label": "Notification",
+        "importPath": "models.notification",
+        "description": "models.notification",
+        "isExtraImport": true,
+        "detail": "models.notification",
+        "documentation": {}
+    },
+    {
+        "label": "Notification",
+        "importPath": "models.notification",
+        "description": "models.notification",
+        "isExtraImport": true,
+        "detail": "models.notification",
+        "documentation": {}
+    },
+    {
+        "label": "OTP",
+        "importPath": "models.otp",
+        "description": "models.otp",
+        "isExtraImport": true,
+        "detail": "models.otp",
+        "documentation": {}
+    },
+    {
+        "label": "OTP",
+        "importPath": "models.otp",
+        "description": "models.otp",
+        "isExtraImport": true,
+        "detail": "models.otp",
+        "documentation": {}
+    },
+    {
+        "label": "OTP",
+        "importPath": "models.otp",
+        "description": "models.otp",
+        "isExtraImport": true,
+        "detail": "models.otp",
+        "documentation": {}
+    },
+    {
         "label": "relationship",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
@@ -608,11 +1620,43 @@
         "documentation": {}
     },
     {
-        "label": "func",
-        "importPath": "sqlalchemy.sql",
-        "description": "sqlalchemy.sql",
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
         "isExtraImport": true,
-        "detail": "sqlalchemy.sql",
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
         "documentation": {}
     },
     {
@@ -680,163 +1724,27 @@
         "documentation": {}
     },
     {
-        "label": "Base",
-        "importPath": "models",
-        "description": "models",
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
         "isExtraImport": true,
-        "detail": "models",
+        "detail": "sqlalchemy.sql",
         "documentation": {}
     },
     {
-        "label": "Base",
-        "importPath": "models",
-        "description": "models",
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
         "isExtraImport": true,
-        "detail": "models",
+        "detail": "sqlalchemy.sql",
         "documentation": {}
     },
     {
-        "label": "Base",
-        "importPath": "models",
-        "description": "models",
+        "label": "cli",
+        "importPath": "pydoc",
+        "description": "pydoc",
         "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "Base",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "Base",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "Base",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "Base",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "Base",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "Base",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "get_db",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "get_db",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "get_db",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "get_db",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "get_db",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "get_db",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "get_db",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "get_db",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "get_db",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "Base",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "engine",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
+        "detail": "pydoc",
         "documentation": {}
     },
     {
@@ -857,6 +1765,78 @@
     },
     {
         "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -1136,190 +2116,6 @@
         "documentation": {}
     },
     {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Admin",
-        "importPath": "models.admin",
-        "description": "models.admin",
-        "isExtraImport": true,
-        "detail": "models.admin",
-        "documentation": {}
-    },
-    {
-        "label": "Admin",
-        "importPath": "models.admin",
-        "description": "models.admin",
-        "isExtraImport": true,
-        "detail": "models.admin",
-        "documentation": {}
-    },
-    {
-        "label": "Admin",
-        "importPath": "models.admin",
-        "description": "models.admin",
-        "isExtraImport": true,
-        "detail": "models.admin",
-        "documentation": {}
-    },
-    {
-        "label": "Admin",
-        "importPath": "models.admin",
-        "description": "models.admin",
-        "isExtraImport": true,
-        "detail": "models.admin",
-        "documentation": {}
-    },
-    {
         "label": "AdminCreate",
         "importPath": "schemas.admin",
         "description": "schemas.admin",
@@ -1360,6 +2156,14 @@
         "documentation": {}
     },
     {
+        "label": "AdminLogin",
+        "importPath": "schemas.admin",
+        "description": "schemas.admin",
+        "isExtraImport": true,
+        "detail": "schemas.admin",
+        "documentation": {}
+    },
+    {
         "label": "hash_password",
         "importPath": "utils.auth",
         "description": "utils.auth",
@@ -1385,6 +2189,14 @@
     },
     {
         "label": "get_current_admin",
+        "importPath": "utils.auth",
+        "description": "utils.auth",
+        "isExtraImport": true,
+        "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
         "importPath": "utils.auth",
         "description": "utils.auth",
         "isExtraImport": true,
@@ -1464,7 +2276,7 @@
         "documentation": {}
     },
     {
-        "label": "get_current_admin",
+        "label": "hash_password",
         "importPath": "utils.auth",
         "description": "utils.auth",
         "isExtraImport": true,
@@ -1485,6 +2297,46 @@
         "description": "utils.auth",
         "isExtraImport": true,
         "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_admin",
+        "importPath": "utils.auth",
+        "description": "utils.auth",
+        "isExtraImport": true,
+        "detail": "utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "http.client",
+        "description": "http.client",
+        "isExtraImport": true,
+        "detail": "http.client",
+        "documentation": {}
+    },
+    {
+        "label": "login_admin",
+        "importPath": "routers.admin",
+        "description": "routers.admin",
+        "isExtraImport": true,
+        "detail": "routers.admin",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -1584,11 +2436,19 @@
         "documentation": {}
     },
     {
-        "label": "Decimal",
-        "importPath": "decimal",
-        "description": "decimal",
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
         "isExtraImport": true,
-        "detail": "decimal",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -1624,155 +2484,11 @@
         "documentation": {}
     },
     {
-        "label": "Bill",
-        "importPath": "models.bill",
-        "description": "models.bill",
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
         "isExtraImport": true,
-        "detail": "models.bill",
-        "documentation": {}
-    },
-    {
-        "label": "Bill",
-        "importPath": "models.bill",
-        "description": "models.bill",
-        "isExtraImport": true,
-        "detail": "models.bill",
-        "documentation": {}
-    },
-    {
-        "label": "Bill",
-        "importPath": "models.bill",
-        "description": "models.bill",
-        "isExtraImport": true,
-        "detail": "models.bill",
-        "documentation": {}
-    },
-    {
-        "label": "Bill",
-        "importPath": "models.bill",
-        "description": "models.bill",
-        "isExtraImport": true,
-        "detail": "models.bill",
-        "documentation": {}
-    },
-    {
-        "label": "Bill",
-        "importPath": "models.bill",
-        "description": "models.bill",
-        "isExtraImport": true,
-        "detail": "models.bill",
-        "documentation": {}
-    },
-    {
-        "label": "BillItem",
-        "importPath": "models.bill_item",
-        "description": "models.bill_item",
-        "isExtraImport": true,
-        "detail": "models.bill_item",
-        "documentation": {}
-    },
-    {
-        "label": "BillItem",
-        "importPath": "models.bill_item",
-        "description": "models.bill_item",
-        "isExtraImport": true,
-        "detail": "models.bill_item",
-        "documentation": {}
-    },
-    {
-        "label": "Product",
-        "importPath": "models.product",
-        "description": "models.product",
-        "isExtraImport": true,
-        "detail": "models.product",
-        "documentation": {}
-    },
-    {
-        "label": "Product",
-        "importPath": "models.product",
-        "description": "models.product",
-        "isExtraImport": true,
-        "detail": "models.product",
-        "documentation": {}
-    },
-    {
-        "label": "Product",
-        "importPath": "models.product",
-        "description": "models.product",
-        "isExtraImport": true,
-        "detail": "models.product",
-        "documentation": {}
-    },
-    {
-        "label": "Product",
-        "importPath": "models.product",
-        "description": "models.product",
-        "isExtraImport": true,
-        "detail": "models.product",
-        "documentation": {}
-    },
-    {
-        "label": "Product",
-        "importPath": "models.product",
-        "description": "models.product",
-        "isExtraImport": true,
-        "detail": "models.product",
-        "documentation": {}
-    },
-    {
-        "label": "Product",
-        "importPath": "models.product",
-        "description": "models.product",
-        "isExtraImport": true,
-        "detail": "models.product",
-        "documentation": {}
-    },
-    {
-        "label": "Product",
-        "importPath": "models.product",
-        "description": "models.product",
-        "isExtraImport": true,
-        "detail": "models.product",
-        "documentation": {}
-    },
-    {
-        "label": "Client",
-        "importPath": "models.client",
-        "description": "models.client",
-        "isExtraImport": true,
-        "detail": "models.client",
-        "documentation": {}
-    },
-    {
-        "label": "Client",
-        "importPath": "models.client",
-        "description": "models.client",
-        "isExtraImport": true,
-        "detail": "models.client",
-        "documentation": {}
-    },
-    {
-        "label": "Client",
-        "importPath": "models.client",
-        "description": "models.client",
-        "isExtraImport": true,
-        "detail": "models.client",
-        "documentation": {}
-    },
-    {
-        "label": "Client",
-        "importPath": "models.client",
-        "description": "models.client",
-        "isExtraImport": true,
-        "detail": "models.client",
-        "documentation": {}
-    },
-    {
-        "label": "Client",
-        "importPath": "models.client",
-        "description": "models.client",
-        "isExtraImport": true,
-        "detail": "models.client",
+        "detail": "decimal",
         "documentation": {}
     },
     {
@@ -1845,30 +2561,6 @@
         "description": "utils.notification_manager",
         "isExtraImport": true,
         "detail": "utils.notification_manager",
-        "documentation": {}
-    },
-    {
-        "label": "Category",
-        "importPath": "models.category",
-        "description": "models.category",
-        "isExtraImport": true,
-        "detail": "models.category",
-        "documentation": {}
-    },
-    {
-        "label": "Category",
-        "importPath": "models.category",
-        "description": "models.category",
-        "isExtraImport": true,
-        "detail": "models.category",
-        "documentation": {}
-    },
-    {
-        "label": "Category",
-        "importPath": "models.category",
-        "description": "models.category",
-        "isExtraImport": true,
-        "detail": "models.category",
         "documentation": {}
     },
     {
@@ -1952,30 +2644,6 @@
         "documentation": {}
     },
     {
-        "label": "Notification",
-        "importPath": "models.notification",
-        "description": "models.notification",
-        "isExtraImport": true,
-        "detail": "models.notification",
-        "documentation": {}
-    },
-    {
-        "label": "Notification",
-        "importPath": "models.notification",
-        "description": "models.notification",
-        "isExtraImport": true,
-        "detail": "models.notification",
-        "documentation": {}
-    },
-    {
-        "label": "Notification",
-        "importPath": "models.notification",
-        "description": "models.notification",
-        "isExtraImport": true,
-        "detail": "models.notification",
-        "documentation": {}
-    },
-    {
         "label": "NotificationResponse",
         "importPath": "schemas.notification",
         "description": "schemas.notification",
@@ -1992,19 +2660,51 @@
         "documentation": {}
     },
     {
-        "label": "Payment",
-        "importPath": "models.payment",
-        "description": "models.payment",
+        "label": "OTPRequest",
+        "importPath": "schemas.otp",
+        "description": "schemas.otp",
         "isExtraImport": true,
-        "detail": "models.payment",
+        "detail": "schemas.otp",
         "documentation": {}
     },
     {
-        "label": "Payment",
-        "importPath": "models.payment",
-        "description": "models.payment",
+        "label": "OTPVerify",
+        "importPath": "schemas.otp",
+        "description": "schemas.otp",
         "isExtraImport": true,
-        "detail": "models.payment",
+        "detail": "schemas.otp",
+        "documentation": {}
+    },
+    {
+        "label": "OTPResponse",
+        "importPath": "schemas.otp",
+        "description": "schemas.otp",
+        "isExtraImport": true,
+        "detail": "schemas.otp",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordReset",
+        "importPath": "schemas.otp",
+        "description": "schemas.otp",
+        "isExtraImport": true,
+        "detail": "schemas.otp",
+        "documentation": {}
+    },
+    {
+        "label": "OTPService",
+        "importPath": "utils.otp_service",
+        "description": "utils.otp_service",
+        "isExtraImport": true,
+        "detail": "utils.otp_service",
+        "documentation": {}
+    },
+    {
+        "label": "EmailService",
+        "importPath": "utils.email_service",
+        "description": "utils.email_service",
+        "isExtraImport": true,
+        "detail": "utils.email_service",
         "documentation": {}
     },
     {
@@ -2040,43 +2740,20 @@
         "documentation": {}
     },
     {
-        "label": "StockAlert",
-        "importPath": "models.stock_alert",
-        "description": "models.stock_alert",
+        "label": "json",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "models.stock_alert",
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
-        "label": "StockAlert",
-        "importPath": "models.stock_alert",
-        "description": "models.stock_alert",
+        "label": "ProductCount",
+        "importPath": "schemas.product",
+        "description": "schemas.product",
         "isExtraImport": true,
-        "detail": "models.stock_alert",
-        "documentation": {}
-    },
-    {
-        "label": "StockAlert",
-        "importPath": "models.stock_alert",
-        "description": "models.stock_alert",
-        "isExtraImport": true,
-        "detail": "models.stock_alert",
-        "documentation": {}
-    },
-    {
-        "label": "StockAlert",
-        "importPath": "models.stock_alert",
-        "description": "models.stock_alert",
-        "isExtraImport": true,
-        "detail": "models.stock_alert",
-        "documentation": {}
-    },
-    {
-        "label": "StockAlert",
-        "importPath": "models.stock_alert",
-        "description": "models.stock_alert",
-        "isExtraImport": true,
-        "detail": "models.stock_alert",
+        "detail": "schemas.product",
         "documentation": {}
     },
     {
@@ -2113,6 +2790,14 @@
     },
     {
         "label": "ProductStockStatus",
+        "importPath": "schemas.product",
+        "description": "schemas.product",
+        "isExtraImport": true,
+        "detail": "schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "StockUpdate",
         "importPath": "schemas.product",
         "description": "schemas.product",
         "isExtraImport": true,
@@ -2256,7 +2941,7 @@
         "documentation": {}
     },
     {
-        "label": "Field",
+        "label": "EmailStr",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -2296,11 +2981,36 @@
         "documentation": {}
     },
     {
-        "label": "CryptContext",
-        "importPath": "passlib.context",
-        "description": "passlib.context",
+        "label": "field_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
         "isExtraImport": true,
-        "detail": "passlib.context",
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "bcrypt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "bcrypt",
+        "description": "bcrypt",
+        "detail": "bcrypt",
         "documentation": {}
     },
     {
@@ -2328,12 +3038,37 @@
         "documentation": {}
     },
     {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.ext.declarative",
+        "description": "sqlalchemy.ext.declarative",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
         "label": "smtplib",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "smtplib",
         "description": "smtplib",
         "detail": "smtplib",
+        "documentation": {}
+    },
+    {
+        "label": "MIMEText",
+        "importPath": "email.mime.text",
+        "description": "email.mime.text",
+        "isExtraImport": true,
+        "detail": "email.mime.text",
         "documentation": {}
     },
     {
@@ -2353,12 +3088,38 @@
         "documentation": {}
     },
     {
+        "label": "MIMEMultipart",
+        "importPath": "email.mime.multipart",
+        "description": "email.mime.multipart",
+        "isExtraImport": true,
+        "detail": "email.mime.multipart",
+        "documentation": {}
+    },
+    {
         "label": "requests",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "requests",
         "description": "requests",
         "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "string",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "string",
+        "description": "string",
+        "detail": "string",
         "documentation": {}
     },
     {
@@ -2450,19 +3211,118 @@
         "documentation": {}
     },
     {
-        "label": "create_sample_data",
-        "importPath": "utils.db",
-        "description": "utils.db",
+        "label": "auth_router",
+        "importPath": "routers",
+        "description": "routers",
         "isExtraImport": true,
-        "detail": "utils.db",
+        "detail": "routers",
         "documentation": {}
     },
     {
-        "label": "init_db",
-        "importPath": "utils.db",
-        "description": "utils.db",
+        "label": "otp_rout",
+        "importPath": "routers",
+        "description": "routers",
         "isExtraImport": true,
-        "detail": "utils.db",
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "server.alembic.versions.944b72c992ec_updated_product_table_and_routers",
+        "description": "server.alembic.versions.944b72c992ec_updated_product_table_and_routers",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('products', sa.Column('image_urls', sa.String(length=2500), nullable=True))\n    op.drop_column('products', 'image_url')\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('products', sa.Column('image_url', sa.VARCHAR(length=500), autoincrement=False, nullable=True))\n    op.drop_column('products', 'image_urls')\n    # ### end Alembic commands ###",
+        "detail": "server.alembic.versions.944b72c992ec_updated_product_table_and_routers",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "server.alembic.versions.944b72c992ec_updated_product_table_and_routers",
+        "description": "server.alembic.versions.944b72c992ec_updated_product_table_and_routers",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('products', sa.Column('image_url', sa.VARCHAR(length=500), autoincrement=False, nullable=True))\n    op.drop_column('products', 'image_urls')\n    # ### end Alembic commands ###",
+        "detail": "server.alembic.versions.944b72c992ec_updated_product_table_and_routers",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "server.alembic.versions.9e9b1ffd9c39_initial_migration_with_all_tables_v2",
+        "description": "server.alembic.versions.9e9b1ffd9c39_initial_migration_with_all_tables_v2",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('admins',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('username', sa.String(length=50), nullable=False),\n    sa.Column('email', sa.String(length=100), nullable=False),\n    sa.Column('password_hash', sa.String(length=255), nullable=False),\n    sa.Column('phone_number', sa.String(length=20), nullable=True),\n    sa.Column('created_at', sa.DateTime(timezone=True), server_default=sa.text('now()'), nullable=True),\n    sa.Column('updated_at', sa.DateTime(timezone=True), nullable=True),",
+        "detail": "server.alembic.versions.9e9b1ffd9c39_initial_migration_with_all_tables_v2",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "server.alembic.versions.9e9b1ffd9c39_initial_migration_with_all_tables_v2",
+        "description": "server.alembic.versions.9e9b1ffd9c39_initial_migration_with_all_tables_v2",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_index(op.f('ix_notifications_id'), table_name='notifications')\n    op.drop_table('notifications')\n    op.drop_index(op.f('ix_stock_alerts_id'), table_name='stock_alerts')\n    op.drop_table('stock_alerts')\n    op.drop_index(op.f('ix_payments_id'), table_name='payments')\n    op.drop_table('payments')\n    op.drop_index(op.f('ix_bill_items_id'), table_name='bill_items')\n    op.drop_table('bill_items')",
+        "detail": "server.alembic.versions.9e9b1ffd9c39_initial_migration_with_all_tables_v2",
+        "documentation": {}
+    },
+    {
+        "label": "run_migrations_offline",
+        "kind": 2,
+        "importPath": "server.alembic.env",
+        "description": "server.alembic.env",
+        "peekOfCode": "def run_migrations_offline() -> None:\n    \"\"\"Run migrations in 'offline' mode.\n    This configures the context with just a URL\n    and not an Engine, though an Engine is acceptable\n    here as well.  By skipping the Engine creation\n    we don't even need a DBAPI to be available.\n    Calls to context.execute() here emit the given string to the\n    script output.\n    \"\"\"\n    url = config.get_main_option(\"sqlalchemy.url\")",
+        "detail": "server.alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "run_migrations_online",
+        "kind": 2,
+        "importPath": "server.alembic.env",
+        "description": "server.alembic.env",
+        "peekOfCode": "def run_migrations_online() -> None:\n    \"\"\"Run migrations in 'online' mode.\n    In this scenario we need to create an Engine\n    and associate a connection with the context.\n    \"\"\"\n    configuration = config.get_section(config.config_ini_section, {})\n    configuration[\"sqlalchemy.url\"] = DATABASE_URL\n    connectable = engine_from_config(\n        configuration,\n        prefix=\"sqlalchemy.\",",
+        "detail": "server.alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "kind": 5,
+        "importPath": "server.alembic.env",
+        "description": "server.alembic.env",
+        "peekOfCode": "config = context.config\n# Interpret the config file for Python logging.\n# This line sets up loggers basically.\nif config.config_file_name is not None:\n    fileConfig(config.config_file_name)\n# Import Base and all models - THIS IS CRITICAL!\nfrom utils.db import Base\n# Import all models to ensure they're registered with Base\nfrom models.admin import Admin\nfrom models.client import Client",
+        "detail": "server.alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "target_metadata",
+        "kind": 5,
+        "importPath": "server.alembic.env",
+        "description": "server.alembic.env",
+        "peekOfCode": "target_metadata = Base.metadata\n# ============================================================\n# Use same database selection logic as main.py\n# ============================================================\nENVIRONMENT = os.getenv(\"ENVIRONMENT\", \"development\")\nIS_PRODUCTION = ENVIRONMENT == \"production\"\nif IS_PRODUCTION:\n    DATABASE_URL = os.getenv(\"DATABASE_URL\")\n    print(f\"🔴 Alembic using PRODUCTION database\")\n    if not DATABASE_URL:",
+        "detail": "server.alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "ENVIRONMENT",
+        "kind": 5,
+        "importPath": "server.alembic.env",
+        "description": "server.alembic.env",
+        "peekOfCode": "ENVIRONMENT = os.getenv(\"ENVIRONMENT\", \"development\")\nIS_PRODUCTION = ENVIRONMENT == \"production\"\nif IS_PRODUCTION:\n    DATABASE_URL = os.getenv(\"DATABASE_URL\")\n    print(f\"🔴 Alembic using PRODUCTION database\")\n    if not DATABASE_URL:\n        raise ValueError(\"DATABASE_URL not set in production!\")\nelse:\n    DATABASE_URL = os.getenv(\"LOCAL_DATABASE_URL\")\n    if not DATABASE_URL:",
+        "detail": "server.alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "IS_PRODUCTION",
+        "kind": 5,
+        "importPath": "server.alembic.env",
+        "description": "server.alembic.env",
+        "peekOfCode": "IS_PRODUCTION = ENVIRONMENT == \"production\"\nif IS_PRODUCTION:\n    DATABASE_URL = os.getenv(\"DATABASE_URL\")\n    print(f\"🔴 Alembic using PRODUCTION database\")\n    if not DATABASE_URL:\n        raise ValueError(\"DATABASE_URL not set in production!\")\nelse:\n    DATABASE_URL = os.getenv(\"LOCAL_DATABASE_URL\")\n    if not DATABASE_URL:\n        print(\"⚠️ LOCAL_DATABASE_URL not set, falling back to DATABASE_URL\")",
+        "detail": "server.alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "masked_url",
+        "kind": 5,
+        "importPath": "server.alembic.env",
+        "description": "server.alembic.env",
+        "peekOfCode": "masked_url = re.sub(r'://([^:]+):([^@]+)@', r'://\\1:****@', DATABASE_URL)\nprint(f\"📊 Alembic Database: {masked_url}\")\n# Override sqlalchemy.url in alembic.ini\nconfig.set_main_option(\"sqlalchemy.url\", DATABASE_URL)\ndef run_migrations_offline() -> None:\n    \"\"\"Run migrations in 'offline' mode.\n    This configures the context with just a URL\n    and not an Engine, though an Engine is acceptable\n    here as well.  By skipping the Engine creation\n    we don't even need a DBAPI to be available.",
+        "detail": "server.alembic.env",
         "documentation": {}
     },
     {
@@ -2479,7 +3339,7 @@
         "kind": 6,
         "importPath": "server.models.bill",
         "description": "server.models.bill",
-        "peekOfCode": "class Bill(Base):\n    __tablename__ = \"bills\"\n    id = Column(Integer, primary_key=True, index=True)\n    client_id = Column(Integer, ForeignKey(\"clients.id\"), nullable=False)\n    bill_number = Column(String(50), unique=True, nullable=False, index=True)\n    total_amount = Column(Numeric(10, 2), nullable=False, default=0.00)\n    total_paid = Column(Numeric(10, 2), nullable=False, default=0.00)\n    total_remaining = Column(Numeric(10, 2), nullable=False, default=0.00)\n    status = Column(String(20), nullable=False, default=\"not paid\")  # \"paid\" or \"not paid\"\n    created_at = Column(DateTime(timezone=True), server_default=func.now())",
+        "peekOfCode": "class Bill(Base):\n    __tablename__ = \"bills\"\n    id = Column(Integer, primary_key=True, index=True)\n    client_id = Column(Integer, ForeignKey(\"clients.id\"), nullable=False)\n    bill_number = Column(String(50), unique=True, nullable=False, index=True)\n    total_amount = Column(Numeric(10, 2), nullable=False, default=0.00)\n    total_paid = Column(Numeric(10, 2), nullable=False, default=0.00)\n    total_remaining = Column(Numeric(10, 2), nullable=False, default=0.00)\n    status = Column(String(20), nullable=False,\n                    default=\"not paid\")  # \"paid\" or \"not paid\"",
         "detail": "server.models.bill",
         "documentation": {}
     },
@@ -2520,6 +3380,15 @@
         "documentation": {}
     },
     {
+        "label": "OTP",
+        "kind": 6,
+        "importPath": "server.models.otp",
+        "description": "server.models.otp",
+        "peekOfCode": "class OTP(Base):\n    __tablename__ = \"otps\"\n    id = Column(Integer, primary_key=True, index=True)\n    email = Column(String(255), nullable=False, index=True)\n    otp_code = Column(String(6), nullable=False)\n    otp_type = Column(String(50), nullable=False)  # 'registration' or 'password_reset'\n    is_used = Column(Boolean, default=False)\n    is_verified = Column(Boolean, default=False)\n    expires_at = Column(DateTime(timezone=True), nullable=False)\n    created_at = Column(DateTime(timezone=True), server_default=func.now())",
+        "detail": "server.models.otp",
+        "documentation": {}
+    },
+    {
         "label": "Payment",
         "kind": 6,
         "importPath": "server.models.payment",
@@ -2547,11 +3416,20 @@
         "documentation": {}
     },
     {
+        "label": "register_admin",
+        "kind": 2,
+        "importPath": "server.routers.admin",
+        "description": "server.routers.admin",
+        "peekOfCode": "def register_admin(admin_data: AdminCreate, db: Session = Depends(get_db)):\n    \"\"\"Inscription d'un nouvel administrateur\"\"\"\n    # Vérifier si l'email existe déjà\n    existing_admin = db.query(Admin).filter(Admin.email == admin_data.email).first()\n    if existing_admin:\n        raise HTTPException(\n            status_code=status.HTTP_400_BAD_REQUEST,\n            detail=\"Cet email est déjà utilisé\"\n        )\n    # Vérifier si le nom d'utilisateur existe déjà",
+        "detail": "server.routers.admin",
+        "documentation": {}
+    },
+    {
         "label": "login_admin",
         "kind": 2,
         "importPath": "server.routers.admin",
         "description": "server.routers.admin",
-        "peekOfCode": "def login_admin(login_data: AdminLogin, db: Session = Depends(get_db)):\n    \"\"\"Connexion administrateur\"\"\"\n    admin = db.query(Admin).filter(Admin.email == login_data.email).first()\n    if not admin or not verify_password(login_data.password, admin.password_hash):\n        raise HTTPException(\n            status_code=status.HTTP_401_UNAUTHORIZED,\n            detail=\"Email ou mot de passe incorrect\"\n        )\n    access_token = create_access_token(data={\"sub\": str(admin.id), \"type\": \"admin\"})\n    return {",
+        "peekOfCode": "def login_admin(login_data: AdminLogin, db: Session = Depends(get_db)):\n    \"\"\"Connexion administrateur\"\"\"\n    admin = db.query(Admin).filter(Admin.email == login_data.email).first()\n    if not admin or not verify_password(login_data.password, admin.password_hash):\n        raise HTTPException(\n            status_code=status.HTTP_401_UNAUTHORIZED,\n            detail=\"Email ou mot de passe incorrect\"\n        )\n    access_token = create_access_token(\n        data={\"sub\": str(admin.id), \"type\": \"admin\"})",
         "detail": "server.routers.admin",
         "documentation": {}
     },
@@ -2560,7 +3438,7 @@
         "kind": 2,
         "importPath": "server.routers.admin",
         "description": "server.routers.admin",
-        "peekOfCode": "def get_current_admin_info(current_admin: Admin = Depends(get_current_admin)):\n    \"\"\"Obtenir les informations de l'administrateur connecté\"\"\"\n    return current_admin\n@router.put(\"/me\", response_model=AdminResponse)\ndef update_admin_profile(\n    admin_data: AdminUpdate,\n    current_admin: Admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Mettre à jour le profil de l'administrateur\"\"\"",
+        "peekOfCode": "def get_current_admin_info(current_admin: Admin = Depends(get_current_admin)):\n    \"\"\"Obtenir les informations de l'administrateur connecté\"\"\"\n    return current_admin\n@router.put(\"/me\", response_model=AdminResponse, dependencies=[Depends(get_current_admin)])\ndef update_admin_profile(\n    admin_data: AdminUpdate,\n    current_admin: Admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Mettre à jour le profil de l'administrateur\"\"\"",
         "detail": "server.routers.admin",
         "documentation": {}
     },
@@ -2569,7 +3447,7 @@
         "kind": 2,
         "importPath": "server.routers.admin",
         "description": "server.routers.admin",
-        "peekOfCode": "def update_admin_profile(\n    admin_data: AdminUpdate,\n    current_admin: Admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Mettre à jour le profil de l'administrateur\"\"\"\n    # Vérifier si le nouvel email existe déjà\n    if admin_data.email and admin_data.email != current_admin.email:\n        existing = db.query(Admin).filter(Admin.email == admin_data.email).first()\n        if existing:",
+        "peekOfCode": "def update_admin_profile(\n    admin_data: AdminUpdate,\n    current_admin: Admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Mettre à jour le profil de l'administrateur\"\"\"\n    # Vérifier si le nouvel email existe déjà\n    if admin_data.email and admin_data.email != current_admin.email:\n        existing = db.query(Admin).filter(\n            Admin.email == admin_data.email).first()",
         "detail": "server.routers.admin",
         "documentation": {}
     },
@@ -2578,7 +3456,7 @@
         "kind": 2,
         "importPath": "server.routers.admin",
         "description": "server.routers.admin",
-        "peekOfCode": "def get_all_admins(\n    skip: int = 0,\n    limit: int = 100,\n    current_admin: Admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir la liste de tous les administrateurs\"\"\"\n    admins = db.query(Admin).offset(skip).limit(limit).all()\n    return admins\n@router.delete(\"/{admin_id}\", status_code=status.HTTP_204_NO_CONTENT)",
+        "peekOfCode": "def get_all_admins(\n    skip: int = 0,\n    limit: int = 100,\n    current_admin: Admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir la liste de tous les administrateurs\"\"\"\n    admins = db.query(Admin).offset(skip).limit(limit).all()\n    return admins\n@router.delete(\"/{admin_id}\", status_code=status.HTTP_204_NO_CONTENT, dependencies=[Depends(get_current_admin)])",
         "detail": "server.routers.admin",
         "documentation": {}
     },
@@ -2592,12 +3470,75 @@
         "documentation": {}
     },
     {
+        "label": "get_type_of_user",
+        "kind": 2,
+        "importPath": "server.routers.admin",
+        "description": "server.routers.admin",
+        "peekOfCode": "def get_type_of_user(login_data: AdminLogin, db: Session = Depends(get_db)):\n    \"\"\"Vérifier le type d'utilisateur\"\"\"\n    admin = db.query(Admin).filter(Admin.email == login_data.email).first()\n    client = db.query(Client).filter(Client.email == login_data.email).first()\n    if admin:\n        return \"admin\"\n    elif client:\n        return \"client\"\n    else:\n        raise HTTPException(",
+        "detail": "server.routers.admin",
+        "documentation": {}
+    },
+    {
         "label": "router",
         "kind": 5,
         "importPath": "server.routers.admin",
         "description": "server.routers.admin",
-        "peekOfCode": "router = APIRouter(prefix=\"/admin\", tags=[\"Admin\"])\n@router.post(\"/login\", response_model=AdminWithToken)\ndef login_admin(login_data: AdminLogin, db: Session = Depends(get_db)):\n    \"\"\"Connexion administrateur\"\"\"\n    admin = db.query(Admin).filter(Admin.email == login_data.email).first()\n    if not admin or not verify_password(login_data.password, admin.password_hash):\n        raise HTTPException(\n            status_code=status.HTTP_401_UNAUTHORIZED,\n            detail=\"Email ou mot de passe incorrect\"\n        )",
+        "peekOfCode": "router = APIRouter(prefix=\"/admin\", tags=[\"Admin\"])\n@router.post(\"/register\", response_model=AdminWithToken, status_code=status.HTTP_201_CREATED)\ndef register_admin(admin_data: AdminCreate, db: Session = Depends(get_db)):\n    \"\"\"Inscription d'un nouvel administrateur\"\"\"\n    # Vérifier si l'email existe déjà\n    existing_admin = db.query(Admin).filter(Admin.email == admin_data.email).first()\n    if existing_admin:\n        raise HTTPException(\n            status_code=status.HTTP_400_BAD_REQUEST,\n            detail=\"Cet email est déjà utilisé\"",
         "detail": "server.routers.admin",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_type",
+        "kind": 2,
+        "importPath": "server.routers.auth",
+        "description": "server.routers.auth",
+        "peekOfCode": "def get_user_type(data: AdminLogin, db: Session = Depends(get_db)):\n    admin = db.query(Admin).filter(Admin.email == data.email).first()\n    client = db.query(Client).filter(Client.email == data.email).first()\n    if admin:\n        return \"admin\"\n    elif client:\n        return \"client\"\n    else:\n        raise HTTPException(\n            status_code=status.HTTP_401_UNAUTHORIZED,",
+        "detail": "server.routers.auth",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "server.routers.auth",
+        "description": "server.routers.auth",
+        "peekOfCode": "router = APIRouter(prefix=\"/auth\", tags=[\"Auth\"])\n@router.post(\"/type_user\", response_model=str)\ndef get_user_type(data: AdminLogin, db: Session = Depends(get_db)):\n    admin = db.query(Admin).filter(Admin.email == data.email).first()\n    client = db.query(Client).filter(Client.email == data.email).first()\n    if admin:\n        return \"admin\"\n    elif client:\n        return \"client\"\n    else:",
+        "detail": "server.routers.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_daily_bill_summary",
+        "kind": 2,
+        "importPath": "server.routers.bill",
+        "description": "server.routers.bill",
+        "peekOfCode": "def get_daily_bill_summary(\n    year: int = Query(..., description=\"Year (e.g., 2024)\"),\n    month: int = Query(..., description=\"Month (1-12)\"),\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Get daily bill summary for a specific month\"\"\"\n    # Query bills for the specific month and group by day\n    results = db.query(\n        func.to_char(Bill.created_at, 'YYYY-MM-DD').label(\"date\"),",
+        "detail": "server.routers.bill",
+        "documentation": {}
+    },
+    {
+        "label": "get_monthly_bill_summary",
+        "kind": 2,
+        "importPath": "server.routers.bill",
+        "description": "server.routers.bill",
+        "peekOfCode": "def get_monthly_bill_summary(\n    year: Optional[int] = Query(\n        None, description=\"Year (e.g., 2024). If not provided, returns all months\"),\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Get monthly bill summary, optionally filtered by year\"\"\"\n    query = db.query(\n        func.to_char(Bill.created_at, 'YYYY-MM').label(\"month\"),\n        func.count(Bill.id).label(\"total_bills\"),",
+        "detail": "server.routers.bill",
+        "documentation": {}
+    },
+    {
+        "label": "get_yearly_bill_summary",
+        "kind": 2,
+        "importPath": "server.routers.bill",
+        "description": "server.routers.bill",
+        "peekOfCode": "def get_yearly_bill_summary(\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Get yearly bill summary\"\"\"\n    results = db.query(\n        func.to_char(Bill.created_at, 'YYYY').label(\"year\"),\n        func.count(Bill.id).label(\"total_bills\"),\n        func.sum(Bill.total_amount).label(\"total_revenue\"),\n        func.sum(Bill.total_paid).label(\"total_paid\"),",
+        "detail": "server.routers.bill",
+        "documentation": {}
+    },
+    {
+        "label": "get_period_range_summary",
+        "kind": 2,
+        "importPath": "server.routers.bill",
+        "description": "server.routers.bill",
+        "peekOfCode": "def get_period_range_summary(\n    start_date: date = Query(..., description=\"Start date (YYYY-MM-DD)\"),\n    end_date: date = Query(..., description=\"End date (YYYY-MM-DD)\"),\n    group_by: str = Query(\"day\", description=\"Group by: day, month, or year\"),\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Get bill summary for a date range, grouped by specified period\"\"\"\n    # Determine the grouping format\n    format_map = {",
+        "detail": "server.routers.bill",
         "documentation": {}
     },
     {
@@ -2605,7 +3546,7 @@
         "kind": 2,
         "importPath": "server.routers.bill",
         "description": "server.routers.bill",
-        "peekOfCode": "def create_bill(\n    bill_data: BillCreate,\n    current_client = Depends(get_current_client),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Créer une nouvelle facture (client seulement)\"\"\"\n    # Générer un numéro de facture unique\n    bill_count = db.query(Bill).count()\n    bill_number = f\"BILL-{datetime.now().strftime('%Y%m%d')}-{bill_count + 1:04d}\"\n    # Créer la facture",
+        "peekOfCode": "def create_bill(\n    bill_data: BillCreate,\n    current_client=Depends(get_current_client),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Créer une nouvelle facture (client seulement)\"\"\"\n    # Générer un numéro de facture unique\n    bill_count = db.query(Bill).count()\n    bill_number = f\"BILL-{datetime.now().strftime('%Y%m%d')}-{bill_count + 1:04d}\"\n    # Créer la facture",
         "detail": "server.routers.bill",
         "documentation": {}
     },
@@ -2614,7 +3555,25 @@
         "kind": 2,
         "importPath": "server.routers.bill",
         "description": "server.routers.bill",
-        "peekOfCode": "def get_my_bills(\n    skip: int = 0,\n    limit: int = 100,\n    current_client = Depends(get_current_client),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir toutes les factures du client connecté\"\"\"\n    bills = db.query(Bill).filter(Bill.client_id == current_client.id).offset(skip).limit(limit).all()\n    result = []\n    for bill in bills:",
+        "peekOfCode": "def get_my_bills(\n    skip: int = 0,\n    limit: int = 100,\n    current_client=Depends(get_current_client),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir toutes les factures du client connecté\"\"\"\n    bills = db.query(Bill).filter(Bill.client_id ==\n                                  current_client.id).offset(skip).limit(limit).all()\n    result = []",
+        "detail": "server.routers.bill",
+        "documentation": {}
+    },
+    {
+        "label": "count_my_bills",
+        "kind": 2,
+        "importPath": "server.routers.bill",
+        "description": "server.routers.bill",
+        "peekOfCode": "def count_my_bills(\n    current_client=Depends(get_current_client),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir le nombre total de factures du client connecté\"\"\"\n    count = db.query(Bill).filter(Bill.client_id == current_client.id).count()\n    return {\"count\": count}\n# count all unpaid bills\n@router.get(\"/unpaid-bills/count\")\ndef count_my_bills(",
+        "detail": "server.routers.bill",
+        "documentation": {}
+    },
+    {
+        "label": "count_my_bills",
+        "kind": 2,
+        "importPath": "server.routers.bill",
+        "description": "server.routers.bill",
+        "peekOfCode": "def count_my_bills(\n    current_client=Depends(get_current_client),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir le nombre total de factures du client connecté\"\"\"\n    count = db.query(Bill).filter(\n        Bill.client_id == current_client.id,\n        Bill.status == \"not paid\"\n    ).count()\n    return {\"count_unpaid\": count}",
         "detail": "server.routers.bill",
         "documentation": {}
     },
@@ -2623,7 +3582,7 @@
         "kind": 2,
         "importPath": "server.routers.bill",
         "description": "server.routers.bill",
-        "peekOfCode": "def get_all_bills(\n    skip: int = 0,\n    limit: int = 100,\n    status_filter: str = None,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir toutes les factures (admin seulement)\"\"\"\n    query = db.query(Bill)\n    if status_filter:",
+        "peekOfCode": "def get_all_bills(\n    skip: int = 0,\n    limit: int = 100,\n    status_filter: str = None,\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir toutes les factures (admin seulement)\"\"\"\n    query = db.query(Bill)\n    if status_filter:",
         "detail": "server.routers.bill",
         "documentation": {}
     },
@@ -2632,7 +3591,16 @@
         "kind": 2,
         "importPath": "server.routers.bill",
         "description": "server.routers.bill",
-        "peekOfCode": "def get_bill_summary(\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir le résumé des factures (admin seulement)\"\"\"\n    total_bills = db.query(Bill).count()\n    total_revenue = db.query(func.sum(Bill.total_amount)).scalar() or Decimal('0.00')\n    total_paid = db.query(func.sum(Bill.total_paid)).scalar() or Decimal('0.00')\n    total_pending = db.query(func.sum(Bill.total_remaining)).scalar() or Decimal('0.00')\n    paid_bills = db.query(Bill).filter(Bill.status == \"paid\").count()",
+        "peekOfCode": "def get_bill_summary(\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir le résumé des factures (admin seulement)\"\"\"\n    total_bills = db.query(Bill).count()\n    total_revenue = db.query(func.sum(Bill.total_amount)\n                             ).scalar() or Decimal('0.00')\n    total_paid = db.query(func.sum(Bill.total_paid)\n                          ).scalar() or Decimal('0.00')",
+        "detail": "server.routers.bill",
+        "documentation": {}
+    },
+    {
+        "label": "get_monthly_bill_summary",
+        "kind": 2,
+        "importPath": "server.routers.bill",
+        "description": "server.routers.bill",
+        "peekOfCode": "def get_monthly_bill_summary(\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir le résumé mensuel des factures (admin seulement)\"\"\"\n    monthly_summary = []\n    # PostgreSQL uses TO_CHAR instead of strftime\n    results = db.query(\n        func.to_char(Bill.created_at, 'YYYY-MM').label(\"month\"),\n        func.count(Bill.id).label(\"total_bills\"),",
         "detail": "server.routers.bill",
         "documentation": {}
     },
@@ -2641,7 +3609,25 @@
         "kind": 2,
         "importPath": "server.routers.bill",
         "description": "server.routers.bill",
-        "peekOfCode": "def get_bill_by_id(\n    bill_id: int,\n    current_client = Depends(get_current_client),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir une facture par son ID\"\"\"\n    bill = db.query(Bill).filter(Bill.id == bill_id).first()\n    if not bill:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "peekOfCode": "def get_bill_by_id(\n    bill_id: int,\n    current_client=Depends(get_current_client),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir une facture par son ID\"\"\"\n    bill = db.query(Bill).filter(Bill.id == bill_id).first()\n    if not bill:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "detail": "server.routers.bill",
+        "documentation": {}
+    },
+    {
+        "label": "pay_bill",
+        "kind": 2,
+        "importPath": "server.routers.bill",
+        "description": "server.routers.bill",
+        "peekOfCode": "def pay_bill(\n    bill_id: int,\n    amount: Decimal = Query(..., gt=0, description=\"Amount to pay\"),\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Payer une facture (admin seulement)\"\"\"\n    bill = db.query(Bill).filter(Bill.id == bill_id).first()\n    if not bill:\n        raise HTTPException(",
+        "detail": "server.routers.bill",
+        "documentation": {}
+    },
+    {
+        "label": "get_bill_by_id_admin",
+        "kind": 2,
+        "importPath": "server.routers.bill",
+        "description": "server.routers.bill",
+        "peekOfCode": "def get_bill_by_id_admin(\n    bill_id: int,\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir une facture par son ID (admin seulement)\"\"\"\n    bill = db.query(Bill).filter(Bill.id == bill_id).first()\n    if not bill:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
         "detail": "server.routers.bill",
         "documentation": {}
     },
@@ -2650,7 +3636,7 @@
         "kind": 5,
         "importPath": "server.routers.bill",
         "description": "server.routers.bill",
-        "peekOfCode": "router = APIRouter(prefix=\"/bill\", tags=[\"Bill\"])\n@router.post(\"/\", response_model=BillWithItems, status_code=status.HTTP_201_CREATED)\ndef create_bill(\n    bill_data: BillCreate,\n    current_client = Depends(get_current_client),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Créer une nouvelle facture (client seulement)\"\"\"\n    # Générer un numéro de facture unique\n    bill_count = db.query(Bill).count()",
+        "peekOfCode": "router = APIRouter(prefix=\"/bill\", tags=[\"Bill\"])\n@router.get(\"/statistics/daily\", response_model=List[dict])\ndef get_daily_bill_summary(\n    year: int = Query(..., description=\"Year (e.g., 2024)\"),\n    month: int = Query(..., description=\"Month (1-12)\"),\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Get daily bill summary for a specific month\"\"\"\n    # Query bills for the specific month and group by day",
         "detail": "server.routers.bill",
         "documentation": {}
     },
@@ -2713,7 +3699,7 @@
         "kind": 2,
         "importPath": "server.routers.client",
         "description": "server.routers.client",
-        "peekOfCode": "def register_client(client_data: ClientCreate, db: Session = Depends(get_db)):\n    \"\"\"Enregistrer un nouveau client\"\"\"\n    # Vérifier si l'email existe déjà\n    existing_client = db.query(Client).filter(Client.email == client_data.email).first()\n    if existing_client:\n        raise HTTPException(\n            status_code=status.HTTP_400_BAD_REQUEST,\n            detail=\"Cet email est déjà utilisé\"\n        )\n    # Vérifier si le nom d'utilisateur existe déjà",
+        "peekOfCode": "def register_client(client_data: ClientCreate, db: Session = Depends(get_db)):\n    \"\"\"Enregistrer un nouveau client (nécessite vérification OTP préalable)\"\"\"\n    # Vérifier si l'OTP a été vérifié pour cet email\n    verified_otp = db.query(OTP).filter(\n        OTP.email == client_data.email,\n        OTP.otp_type == \"registration\",\n        OTP.is_verified == True,\n        OTP.is_used == True\n    ).first()\n    if not verified_otp:",
         "detail": "server.routers.client",
         "documentation": {}
     },
@@ -2740,7 +3726,7 @@
         "kind": 2,
         "importPath": "server.routers.client",
         "description": "server.routers.client",
-        "peekOfCode": "def update_client_profile(\n    client_data: ClientUpdate,\n    current_client: Client = Depends(get_current_client),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Mettre à jour le profil du client\"\"\"\n    # Vérifier si le nouvel email existe déjà\n    if client_data.email and client_data.email != current_client.email:\n        existing = db.query(Client).filter(Client.email == client_data.email).first()\n        if existing:",
+        "peekOfCode": "def update_client_profile(\n    client_data: ClientUpdate,\n    current_client: Client = Depends(get_current_client),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Mettre à jour le profil du client\"\"\"\n    # Vérifier si le nouvel email existe déjà\n    if client_data.email and client_data.email != current_client.email:\n        existing = db.query(Client).filter(\n            Client.email == client_data.email).first()",
         "detail": "server.routers.client",
         "documentation": {}
     },
@@ -2749,7 +3735,7 @@
         "kind": 2,
         "importPath": "server.routers.client",
         "description": "server.routers.client",
-        "peekOfCode": "def get_all_clients(\n    skip: int = 0,\n    limit: int = 100,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir la liste de tous les clients (admin seulement)\"\"\"\n    clients = db.query(\n        Client,\n        func.count(Bill.id).label('total_bills'),",
+        "peekOfCode": "def get_all_clients(\n    skip: int = 0,\n    limit: int = 100,\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir la liste de tous les clients (admin seulement)\"\"\"\n    clients = db.query(\n        Client,\n        func.count(Bill.id).label('total_bills'),",
         "detail": "server.routers.client",
         "documentation": {}
     },
@@ -2758,7 +3744,7 @@
         "kind": 2,
         "importPath": "server.routers.client",
         "description": "server.routers.client",
-        "peekOfCode": "def get_client_by_id(\n    client_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir un client par son ID (admin seulement)\"\"\"\n    client = db.query(Client).filter(Client.id == client_id).first()\n    if not client:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "peekOfCode": "def get_client_by_id(\n    client_id: int,\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir un client par son ID (admin seulement)\"\"\"\n    client = db.query(Client).filter(Client.id == client_id).first()\n    if not client:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
         "detail": "server.routers.client",
         "documentation": {}
     },
@@ -2767,7 +3753,7 @@
         "kind": 2,
         "importPath": "server.routers.client",
         "description": "server.routers.client",
-        "peekOfCode": "def toggle_client_active(\n    client_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Activer/désactiver un client (admin seulement)\"\"\"\n    client = db.query(Client).filter(Client.id == client_id).first()\n    if not client:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "peekOfCode": "def toggle_client_active(\n    client_id: int,\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Activer/désactiver un client (admin seulement)\"\"\"\n    client = db.query(Client).filter(Client.id == client_id).first()\n    if not client:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
         "detail": "server.routers.client",
         "documentation": {}
     },
@@ -2776,7 +3762,7 @@
         "kind": 2,
         "importPath": "server.routers.client",
         "description": "server.routers.client",
-        "peekOfCode": "def delete_client(\n    client_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Supprimer un client (admin seulement)\"\"\"\n    client = db.query(Client).filter(Client.id == client_id).first()\n    if not client:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "peekOfCode": "def delete_client(\n    client_id: int,\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Supprimer un client (admin seulement)\"\"\"\n    client = db.query(Client).filter(Client.id == client_id).first()\n    if not client:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
         "detail": "server.routers.client",
         "documentation": {}
     },
@@ -2785,7 +3771,7 @@
         "kind": 5,
         "importPath": "server.routers.client",
         "description": "server.routers.client",
-        "peekOfCode": "router = APIRouter(prefix=\"/client\", tags=[\"Client\"])\n@router.post(\"/register\", response_model=ClientResponse, status_code=status.HTTP_201_CREATED)\ndef register_client(client_data: ClientCreate, db: Session = Depends(get_db)):\n    \"\"\"Enregistrer un nouveau client\"\"\"\n    # Vérifier si l'email existe déjà\n    existing_client = db.query(Client).filter(Client.email == client_data.email).first()\n    if existing_client:\n        raise HTTPException(\n            status_code=status.HTTP_400_BAD_REQUEST,\n            detail=\"Cet email est déjà utilisé\"",
+        "peekOfCode": "router = APIRouter(prefix=\"/client\", tags=[\"Client\"])\n@router.post(\"/register\", response_model=ClientResponse, status_code=status.HTTP_201_CREATED)\ndef register_client(client_data: ClientCreate, db: Session = Depends(get_db)):\n    \"\"\"Enregistrer un nouveau client (nécessite vérification OTP préalable)\"\"\"\n    # Vérifier si l'OTP a été vérifié pour cet email\n    verified_otp = db.query(OTP).filter(\n        OTP.email == client_data.email,\n        OTP.otp_type == \"registration\",\n        OTP.is_verified == True,\n        OTP.is_used == True",
         "detail": "server.routers.client",
         "documentation": {}
     },
@@ -2862,6 +3848,51 @@
         "documentation": {}
     },
     {
+        "label": "send_otp",
+        "kind": 2,
+        "importPath": "server.routers.otp",
+        "description": "server.routers.otp",
+        "peekOfCode": "def send_otp(otp_request: OTPRequest, db: Session = Depends(get_db)):\n    \"\"\"Send OTP to email\"\"\"\n    client = db.query(Client).filter(Client.email == otp_request.email).first()\n    admin = db.query(Admin).filter(Admin.email == otp_request.email).first()\n    if otp_request.otp_type == \"registration\":\n        if client or admin :\n            raise HTTPException(\n                status_code=status.HTTP_400_BAD_REQUEST,\n                detail=\"Cet email est déjà utilisé\"\n            )",
+        "detail": "server.routers.otp",
+        "documentation": {}
+    },
+    {
+        "label": "verify_otp",
+        "kind": 2,
+        "importPath": "server.routers.otp",
+        "description": "server.routers.otp",
+        "peekOfCode": "def verify_otp(otp_verify: OTPVerify, db: Session = Depends(get_db)):\n    \"\"\"Verify OTP code\"\"\"\n    is_valid = OTPService.verify_otp(\n        db,\n        otp_verify.email,\n        otp_verify.otp_code,\n        otp_verify.otp_type\n    )\n    if not is_valid:\n        raise HTTPException(",
+        "detail": "server.routers.otp",
+        "documentation": {}
+    },
+    {
+        "label": "reset_password",
+        "kind": 2,
+        "importPath": "server.routers.otp",
+        "description": "server.routers.otp",
+        "peekOfCode": "def reset_password(reset_data: PasswordReset, db: Session = Depends(get_db)):\n    \"\"\"Reset password using OTP\"\"\"\n    # Verify OTP first\n    is_valid = OTPService.verify_otp(\n        db,\n        reset_data.email,\n        reset_data.otp_code,\n        \"password_reset\"\n    )\n    if not is_valid:",
+        "detail": "server.routers.otp",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "server.routers.otp",
+        "description": "server.routers.otp",
+        "peekOfCode": "router = APIRouter(prefix=\"/otp\", tags=[\"OTP\"])\nemail_service = EmailService()\n@router.post(\"/send\", response_model=OTPResponse)\ndef send_otp(otp_request: OTPRequest, db: Session = Depends(get_db)):\n    \"\"\"Send OTP to email\"\"\"\n    client = db.query(Client).filter(Client.email == otp_request.email).first()\n    admin = db.query(Admin).filter(Admin.email == otp_request.email).first()\n    if otp_request.otp_type == \"registration\":\n        if client or admin :\n            raise HTTPException(",
+        "detail": "server.routers.otp",
+        "documentation": {}
+    },
+    {
+        "label": "email_service",
+        "kind": 5,
+        "importPath": "server.routers.otp",
+        "description": "server.routers.otp",
+        "peekOfCode": "email_service = EmailService()\n@router.post(\"/send\", response_model=OTPResponse)\ndef send_otp(otp_request: OTPRequest, db: Session = Depends(get_db)):\n    \"\"\"Send OTP to email\"\"\"\n    client = db.query(Client).filter(Client.email == otp_request.email).first()\n    admin = db.query(Admin).filter(Admin.email == otp_request.email).first()\n    if otp_request.otp_type == \"registration\":\n        if client or admin :\n            raise HTTPException(\n                status_code=status.HTTP_400_BAD_REQUEST,",
+        "detail": "server.routers.otp",
+        "documentation": {}
+    },
+    {
         "label": "create_payment",
         "kind": 2,
         "importPath": "server.routers.payment",
@@ -2929,7 +3960,16 @@
         "kind": 2,
         "importPath": "server.routers.product",
         "description": "server.routers.product",
-        "peekOfCode": "def create_product(\n    product_data: ProductCreate,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Créer un nouveau produit (admin seulement)\"\"\"\n    # Vérifier si la catégorie existe\n    category = db.query(Category).filter(Category.id == product_data.category_id).first()\n    if not category:\n        raise HTTPException(",
+        "peekOfCode": "def create_product(\n    product_data: ProductCreate,\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Create a new product (admin only)\"\"\"\n    category = db.query(Category).filter(\n        Category.id == product_data.category_id\n    ).first()\n    if not category:",
+        "detail": "server.routers.product",
+        "documentation": {}
+    },
+    {
+        "label": "get_product_count",
+        "kind": 2,
+        "importPath": "server.routers.product",
+        "description": "server.routers.product",
+        "peekOfCode": "def get_product_count(db: Session = Depends(get_db)):\n    \"\"\"Get total product count\"\"\"\n    count = db.query(Product).count()\n    return {\"count\": count}\n@router.get(\"/\", response_model=List[ProductWithCategory])\ndef get_all_products(\n    skip: int = 0,\n    limit: int = 100,\n    category_id: Optional[int] = None,\n    is_active: Optional[bool] = None,",
         "detail": "server.routers.product",
         "documentation": {}
     },
@@ -2938,7 +3978,7 @@
         "kind": 2,
         "importPath": "server.routers.product",
         "description": "server.routers.product",
-        "peekOfCode": "def get_all_products(\n    skip: int = 0,\n    limit: int = 100,\n    category_id: Optional[int] = None,\n    is_active: Optional[bool] = None,\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir tous les produits\"\"\"\n    query = db.query(Product).join(Category)\n    if category_id:",
+        "peekOfCode": "def get_all_products(\n    skip: int = 0,\n    limit: int = 100,\n    category_id: Optional[int] = None,\n    is_active: Optional[bool] = None,\n    db: Session = Depends(get_db)\n):\n    \"\"\"Get all products\"\"\"\n    query = db.query(Product)\n    if category_id is not None:",
         "detail": "server.routers.product",
         "documentation": {}
     },
@@ -2947,7 +3987,7 @@
         "kind": 2,
         "importPath": "server.routers.product",
         "description": "server.routers.product",
-        "peekOfCode": "def get_low_stock_products(\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir les produits avec un stock faible (admin seulement)\"\"\"\n    products = db.query(Product).filter(\n        Product.quantity_in_stock <= Product.minimum_stock_level\n    ).all()\n    result = []\n    for product in products:",
+        "peekOfCode": "def get_low_stock_products(\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Get low stock products (admin only)\"\"\"\n    products = db.query(Product).filter(\n        Product.quantity_in_stock <= Product.minimum_stock_level\n    ).all()\n    result = []\n    for p in products:",
         "detail": "server.routers.product",
         "documentation": {}
     },
@@ -2956,7 +3996,7 @@
         "kind": 2,
         "importPath": "server.routers.product",
         "description": "server.routers.product",
-        "peekOfCode": "def get_product_by_id(\n    product_id: int,\n    db: Session = Depends(get_db)\n):\n    \"\"\"Obtenir un produit par son ID\"\"\"\n    product = db.query(Product).filter(Product.id == product_id).first()\n    if not product:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,\n            detail=\"Produit non trouvé\"",
+        "peekOfCode": "def get_product_by_id(product_id: int, db: Session = Depends(get_db)):\n    \"\"\"Get product by ID\"\"\"\n    product = db.query(Product).filter(Product.id == product_id).first()\n    if not product:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,\n            detail=\"Product not found\"\n        )\n    return ProductWithCategory(\n        id=product.id,",
         "detail": "server.routers.product",
         "documentation": {}
     },
@@ -2965,7 +4005,7 @@
         "kind": 2,
         "importPath": "server.routers.product",
         "description": "server.routers.product",
-        "peekOfCode": "def update_product(\n    product_id: int,\n    product_data: ProductUpdate,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Mettre à jour un produit (admin seulement)\"\"\"\n    product = db.query(Product).filter(Product.id == product_id).first()\n    if not product:\n        raise HTTPException(",
+        "peekOfCode": "def update_product(\n    product_id: int,\n    product_data: ProductUpdate,\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Update product (admin only)\"\"\"\n    product = db.query(Product).filter(Product.id == product_id).first()\n    if not product:\n        raise HTTPException(",
         "detail": "server.routers.product",
         "documentation": {}
     },
@@ -2974,7 +4014,7 @@
         "kind": 2,
         "importPath": "server.routers.product",
         "description": "server.routers.product",
-        "peekOfCode": "def update_product_stock(\n    product_id: int,\n    quantity: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Mettre à jour le stock d'un produit (admin seulement)\"\"\"\n    product = db.query(Product).filter(Product.id == product_id).first()\n    if not product:\n        raise HTTPException(",
+        "peekOfCode": "def update_product_stock(\n    product_id: int,\n    stock_update: StockUpdate,\n    db: Session = Depends(get_db)\n):\n    \"\"\"Update product stock (admin only)\"\"\"\n    product = db.query(Product).filter(Product.id == product_id).first()\n    if not product:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
         "detail": "server.routers.product",
         "documentation": {}
     },
@@ -2983,7 +4023,7 @@
         "kind": 2,
         "importPath": "server.routers.product",
         "description": "server.routers.product",
-        "peekOfCode": "def delete_product(\n    product_id: int,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Supprimer un produit (admin seulement)\"\"\"\n    product = db.query(Product).filter(Product.id == product_id).first()\n    if not product:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
+        "peekOfCode": "def delete_product(\n    product_id: int,\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Delete product (admin only)\"\"\"\n    product = db.query(Product).filter(Product.id == product_id).first()\n    if not product:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,",
         "detail": "server.routers.product",
         "documentation": {}
     },
@@ -2992,7 +4032,7 @@
         "kind": 5,
         "importPath": "server.routers.product",
         "description": "server.routers.product",
-        "peekOfCode": "router = APIRouter(prefix=\"/product\", tags=[\"Product\"])\n@router.post(\"/\", response_model=ProductResponse, status_code=status.HTTP_201_CREATED)\ndef create_product(\n    product_data: ProductCreate,\n    current_admin = Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Créer un nouveau produit (admin seulement)\"\"\"\n    # Vérifier si la catégorie existe\n    category = db.query(Category).filter(Category.id == product_data.category_id).first()",
+        "peekOfCode": "router = APIRouter(prefix=\"/product\", tags=[\"Product\"])\n@router.post(\"/\", response_model=ProductResponse, \n             status_code=status.HTTP_201_CREATED, \n             dependencies=[Depends(get_current_admin)])\ndef create_product(\n    product_data: ProductCreate,\n    current_admin=Depends(get_current_admin),\n    db: Session = Depends(get_db)\n):\n    \"\"\"Create a new product (admin only)\"\"\"",
         "detail": "server.routers.product",
         "documentation": {}
     },
@@ -3357,6 +4397,42 @@
         "documentation": {}
     },
     {
+        "label": "OTPRequest",
+        "kind": 6,
+        "importPath": "server.schemas.otp",
+        "description": "server.schemas.otp",
+        "peekOfCode": "class OTPRequest(BaseModel):\n    email: EmailStr\n    otp_type: str  # 'registration' or 'password_reset'\nclass OTPVerify(BaseModel):\n    email: EmailStr\n    otp_code: str\n    otp_type: str\nclass OTPResponse(BaseModel):\n    message: str\n    email: str",
+        "detail": "server.schemas.otp",
+        "documentation": {}
+    },
+    {
+        "label": "OTPVerify",
+        "kind": 6,
+        "importPath": "server.schemas.otp",
+        "description": "server.schemas.otp",
+        "peekOfCode": "class OTPVerify(BaseModel):\n    email: EmailStr\n    otp_code: str\n    otp_type: str\nclass OTPResponse(BaseModel):\n    message: str\n    email: str\nclass PasswordReset(BaseModel):\n    email: EmailStr\n    otp_code: str",
+        "detail": "server.schemas.otp",
+        "documentation": {}
+    },
+    {
+        "label": "OTPResponse",
+        "kind": 6,
+        "importPath": "server.schemas.otp",
+        "description": "server.schemas.otp",
+        "peekOfCode": "class OTPResponse(BaseModel):\n    message: str\n    email: str\nclass PasswordReset(BaseModel):\n    email: EmailStr\n    otp_code: str\n    new_password: str",
+        "detail": "server.schemas.otp",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordReset",
+        "kind": 6,
+        "importPath": "server.schemas.otp",
+        "description": "server.schemas.otp",
+        "peekOfCode": "class PasswordReset(BaseModel):\n    email: EmailStr\n    otp_code: str\n    new_password: str",
+        "detail": "server.schemas.otp",
+        "documentation": {}
+    },
+    {
         "label": "PaymentBase",
         "kind": 6,
         "importPath": "server.schemas.payment",
@@ -3415,7 +4491,7 @@
         "kind": 6,
         "importPath": "server.schemas.product",
         "description": "server.schemas.product",
-        "peekOfCode": "class ProductBase(BaseModel):\n    name: str = Field(..., min_length=2, max_length=200)\n    description: Optional[str] = Field(None, max_length=1000)\n    price: Decimal = Field(..., gt=0, decimal_places=2)\n    quantity_in_stock: int = Field(..., ge=0)\n    minimum_stock_level: int = Field(default=10, ge=0)\n    image_url: Optional[str] = Field(None, max_length=500)\n    category_id: int\n    is_active: bool = True\n# Product Create Schema",
+        "peekOfCode": "class ProductBase(BaseModel):\n    name: str = Field(..., min_length=2, max_length=200)\n    description: Optional[str] = Field(None, max_length=1000)\n    price: Decimal = Field(..., gt=0, decimal_places=2)\n    quantity_in_stock: int = Field(..., ge=0)\n    minimum_stock_level: int = Field(default=10, ge=0)\n    image_urls: List[str] = Field(default=[], max_length=5)\n    category_id: int\n    is_active: bool = True\n    @field_validator('image_urls')",
         "detail": "server.schemas.product",
         "documentation": {}
     },
@@ -3424,7 +4500,7 @@
         "kind": 6,
         "importPath": "server.schemas.product",
         "description": "server.schemas.product",
-        "peekOfCode": "class ProductCreate(ProductBase):\n    pass\n# Product Update Schema\nclass ProductUpdate(BaseModel):\n    name: Optional[str] = Field(None, min_length=2, max_length=200)\n    description: Optional[str] = Field(None, max_length=1000)\n    price: Optional[Decimal] = Field(None, gt=0, decimal_places=2)\n    quantity_in_stock: Optional[int] = Field(None, ge=0)\n    minimum_stock_level: Optional[int] = Field(None, ge=0)\n    image_url: Optional[str] = Field(None, max_length=500)",
+        "peekOfCode": "class ProductCreate(ProductBase):\n    pass\nclass ProductUpdate(BaseModel):\n    name: Optional[str] = Field(None, min_length=2, max_length=200)\n    description: Optional[str] = Field(None, max_length=1000)\n    price: Optional[Decimal] = Field(None, gt=0, decimal_places=2)\n    quantity_in_stock: Optional[int] = Field(None, ge=0)\n    minimum_stock_level: Optional[int] = Field(None, ge=0)\n    image_urls: Optional[List[str]] = Field(None, max_length=5)\n    category_id: Optional[int] = None",
         "detail": "server.schemas.product",
         "documentation": {}
     },
@@ -3433,7 +4509,16 @@
         "kind": 6,
         "importPath": "server.schemas.product",
         "description": "server.schemas.product",
-        "peekOfCode": "class ProductUpdate(BaseModel):\n    name: Optional[str] = Field(None, min_length=2, max_length=200)\n    description: Optional[str] = Field(None, max_length=1000)\n    price: Optional[Decimal] = Field(None, gt=0, decimal_places=2)\n    quantity_in_stock: Optional[int] = Field(None, ge=0)\n    minimum_stock_level: Optional[int] = Field(None, ge=0)\n    image_url: Optional[str] = Field(None, max_length=500)\n    category_id: Optional[int] = None\n    is_active: Optional[bool] = None\n# Product Response Schema",
+        "peekOfCode": "class ProductUpdate(BaseModel):\n    name: Optional[str] = Field(None, min_length=2, max_length=200)\n    description: Optional[str] = Field(None, max_length=1000)\n    price: Optional[Decimal] = Field(None, gt=0, decimal_places=2)\n    quantity_in_stock: Optional[int] = Field(None, ge=0)\n    minimum_stock_level: Optional[int] = Field(None, ge=0)\n    image_urls: Optional[List[str]] = Field(None, max_length=5)\n    category_id: Optional[int] = None\n    is_active: Optional[bool] = None\n    @field_validator('image_urls')",
+        "detail": "server.schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "ProductCount",
+        "kind": 6,
+        "importPath": "server.schemas.product",
+        "description": "server.schemas.product",
+        "peekOfCode": "class ProductCount(BaseModel):\n    count: int\nclass ProductResponse(ProductBase):\n    id: int\n    admin_id: int\n    created_at: datetime\n    updated_at: Optional[datetime]\n    class Config:\n        from_attributes = True\nclass ProductWithCategory(ProductResponse):",
         "detail": "server.schemas.product",
         "documentation": {}
     },
@@ -3442,7 +4527,7 @@
         "kind": 6,
         "importPath": "server.schemas.product",
         "description": "server.schemas.product",
-        "peekOfCode": "class ProductResponse(ProductBase):\n    id: int\n    admin_id: int\n    created_at: datetime\n    updated_at: Optional[datetime]\n    class Config:\n        from_attributes = True\n# Product with Category Name\nclass ProductWithCategory(ProductResponse):\n    category_name: str",
+        "peekOfCode": "class ProductResponse(ProductBase):\n    id: int\n    admin_id: int\n    created_at: datetime\n    updated_at: Optional[datetime]\n    class Config:\n        from_attributes = True\nclass ProductWithCategory(ProductResponse):\n    category_name: str\n    class Config:",
         "detail": "server.schemas.product",
         "documentation": {}
     },
@@ -3451,7 +4536,7 @@
         "kind": 6,
         "importPath": "server.schemas.product",
         "description": "server.schemas.product",
-        "peekOfCode": "class ProductWithCategory(ProductResponse):\n    category_name: str\n    class Config:\n        from_attributes = True\n# Product Stock Status\nclass ProductStockStatus(BaseModel):\n    id: int\n    name: str\n    quantity_in_stock: int\n    minimum_stock_level: int",
+        "peekOfCode": "class ProductWithCategory(ProductResponse):\n    category_name: str\n    class Config:\n        from_attributes = True\nclass ProductStockStatus(BaseModel):\n    id: int\n    name: str\n    quantity_in_stock: int\n    minimum_stock_level: int\n    is_low_stock: bool",
         "detail": "server.schemas.product",
         "documentation": {}
     },
@@ -3460,7 +4545,16 @@
         "kind": 6,
         "importPath": "server.schemas.product",
         "description": "server.schemas.product",
-        "peekOfCode": "class ProductStockStatus(BaseModel):\n    id: int\n    name: str\n    quantity_in_stock: int\n    minimum_stock_level: int\n    is_low_stock: bool\n    stock_percentage: float\n    class Config:\n        from_attributes = True",
+        "peekOfCode": "class ProductStockStatus(BaseModel):\n    id: int\n    name: str\n    quantity_in_stock: int\n    minimum_stock_level: int\n    is_low_stock: bool\n    stock_percentage: float\n    class Config:\n        from_attributes = True\nclass StockUpdate(BaseModel):",
+        "detail": "server.schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "StockUpdate",
+        "kind": 6,
+        "importPath": "server.schemas.product",
+        "description": "server.schemas.product",
+        "peekOfCode": "class StockUpdate(BaseModel):\n    quantity: int",
         "detail": "server.schemas.product",
         "documentation": {}
     },
@@ -3523,7 +4617,7 @@
         "kind": 2,
         "importPath": "server.utils.auth",
         "description": "server.utils.auth",
-        "peekOfCode": "def hash_password(password: str) -> str:\n    \"\"\"Hacher un mot de passe\"\"\"\n    return pwd_context.hash(password)\ndef verify_password(plain_password: str, hashed_password: str) -> bool:\n    \"\"\"Vérifier un mot de passe\"\"\"\n    return pwd_context.verify(plain_password, hashed_password)\ndef create_access_token(data: dict, expires_delta: timedelta = None) -> str:\n    \"\"\"Créer un token JWT\"\"\"\n    to_encode = data.copy()\n    if expires_delta:",
+        "peekOfCode": "def hash_password(password: str) -> str:\n    \"\"\"\n    Hacher un mot de passe avec bcrypt.\n    Bcrypt a une limite de 72 octets, donc on pré-hache les mots de passe longs avec SHA256.\n    \"\"\"\n    # Si le mot de passe dépasse 72 octets, on le pré-hache avec SHA256\n    if len(password.encode('utf-8')) > 72:\n        password = hashlib.sha256(password.encode('utf-8')).hexdigest()\n    # Hacher avec bcrypt\n    password_bytes = password.encode('utf-8')",
         "detail": "server.utils.auth",
         "documentation": {}
     },
@@ -3532,7 +4626,7 @@
         "kind": 2,
         "importPath": "server.utils.auth",
         "description": "server.utils.auth",
-        "peekOfCode": "def verify_password(plain_password: str, hashed_password: str) -> bool:\n    \"\"\"Vérifier un mot de passe\"\"\"\n    return pwd_context.verify(plain_password, hashed_password)\ndef create_access_token(data: dict, expires_delta: timedelta = None) -> str:\n    \"\"\"Créer un token JWT\"\"\"\n    to_encode = data.copy()\n    if expires_delta:\n        expire = datetime.utcnow() + expires_delta\n    else:\n        expire = datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)",
+        "peekOfCode": "def verify_password(plain_password: str, hashed_password: str) -> bool:\n    \"\"\"\n    Vérifier un mot de passe.\n    Applique le même pré-hachage si nécessaire.\n    \"\"\"\n    # Appliquer le même pré-hachage si le mot de passe est long\n    if len(plain_password.encode('utf-8')) > 72:\n        plain_password = hashlib.sha256(\n            plain_password.encode('utf-8')).hexdigest()\n    password_bytes = plain_password.encode('utf-8')",
         "detail": "server.utils.auth",
         "documentation": {}
     },
@@ -3577,7 +4671,7 @@
         "kind": 5,
         "importPath": "server.utils.auth",
         "description": "server.utils.auth",
-        "peekOfCode": "SECRET_KEY = \"votre_clé_secrète_très_sécurisée_changez_moi_en_production\"  # Changez ceci en production!\nALGORITHM = \"HS256\"\nACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24  # 24 heures\n# Context pour le hachage des mots de passe\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\n# OAuth2 scheme pour l'extraction du token\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\ndef hash_password(password: str) -> str:\n    \"\"\"Hacher un mot de passe\"\"\"\n    return pwd_context.hash(password)",
+        "peekOfCode": "SECRET_KEY = os.getenv(\n    \"SECRET_KEY\", \"votre_clé_secrète_très_sécurisée_changez_moii_enn_productionn\")\nALGORITHM = \"HS256\"\nACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24 * 20  # 24 heures\n# OAuth2 scheme pour l'extraction du token\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\ndef hash_password(password: str) -> str:\n    \"\"\"\n    Hacher un mot de passe avec bcrypt.\n    Bcrypt a une limite de 72 octets, donc on pré-hache les mots de passe longs avec SHA256.",
         "detail": "server.utils.auth",
         "documentation": {}
     },
@@ -3586,7 +4680,7 @@
         "kind": 5,
         "importPath": "server.utils.auth",
         "description": "server.utils.auth",
-        "peekOfCode": "ALGORITHM = \"HS256\"\nACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24  # 24 heures\n# Context pour le hachage des mots de passe\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\n# OAuth2 scheme pour l'extraction du token\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\ndef hash_password(password: str) -> str:\n    \"\"\"Hacher un mot de passe\"\"\"\n    return pwd_context.hash(password)\ndef verify_password(plain_password: str, hashed_password: str) -> bool:",
+        "peekOfCode": "ALGORITHM = \"HS256\"\nACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24 * 20  # 24 heures\n# OAuth2 scheme pour l'extraction du token\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\ndef hash_password(password: str) -> str:\n    \"\"\"\n    Hacher un mot de passe avec bcrypt.\n    Bcrypt a une limite de 72 octets, donc on pré-hache les mots de passe longs avec SHA256.\n    \"\"\"\n    # Si le mot de passe dépasse 72 octets, on le pré-hache avec SHA256",
         "detail": "server.utils.auth",
         "documentation": {}
     },
@@ -3595,16 +4689,7 @@
         "kind": 5,
         "importPath": "server.utils.auth",
         "description": "server.utils.auth",
-        "peekOfCode": "ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24  # 24 heures\n# Context pour le hachage des mots de passe\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\n# OAuth2 scheme pour l'extraction du token\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\ndef hash_password(password: str) -> str:\n    \"\"\"Hacher un mot de passe\"\"\"\n    return pwd_context.hash(password)\ndef verify_password(plain_password: str, hashed_password: str) -> bool:\n    \"\"\"Vérifier un mot de passe\"\"\"",
-        "detail": "server.utils.auth",
-        "documentation": {}
-    },
-    {
-        "label": "pwd_context",
-        "kind": 5,
-        "importPath": "server.utils.auth",
-        "description": "server.utils.auth",
-        "peekOfCode": "pwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\n# OAuth2 scheme pour l'extraction du token\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\ndef hash_password(password: str) -> str:\n    \"\"\"Hacher un mot de passe\"\"\"\n    return pwd_context.hash(password)\ndef verify_password(plain_password: str, hashed_password: str) -> bool:\n    \"\"\"Vérifier un mot de passe\"\"\"\n    return pwd_context.verify(plain_password, hashed_password)\ndef create_access_token(data: dict, expires_delta: timedelta = None) -> str:",
+        "peekOfCode": "ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24 * 20  # 24 heures\n# OAuth2 scheme pour l'extraction du token\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\ndef hash_password(password: str) -> str:\n    \"\"\"\n    Hacher un mot de passe avec bcrypt.\n    Bcrypt a une limite de 72 octets, donc on pré-hache les mots de passe longs avec SHA256.\n    \"\"\"\n    # Si le mot de passe dépasse 72 octets, on le pré-hache avec SHA256\n    if len(password.encode('utf-8')) > 72:",
         "detail": "server.utils.auth",
         "documentation": {}
     },
@@ -3613,8 +4698,26 @@
         "kind": 5,
         "importPath": "server.utils.auth",
         "description": "server.utils.auth",
-        "peekOfCode": "oauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\ndef hash_password(password: str) -> str:\n    \"\"\"Hacher un mot de passe\"\"\"\n    return pwd_context.hash(password)\ndef verify_password(plain_password: str, hashed_password: str) -> bool:\n    \"\"\"Vérifier un mot de passe\"\"\"\n    return pwd_context.verify(plain_password, hashed_password)\ndef create_access_token(data: dict, expires_delta: timedelta = None) -> str:\n    \"\"\"Créer un token JWT\"\"\"\n    to_encode = data.copy()",
+        "peekOfCode": "oauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\ndef hash_password(password: str) -> str:\n    \"\"\"\n    Hacher un mot de passe avec bcrypt.\n    Bcrypt a une limite de 72 octets, donc on pré-hache les mots de passe longs avec SHA256.\n    \"\"\"\n    # Si le mot de passe dépasse 72 octets, on le pré-hache avec SHA256\n    if len(password.encode('utf-8')) > 72:\n        password = hashlib.sha256(password.encode('utf-8')).hexdigest()\n    # Hacher avec bcrypt",
         "detail": "server.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "kind": 2,
+        "importPath": "server.utils.db",
+        "description": "server.utils.db",
+        "peekOfCode": "def get_db():\n    \"\"\"\n    Database session dependency for FastAPI\n    Usage in routes: db: Session = Depends(get_db)\n    \"\"\"\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()",
+        "detail": "server.utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "test_connection",
+        "kind": 2,
+        "importPath": "server.utils.db",
+        "description": "server.utils.db",
+        "peekOfCode": "def test_connection():\n    \"\"\"\n    Test database connection\n    Returns True if connection is successful, False otherwise\n    \"\"\"\n    try:\n        with engine.connect() as conn:\n            result = conn.execute(text(\"SELECT version();\"))\n            version = result.scalar()\n            print(f\"✅ Database connected successfully!\")",
+        "detail": "server.utils.db",
         "documentation": {}
     },
     {
@@ -3622,7 +4725,7 @@
         "kind": 2,
         "importPath": "server.utils.db",
         "description": "server.utils.db",
-        "peekOfCode": "def init_db():\n    \"\"\"Initialiser la base de données (créer toutes les tables)\"\"\"\n    print(\"🔄 Création des tables de la base de données PostgreSQL...\")\n    try:\n        Base.metadata.create_all(bind=engine)\n        print(\"✅ Tables créées avec succès!\")\n        # Afficher les tables créées\n        with engine.connect() as conn:\n            result = conn.execute(text(\"\"\"\n                SELECT table_name ",
+        "peekOfCode": "def init_db():\n    \"\"\"Initialiser la base de données (créer toutes les tables)\"\"\"\n    from models.admin import Admin\n    from models.client import Client\n    from models.category import Category\n    from models.product import Product\n    from models.bill import Bill\n    from models.bill_item import BillItem\n    from models.payment import Payment\n    from models.stock_alert import StockAlert",
         "detail": "server.utils.db",
         "documentation": {}
     },
@@ -3658,8 +4761,62 @@
         "kind": 2,
         "importPath": "server.utils.db",
         "description": "server.utils.db",
-        "peekOfCode": "def create_sample_data():\n    \"\"\"Créer des données de test (optionnel)\"\"\"\n    from sqlalchemy.orm import Session\n    from utils.auth import hash_password\n    from decimal import Decimal\n    print(\"🎲 Création de données de test...\")\n    session = Session(bind=engine)\n    try:\n        # Créer un admin de test\n        admin = Admin(",
+        "peekOfCode": "def create_sample_data():\n    \"\"\"Créer des données de test (optionnel)\"\"\"\n    from utils.auth import hash_password\n    from decimal import Decimal\n    from models.admin import Admin\n    from models.client import Client\n    from models.category import Category\n    from models.product import Product\n    print(\"🎲 Création de données de test...\")\n    session = Session(bind=engine)",
         "detail": "server.utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_URL",
+        "kind": 5,
+        "importPath": "server.utils.db",
+        "description": "server.utils.db",
+        "peekOfCode": "DATABASE_URL = os.getenv(\"DATABASE_URL\")\n# Railway PostgreSQL URL fix (Railway uses postgres:// but SQLAlchemy needs postgresql://)\nif DATABASE_URL and DATABASE_URL.startswith(\"postgres://\"):\n    DATABASE_URL = DATABASE_URL.replace(\"postgres://\", \"postgresql://\", 1)\n    print(\"🚂 Detected Railway PostgreSQL URL, converted to postgresql://\")\n# Fallback to local database if no DATABASE_URL provided\nif not DATABASE_URL:\n    DATABASE_URL = os.getenv(\n        \"LOCAL_DATABASE_URL\",\n        \"postgresql://postgres:032023@localhost:5432/Ecom_app\"",
+        "detail": "server.utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "engine_kwargs",
+        "kind": 5,
+        "importPath": "server.utils.db",
+        "description": "server.utils.db",
+        "peekOfCode": "engine_kwargs = {\n    \"pool_pre_ping\": True,  # Verify connections before using\n    \"pool_recycle\": 3600,   # Recycle connections after 1 hour\n    # Log SQL queries if SQL_ECHO=true\n    \"echo\": os.getenv(\"SQL_ECHO\", \"False\").lower() == \"true\",\n}\n# SQLite configuration (if you ever need it for testing)\nif DATABASE_URL.startswith(\"sqlite\"):\n    engine_kwargs[\"connect_args\"] = {\"check_same_thread\": False}\nelse:",
+        "detail": "server.utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "server.utils.db",
+        "description": "server.utils.db",
+        "peekOfCode": "engine = create_engine(DATABASE_URL, **engine_kwargs)\n# Session factory\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\n# Base class for models\nBase = declarative_base()\ndef get_db():\n    \"\"\"\n    Database session dependency for FastAPI\n    Usage in routes: db: Session = Depends(get_db)\n    \"\"\"",
+        "detail": "server.utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "SessionLocal",
+        "kind": 5,
+        "importPath": "server.utils.db",
+        "description": "server.utils.db",
+        "peekOfCode": "SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\n# Base class for models\nBase = declarative_base()\ndef get_db():\n    \"\"\"\n    Database session dependency for FastAPI\n    Usage in routes: db: Session = Depends(get_db)\n    \"\"\"\n    db = SessionLocal()\n    try:",
+        "detail": "server.utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "server.utils.db",
+        "description": "server.utils.db",
+        "peekOfCode": "Base = declarative_base()\ndef get_db():\n    \"\"\"\n    Database session dependency for FastAPI\n    Usage in routes: db: Session = Depends(get_db)\n    \"\"\"\n    db = SessionLocal()\n    try:\n        yield db\n    finally:",
+        "detail": "server.utils.db",
+        "documentation": {}
+    },
+    {
+        "label": "EmailService",
+        "kind": 6,
+        "importPath": "server.utils.email_service",
+        "description": "server.utils.email_service",
+        "peekOfCode": "class EmailService:\n    def __init__(self):\n        self.smtp_server = os.getenv(\"SMTP_SERVER\", \"smtp.gmail.com\")\n        self.smtp_port = int(os.getenv(\"SMTP_PORT\", \"587\"))\n        self.sender_email = os.getenv(\"SENDER_EMAIL\")\n        self.sender_password = os.getenv(\"SENDER_PASSWORD\")\n    def send_otp_email(self, recipient_email: str, otp_code: str, otp_type: str) -> bool:\n        \"\"\"Send OTP via email\"\"\"\n        try:\n            subject = \"Code de vérification\" if otp_type == \"registration\" else \"Réinitialisation du mot de passe\"",
+        "detail": "server.utils.email_service",
         "documentation": {}
     },
     {
@@ -3798,6 +4955,15 @@
         "documentation": {}
     },
     {
+        "label": "OTPService",
+        "kind": 6,
+        "importPath": "server.utils.otp_service",
+        "description": "server.utils.otp_service",
+        "peekOfCode": "class OTPService:\n    @staticmethod\n    def generate_otp(length: int = 6) -> str:\n        \"\"\"Generate a random OTP code\"\"\"\n        return ''.join(random.choices(string.digits, k=length))\n    @staticmethod\n    def create_otp(db: Session, email: str, otp_type: str) -> str:\n        \"\"\"Create and store OTP in database\"\"\"\n        # Invalidate previous OTPs for this email and type\n        db.query(OTP).filter(",
+        "detail": "server.utils.otp_service",
+        "documentation": {}
+    },
+    {
         "label": "check_and_create_stock_alert",
         "kind": 2,
         "importPath": "server.utils.stock_manager",
@@ -3852,6 +5018,33 @@
         "documentation": {}
     },
     {
+        "label": "DATABASE_URL",
+        "kind": 5,
+        "importPath": "server.drop_all_tables",
+        "description": "server.drop_all_tables",
+        "peekOfCode": "DATABASE_URL = os.getenv(\"LOCAL_DATABASE_URL\") or os.getenv(\"DATABASE_URL\")\nengine = create_engine(DATABASE_URL)\ntables = [\n    'notifications', 'stock_alerts', 'payments', 'bill_items', \n    'bills', 'products', 'categories', 'clients', 'admins', 'alembic_version'\n]\nwith engine.connect() as conn:\n    for table in tables:\n        try:\n            conn.execute(text(f\"DROP TABLE IF EXISTS {table} CASCADE\"))",
+        "detail": "server.drop_all_tables",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "server.drop_all_tables",
+        "description": "server.drop_all_tables",
+        "peekOfCode": "engine = create_engine(DATABASE_URL)\ntables = [\n    'notifications', 'stock_alerts', 'payments', 'bill_items', \n    'bills', 'products', 'categories', 'clients', 'admins', 'alembic_version'\n]\nwith engine.connect() as conn:\n    for table in tables:\n        try:\n            conn.execute(text(f\"DROP TABLE IF EXISTS {table} CASCADE\"))\n            print(f\"✅ Dropped {table}\")",
+        "detail": "server.drop_all_tables",
+        "documentation": {}
+    },
+    {
+        "label": "tables",
+        "kind": 5,
+        "importPath": "server.drop_all_tables",
+        "description": "server.drop_all_tables",
+        "peekOfCode": "tables = [\n    'notifications', 'stock_alerts', 'payments', 'bill_items', \n    'bills', 'products', 'categories', 'clients', 'admins', 'alembic_version'\n]\nwith engine.connect() as conn:\n    for table in tables:\n        try:\n            conn.execute(text(f\"DROP TABLE IF EXISTS {table} CASCADE\"))\n            print(f\"✅ Dropped {table}\")\n        except Exception as e:",
+        "detail": "server.drop_all_tables",
+        "documentation": {}
+    },
+    {
         "label": "initila_data",
         "kind": 2,
         "importPath": "server.main",
@@ -3867,6 +5060,24 @@
         "description": "server.main",
         "peekOfCode": "app = FastAPI(\n    title=\"Système de Gestion E-Commerce\",\n    description=\"\"\"\n    ## API de gestion e-commerce avec FastAPI\n    ### Fonctionnalités principales:\n    * **Gestion des administrateurs** - Inscription, connexion, gestion des admins\n    * **Gestion des clients** - Inscription, connexion, profils clients\n    * **Gestion des catégories** - CRUD complet des catégories de produits\n    * **Gestion des produits** - CRUD, gestion de stock, alertes automatiques\n    * **Gestion des factures** - Création, consultation, suivi des paiements",
         "detail": "server.main",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_URL",
+        "kind": 5,
+        "importPath": "server.reset_alembic",
+        "description": "server.reset_alembic",
+        "peekOfCode": "DATABASE_URL = os.getenv(\"LOCAL_DATABASE_URL\") or os.getenv(\"DATABASE_URL\")\nengine = create_engine(DATABASE_URL)\nwith engine.connect() as conn:\n    conn.execute(text(\"DELETE FROM alembic_version\"))\n    conn.commit()\n    print(\"✅ Alembic version table cleared!\")",
+        "detail": "server.reset_alembic",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "server.reset_alembic",
+        "description": "server.reset_alembic",
+        "peekOfCode": "engine = create_engine(DATABASE_URL)\nwith engine.connect() as conn:\n    conn.execute(text(\"DELETE FROM alembic_version\"))\n    conn.commit()\n    print(\"✅ Alembic version table cleared!\")",
+        "detail": "server.reset_alembic",
         "documentation": {}
     }
 ]

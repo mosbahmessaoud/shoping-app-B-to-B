@@ -12,7 +12,8 @@ import hashlib
 
 # Configuration de sécurité
 # Changez ceci en production!
-SECRET_KEY = os.getenv("SECRET_KEY", "votre_clé_secrète_très_sécurisée_changez_moii_enn_productionn")
+SECRET_KEY = os.getenv(
+    "SECRET_KEY", "votre_clé_secrète_très_sécurisée_changez_moii_enn_productionn")
 ALGORITHM = "HS256"
 
 ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24 * 20  # 24 heures
@@ -29,12 +30,12 @@ def hash_password(password: str) -> str:
     # Si le mot de passe dépasse 72 octets, on le pré-hache avec SHA256
     if len(password.encode('utf-8')) > 72:
         password = hashlib.sha256(password.encode('utf-8')).hexdigest()
-    
+
     # Hacher avec bcrypt
     password_bytes = password.encode('utf-8')
     salt = bcrypt.gensalt()
     hashed = bcrypt.hashpw(password_bytes, salt)
-    
+
     return hashed.decode('utf-8')
 
 
@@ -45,11 +46,12 @@ def verify_password(plain_password: str, hashed_password: str) -> bool:
     """
     # Appliquer le même pré-hachage si le mot de passe est long
     if len(plain_password.encode('utf-8')) > 72:
-        plain_password = hashlib.sha256(plain_password.encode('utf-8')).hexdigest()
-    
+        plain_password = hashlib.sha256(
+            plain_password.encode('utf-8')).hexdigest()
+
     password_bytes = plain_password.encode('utf-8')
     hashed_bytes = hashed_password.encode('utf-8')
-    
+
     return bcrypt.checkpw(password_bytes, hashed_bytes)
 
 
