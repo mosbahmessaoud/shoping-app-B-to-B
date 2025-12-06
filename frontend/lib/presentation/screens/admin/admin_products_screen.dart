@@ -14,7 +14,7 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
   List<dynamic> _products = [];
   List<dynamic> _categories = [];
   bool _loading = true;
-  int? _selectedCategory ;
+  int? _selectedCategory;
   bool? _isActiveFilter;
 
   @override
@@ -24,23 +24,117 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
     _loadProducts();
   }
 
+  void _showErrorDialog(String title, String message, {VoidCallback? onRetry}) {
+    if (!mounted) return;
+
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Row(
+          children: [
+            const Icon(Icons.error_outline, color: Colors.red, size: 28),
+            const SizedBox(width: 12),
+            Expanded(child: Text(title)),
+          ],
+        ),
+        content: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(message, style: const TextStyle(fontSize: 16)),
+              const SizedBox(height: 16),
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: Colors.blue.shade50,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('💡 Solutions possibles:',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                    SizedBox(height: 8),
+                    Text('• Vérifiez votre connexion internet'),
+                    Text('• Réessayez dans quelques instants'),
+                    Text('• Contactez l\'administrateur si le problème persiste'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Fermer'),
+          ),
+          if (onRetry != null)
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.pop(context);
+                onRetry();
+              },
+              icon: const Icon(Icons.refresh),
+              label: const Text('Réessayer'),
+            ),
+        ],
+      ),
+    );
+  }
+
+  void _showSuccessSnackbar(String message) {
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Row(
+          children: [
+            const Icon(Icons.check_circle, color: Colors.white),
+            const SizedBox(width: 12),
+            Expanded(child: Text(message)),
+          ],
+        ),
+        backgroundColor: Colors.green,
+        behavior: SnackBarBehavior.floating,
+      ),
+    );
+  }
+
+  String _getErrorMessage(dynamic error) {
+    final errorStr = error.toString().toLowerCase();
+    if (errorStr.contains('host lookup') ||
+        errorStr.contains('failed host lookup') ||
+        errorStr.contains('socketexception')) {
+      return 'Impossible de se connecter au serveur. Vérifiez votre connexion internet.';
+    } else if (errorStr.contains('timeout')) {
+      return 'Le serveur met trop de temps à répondre. Veuillez réessayer.';
+    } else if (errorStr.contains('401')) {
+      return 'Votre session a expiré. Veuillez vous reconnecter.';
+    } else if (errorStr.contains('404')) {
+      return 'Ressource introuvable. Veuillez actualiser la page.';
+    } else if (errorStr.contains('500')) {
+      return 'Le serveur rencontre un problème. Veuillez réessayer plus tard.';
+    }
+    return 'Une erreur inattendue s\'est produite. Veuillez réessayer.';
+  }
+
   Future<void> _loadCategories() async {
     try {
       final response = await _api.getAllCategories();
       setState(() => _categories = response.data);
     } catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Erreur chargement catégories: $e')),
-        );
-      }
+      _showErrorDialog(
+        'Erreur de chargement',
+        'Impossible de charger les catégories.\n\n${_getErrorMessage(e)}',
+        onRetry: _loadCategories,
+      );
     }
   }
 
   Future<void> _loadProducts() async {
     setState(() => _loading = true);
     try {
-      print(_selectedCategory);
       final response = await _api.getAllProducts(
         categoryId: _selectedCategory,
         isActive: _isActiveFilter,
@@ -51,11 +145,11 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
       });
     } catch (e) {
       setState(() => _loading = false);
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Erreur: $e')),
-        );
-      }
+      _showErrorDialog(
+        'Erreur de chargement',
+        'Impossible de charger les produits.\n\n${_getErrorMessage(e)}',
+        onRetry: _loadProducts,
+      );
     }
   }
 
@@ -63,8 +157,14 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
     final confirm = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('Confirmer la suppression'),
-        content: Text('Supprimer "$name"?\nCette action est irréversible.'),
+        title: const Row(
+          children: [
+            Icon(Icons.warning, color: Colors.orange, size: 28),
+            SizedBox(width: 12),
+            Text('Confirmer la suppression'),
+          ],
+        ),
+        content: Text('Êtes-vous sûr de vouloir supprimer "$name"?\n\nCette action est irréversible.'),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx, false),
@@ -82,18 +182,14 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
     if (confirm == true) {
       try {
         await _api.deleteProduct(id);
-        if (mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Produit supprimé avec succès')),
-          );
-        }
+        _showSuccessSnackbar('Produit "$name" supprimé avec succès');
         _loadProducts();
       } catch (e) {
-        if (mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('Erreur suppression: $e')),
-          );
-        }
+        _showErrorDialog(
+          'Erreur de suppression',
+          'Impossible de supprimer le produit "$name".\n\n${_getErrorMessage(e)}',
+          onRetry: () => _deleteProduct(id, name),
+        );
       }
     }
   }
@@ -112,9 +208,10 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
                 decoration: const InputDecoration(
                   labelText: 'Catégorie',
                   border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.category),
                 ),
                 items: [
-                  const DropdownMenuItem(value: null, child: Text('Toutes')),
+                  const DropdownMenuItem(value: null, child: Text('Toutes les catégories')),
                   ..._categories.map((cat) => DropdownMenuItem(
                         value: cat['id'],
                         child: Text(cat['name'] ?? ''),
@@ -128,11 +225,12 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
                 decoration: const InputDecoration(
                   labelText: 'Statut',
                   border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.toggle_on),
                 ),
                 items: const [
-                  DropdownMenuItem(value: null, child: Text('Tous')),
-                  DropdownMenuItem(value: true, child: Text('Actifs')),
-                  DropdownMenuItem(value: false, child: Text('Inactifs')),
+                  DropdownMenuItem(value: null, child: Text('Tous les statuts')),
+                  DropdownMenuItem(value: true, child: Text('Actifs uniquement')),
+                  DropdownMenuItem(value: false, child: Text('Inactifs uniquement')),
                 ],
                 onChanged: (val) => setDialogState(() => _isActiveFilter = val),
               ),
@@ -165,18 +263,38 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
 
   Future<void> _updateStock(int id, String name, int currentStock) async {
     final controller = TextEditingController(text: currentStock.toString());
-    
+
     final newStock = await showDialog<int>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: Text('Modifier Stock - $name'),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Row(
+              children: [
+                Icon(Icons.inventory, color: Colors.blue),
+                SizedBox(width: 8),
+                Text('Modifier le stock'),
+              ],
+            ),
+            const SizedBox(height: 4),
+            Text(
+              name,
+              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.normal),
+            ),
+          ],
+        ),
         content: TextField(
           controller: controller,
-          decoration: const InputDecoration(
+          decoration: InputDecoration(
             labelText: 'Nouvelle quantité',
-            border: OutlineInputBorder(),
+            border: const OutlineInputBorder(),
+            suffixText: 'unités',
+            helperText: 'Stock actuel: $currentStock unités',
           ),
           keyboardType: TextInputType.number,
+          autofocus: true,
         ),
         actions: [
           TextButton(
@@ -186,7 +304,16 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
           ElevatedButton(
             onPressed: () {
               final qty = int.tryParse(controller.text);
-              if (qty != null) Navigator.pop(ctx, qty);
+              if (qty != null && qty >= 0) {
+                Navigator.pop(ctx, qty);
+              } else {
+                ScaffoldMessenger.of(ctx).showSnackBar(
+                  const SnackBar(
+                    content: Text('Veuillez entrer un nombre valide'),
+                    backgroundColor: Colors.red,
+                  ),
+                );
+              }
             },
             child: const Text('Confirmer'),
           ),
@@ -197,18 +324,14 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
     if (newStock != null) {
       try {
         await _api.updateProductStock(id, newStock);
-        if (mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Stock mis à jour')),
-          );
-        }
+        _showSuccessSnackbar('Stock de "$name" mis à jour: $newStock unités');
         _loadProducts();
       } catch (e) {
-        if (mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('Erreur: $e')),
-          );
-        }
+        _showErrorDialog(
+          'Erreur de mise à jour',
+          'Impossible de mettre à jour le stock de "$name".\n\n${_getErrorMessage(e)}',
+          onRetry: () => _updateStock(id, name, currentStock),
+        );
       }
     }
   }
@@ -233,6 +356,11 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
               onPressed: _showFilterDialog,
               tooltip: 'Filtrer',
             ),
+          IconButton(
+            icon: const Icon(Icons.refresh),
+            onPressed: _loadProducts,
+            tooltip: 'Actualiser',
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
@@ -252,14 +380,18 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.inventory_2_outlined, 
-                            size: 64, color: Colors.grey[400]),
+                          Icon(Icons.inventory_2_outlined,
+                              size: 64, color: Colors.grey[400]),
                           const SizedBox(height: 16),
                           Text('Aucun produit trouvé',
-                            style: TextStyle(color: Colors.grey[600])),
+                              style: TextStyle(
+                                  fontSize: 18, color: Colors.grey[600])),
                           if (hasFilters) ...[
                             const SizedBox(height: 8),
-                            TextButton.icon(
+                            Text('Essayez de modifier les filtres',
+                                style: TextStyle(color: Colors.grey[500])),
+                            const SizedBox(height: 16),
+                            ElevatedButton.icon(
                               onPressed: () {
                                 setState(() {
                                   _selectedCategory = null;
@@ -270,6 +402,10 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
                               icon: const Icon(Icons.clear),
                               label: const Text('Effacer les filtres'),
                             ),
+                          ] else ...[
+                            const SizedBox(height: 8),
+                            Text('Commencez par ajouter des produits',
+                                style: TextStyle(color: Colors.grey[500])),
                           ],
                         ],
                       ),
@@ -314,6 +450,30 @@ class _ProductCard extends StatelessWidget {
     required this.onUpdateStock,
   });
 
+  // Helper to get first image URL or null
+  String? get _imageUrl {
+    final imageUrls = product['image_urls'];
+    if (imageUrls == null) return null;
+    
+    if (imageUrls is List && imageUrls.isNotEmpty) {
+      return imageUrls[0].toString();
+    }
+    
+    return null;
+  }
+
+  // Helper to get image count
+  int get _imageCount {
+    final imageUrls = product['image_urls'];
+    if (imageUrls == null) return 0;
+    
+    if (imageUrls is List) {
+      return imageUrls.length;
+    }
+    
+    return 0;
+  }
+
   @override
   Widget build(BuildContext context) {
     final stock = product['quantity_in_stock'] ?? 0;
@@ -321,21 +481,95 @@ class _ProductCard extends StatelessWidget {
     final lowStock = stock < minLevel;
     final isActive = product['is_active'] ?? true;
     final categoryName = product['category_name'] ?? 'Sans catégorie';
-    
+
     return Card(
       margin: const EdgeInsets.only(bottom: 12),
+      elevation: lowStock ? 4 : 1,
+      clipBehavior: Clip.antiAlias,
       child: ExpansionTile(
-        leading: CircleAvatar(
-          backgroundColor: lowStock 
-            ? Colors.red 
-            : (isActive ? Colors.green : Colors.grey),
-          child: Text(
-            '$stock',
-            style: const TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
+        leading: Container(
+          width: 60,
+          height: 60,
+          decoration: BoxDecoration(
+            color: Colors.grey[200],
+            borderRadius: BorderRadius.circular(8),
+            border: Border.all(
+              color: lowStock ? Colors.red : (isActive ? Colors.green : Colors.grey),
+              width: 2,
             ),
           ),
+          clipBehavior: Clip.antiAlias,
+          child: _imageUrl != null
+              ? Stack(
+                  children: [
+                    Image.network(
+                      _imageUrl!,
+                      fit: BoxFit.cover,
+                      width: 60,
+                      height: 60,
+                      errorBuilder: (context, error, stackTrace) {
+                        return Center(
+                          child: Icon(
+                            Icons.medical_services,
+                            color: Colors.grey[400],
+                            size: 24,
+                          ),
+                        );
+                      },
+                      loadingBuilder: (context, child, loadingProgress) {
+                        if (loadingProgress == null) return child;
+                        return Center(
+                          child: SizedBox(
+                            width: 20,
+                            height: 20,
+                            child: CircularProgressIndicator(
+                              strokeWidth: 2,
+                              value: loadingProgress.expectedTotalBytes != null
+                                  ? loadingProgress.cumulativeBytesLoaded /
+                                      loadingProgress.expectedTotalBytes!
+                                  : null,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                    // Image count badge
+                    if (_imageCount > 1)
+                      Positioned(
+                        bottom: 2,
+                        right: 2,
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+                          decoration: BoxDecoration(
+                            color: Colors.black87,
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const Icon(Icons.photo_library, size: 10, color: Colors.white),
+                              const SizedBox(width: 2),
+                              Text(
+                                '$_imageCount',
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                  ],
+                )
+              : Center(
+                  child: Icon(
+                    Icons.medical_services,
+                    color: Colors.grey[400],
+                    size: 24,
+                  ),
+                ),
         ),
         title: Row(
           children: [
@@ -362,25 +596,56 @@ class _ProductCard extends StatelessWidget {
             const SizedBox(height: 4),
             Row(
               children: [
-                Text('${product['price']} DA', 
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.green[700],
-                  )),
+                Text('${product['price']} DA',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.green[700],
+                    )),
                 const SizedBox(width: 16),
                 Icon(Icons.category, size: 16, color: Colors.grey[600]),
                 const SizedBox(width: 4),
-                Text(categoryName),
+                Expanded(child: Text(categoryName, overflow: TextOverflow.ellipsis)),
               ],
             ),
-            if (lowStock) ...[
-              const SizedBox(height: 4),
-              Row(
-                children: [
+            const SizedBox(height: 4),
+            Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                  decoration: BoxDecoration(
+                    color: lowStock ? Colors.red[50] : Colors.green[50],
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(
+                      color: lowStock ? Colors.red : Colors.green,
+                      width: 1,
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(
+                        Icons.inventory,
+                        size: 14,
+                        color: lowStock ? Colors.red : Colors.green[700],
+                      ),
+                      const SizedBox(width: 4),
+                      Text(
+                        'Stock: $stock',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: lowStock ? Colors.red : Colors.green[700],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                if (lowStock) ...[
+                  const SizedBox(width: 8),
                   const Icon(Icons.warning, size: 16, color: Colors.red),
                   const SizedBox(width: 4),
                   Text(
-                    'Stock faible (min: $minLevel)',
+                    'Min: $minLevel',
                     style: const TextStyle(
                       color: Colors.red,
                       fontSize: 12,
@@ -388,8 +653,8 @@ class _ProductCard extends StatelessWidget {
                     ),
                   ),
                 ],
-              ),
-            ],
+              ],
+            ),
           ],
         ),
         children: [
@@ -398,14 +663,60 @@ class _ProductCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                if (product['description'] != null && 
+                // Product images preview
+                if (_imageCount > 0) ...[
+                  const Text(
+                    'Images:',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 8),
+                  SizedBox(
+                    height: 80,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: _imageCount,
+                      itemBuilder: (context, index) {
+                        final imageUrls = product['image_urls'] as List;
+                        final imageUrl = imageUrls[index].toString();
+                        
+                        return Container(
+                          width: 80,
+                          height: 80,
+                          margin: const EdgeInsets.only(right: 8),
+                          decoration: BoxDecoration(
+                            color: Colors.grey[200],
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(color: Colors.grey[300]!),
+                          ),
+                          clipBehavior: Clip.antiAlias,
+                          child: Image.network(
+                            imageUrl,
+                            fit: BoxFit.cover,
+                            errorBuilder: (context, error, stackTrace) {
+                              return Center(
+                                child: Icon(
+                                  Icons.broken_image,
+                                  color: Colors.grey[400],
+                                ),
+                              );
+                            },
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                ],
+                
+                if (product['description'] != null &&
                     product['description'].toString().isNotEmpty) ...[
-                  const Text('Description:', 
-                    style: TextStyle(fontWeight: FontWeight.bold)),
+                  const Text('Description:',
+                      style: TextStyle(fontWeight: FontWeight.bold)),
                   const SizedBox(height: 4),
                   Text(product['description']),
                   const SizedBox(height: 12),
                 ],
+                
                 Row(
                   children: [
                     Expanded(
@@ -428,6 +739,7 @@ class _ProductCard extends StatelessWidget {
                 const SizedBox(height: 12),
                 Wrap(
                   spacing: 8,
+                  runSpacing: 8,
                   children: [
                     ElevatedButton.icon(
                       onPressed: onUpdateStock,
@@ -435,6 +747,7 @@ class _ProductCard extends StatelessWidget {
                       label: const Text('Modifier Stock'),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
+                        foregroundColor: Colors.white,
                       ),
                     ),
                     ElevatedButton.icon(
@@ -484,10 +797,8 @@ class _InfoChip extends StatelessWidget {
         children: [
           Icon(icon, size: 20, color: Colors.grey[700]),
           const SizedBox(height: 4),
-          Text(label, 
-            style: TextStyle(fontSize: 12, color: Colors.grey[600])),
-          Text(value, 
-            style: const TextStyle(fontWeight: FontWeight.bold)),
+          Text(label, style: TextStyle(fontSize: 12, color: Colors.grey[600])),
+          Text(value, style: const TextStyle(fontWeight: FontWeight.bold)),
         ],
       ),
     );

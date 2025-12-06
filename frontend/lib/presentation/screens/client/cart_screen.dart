@@ -151,54 +151,72 @@ class _CartScreenState extends State<CartScreen> {
       }
     }
   }
+// Replace the _createBill method in cart_screen.dart with this:
 
-  Future<void> _createBill() async {
-    if (_cartItems.isEmpty) return;
+Future<void> _createBill() async {
+  if (_cartItems.isEmpty) return;
 
-    setState(() => _creatingBill = true);
+  setState(() => _creatingBill = true);
+  
+  try {
+    // Prepare bill items according to ERD schema
+    final billItems = _cartItems.map((item) => {
+      'product_id': item['id'],
+      'quantity': _parseQuantity(item['quantity']),
+      'unit_price': _parsePrice(item['price']),
+    }).toList();
+
+    final billData = {
+      'items': billItems,
+    };
+
+    // Create the bill
+    final billResponse = await _api.createBill(billData);
+    final billId = billResponse.data['id'];
+    final billNumber = billResponse.data['bill_number'];
+    final totalAmount = billResponse.data['total_amount'];
     
+    // Create notification for admin about new bill
     try {
-      // Prepare bill items according to ERD schema
-      final billItems = _cartItems.map((item) => {
-        'product_id': item['id'],
-        'quantity': _parseQuantity(item['quantity']),
-        'unit_price': _parsePrice(item['price']),
-      }).toList();
-
-      final billData = {
-        'items': billItems,
-      };
-
-      await _api.createBill(billData);
-      
-      // Clear cart after successful bill creation
-      await _cartService.clearCart();
-      
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('✅ Facture créée avec succès!'),
-            backgroundColor: Colors.green,
-            duration: Duration(seconds: 3),
-          ),
-        );
-        
-        // Navigate to bills screen
-        context.go('/client/bills');
-      }
-    } catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Erreur création facture: $e'),
-            backgroundColor: Colors.red,
-          ),
-        );
-      }
-    } finally {
-      setState(() => _creatingBill = false);
+      await _api.createNotification({
+        'notification_type': 'new_bill',
+        'channel': 'email',
+        'message': 'Nouvelle facture #$billNumber créée pour un montant de ${totalAmount} DA',
+        'bill_id': billId,
+      });
+    } catch (notifError) {
+      // Don't fail the whole operation if notification fails
+      print('Failed to create notification: $notifError');
     }
+    
+    // Clear cart after successful bill creation
+    await _cartService.clearCart();
+    
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('✅ Facture créée avec succès!'),
+          backgroundColor: Colors.green,
+          duration: Duration(seconds: 3),
+        ),
+      );
+      
+      // Navigate to bills screen
+      context.go('/client/bills');
+    }
+  } catch (e) {
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Erreur création facture: $e'),
+          backgroundColor: Colors.red,
+        ),
+      );
+    }
+  } finally {
+    setState(() => _creatingBill = false);
   }
+}
 
   @override
   Widget build(BuildContext context) {

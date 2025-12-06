@@ -227,7 +227,6 @@ class _BillCard extends StatelessWidget {
     }
   }
 
-  // Safe conversion function that handles String, int, double, and null
   double _toDouble(dynamic value) {
     if (value == null) return 0.0;
     if (value is double) return value;
@@ -250,6 +249,11 @@ class _BillCard extends StatelessWidget {
     final totalAmount = _toDouble(bill['total_amount']);
     final totalPaid = _toDouble(bill['total_paid']);
     final remaining = _toDouble(bill['total_remaining']);
+    
+    // Get screen width for responsive design
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 360;
+    final isMediumScreen = screenWidth < 600;
 
     return Card(
       margin: const EdgeInsets.only(bottom: 12),
@@ -257,131 +261,250 @@ class _BillCard extends StatelessWidget {
         onTap: onTap,
         borderRadius: BorderRadius.circular(12),
         child: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: EdgeInsets.all(isSmallScreen ? 12 : 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Icon(_getStatusIcon(status), color: statusColor, size: 24),
-                      const SizedBox(width: 8),
-                      Text(
-                        'Facture #${bill['bill_number'] ?? bill['id']}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Chip(
-                    label: Text(
-                      _getStatusLabel(status),
-                      style: const TextStyle(fontSize: 12),
-                    ),
-                    backgroundColor: statusColor.withOpacity(0.2),
-                    side: BorderSide(color: statusColor),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 12),
+              // Header with bill number and status
+              _buildHeader(status, statusColor, isSmallScreen, isMediumScreen),
+              
+              SizedBox(height: isSmallScreen ? 8 : 12),
               const Divider(),
-              const SizedBox(height: 12),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Montant Total',
-                        style: TextStyle(color: Colors.grey[600], fontSize: 12),
-                      ),
-                      Text(
-                        '${totalAmount.toStringAsFixed(2)} DA',
-                        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Text(
-                        'Payé',
-                        style: TextStyle(color: Colors.grey[600], fontSize: 12),
-                      ),
-                      Text(
-                        '${totalPaid.toStringAsFixed(2)} DA',
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.green,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+              SizedBox(height: isSmallScreen ? 8 : 12),
+              
+              // Amount details
+              _buildAmountSection(
+                totalAmount, 
+                totalPaid, 
+                isSmallScreen, 
+                isMediumScreen
               ),
+              
+              // Remaining amount (if any)
               if (remaining > 0) ...[
-                const SizedBox(height: 8),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: Colors.orange.shade50,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        'Reste à payer',
-                        style: TextStyle(fontWeight: FontWeight.w600),
-                      ),
-                      Text(
-                        '${remaining.toStringAsFixed(2)} DA',
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.orange,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                SizedBox(height: isSmallScreen ? 6 : 8),
+                _buildRemainingAmount(remaining, isSmallScreen),
               ],
-              const SizedBox(height: 12),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Icon(Icons.calendar_today, size: 14, color: Colors.grey[600]),
-                      const SizedBox(width: 4),
-                      Text(
-                        _formatDate(bill['created_at']),
-                        style: TextStyle(color: Colors.grey[600], fontSize: 12),
-                      ),
-                    ],
-                  ),
-                  const Row(
-                    children: [
-                      Text(
-                        'Voir détails',
-                        style: TextStyle(fontWeight: FontWeight.w600),
-                      ),
-                      SizedBox(width: 4),
-                      Icon(Icons.arrow_forward_ios, size: 14),
-                    ],
-                  ),
-                ],
-              ),
+              
+              SizedBox(height: isSmallScreen ? 8 : 12),
+              
+              // Footer with date and view details
+              _buildFooter(isSmallScreen, isMediumScreen),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Widget _buildHeader(String? status, Color statusColor, bool isSmallScreen, bool isMediumScreen) {
+    return Flex(
+      direction: isMediumScreen ? Axis.vertical : Axis.horizontal,
+      mainAxisAlignment: isMediumScreen 
+          ? MainAxisAlignment.start 
+          : MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: isMediumScreen 
+          ? CrossAxisAlignment.start 
+          : CrossAxisAlignment.center,
+      children: [
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              _getStatusIcon(status), 
+              color: statusColor, 
+              size: isSmallScreen ? 20 : 24
+            ),
+            const SizedBox(width: 8),
+            Flexible(
+              child: Text(
+                'Facture #${bill['bill_number'] ?? bill['id']}',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: isSmallScreen ? 16 : 18,
+                ),
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+          ],
+        ),
+        if (isMediumScreen) const SizedBox(height: 8),
+        Chip(
+          label: Text(
+            _getStatusLabel(status),
+            style: TextStyle(fontSize: isSmallScreen ? 11 : 12),
+          ),
+          backgroundColor: statusColor.withOpacity(0.2),
+          side: BorderSide(color: statusColor),
+          materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+          padding: EdgeInsets.symmetric(
+            horizontal: isSmallScreen ? 6 : 8,
+            vertical: 0,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildAmountSection(
+    double totalAmount, 
+    double totalPaid, 
+    bool isSmallScreen,
+    bool isMediumScreen
+  ) {
+    return Flex(
+      direction: isSmallScreen ? Axis.vertical : Axis.horizontal,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: isSmallScreen 
+          ? CrossAxisAlignment.start 
+          : CrossAxisAlignment.center,
+      children: [
+        Flexible(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Montant Total',
+                style: TextStyle(
+                  color: Colors.grey[600], 
+                  fontSize: isSmallScreen ? 11 : 12
+                ),
+              ),
+              const SizedBox(height: 2),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  '${totalAmount.toStringAsFixed(2)} DA',
+                  style: TextStyle(
+                    fontSize: isSmallScreen ? 16 : 18, 
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        if (isSmallScreen) const SizedBox(height: 8),
+        if (!isSmallScreen) const SizedBox(width: 16),
+        Flexible(
+          child: Column(
+            crossAxisAlignment: isSmallScreen 
+                ? CrossAxisAlignment.start 
+                : CrossAxisAlignment.end,
+            children: [
+              Text(
+                'Payé',
+                style: TextStyle(
+                  color: Colors.grey[600], 
+                  fontSize: isSmallScreen ? 11 : 12
+                ),
+              ),
+              const SizedBox(height: 2),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: isSmallScreen 
+                    ? Alignment.centerLeft 
+                    : Alignment.centerRight,
+                child: Text(
+                  '${totalPaid.toStringAsFixed(2)} DA',
+                  style: TextStyle(
+                    fontSize: isSmallScreen ? 14 : 16,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.green,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildRemainingAmount(double remaining, bool isSmallScreen) {
+    return Container(
+      padding: EdgeInsets.all(isSmallScreen ? 6 : 8),
+      decoration: BoxDecoration(
+        color: Colors.orange.shade50,
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Flexible(
+            child: Text(
+              'Reste à payer',
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: isSmallScreen ? 12 : 14,
+              ),
+            ),
+          ),
+          const SizedBox(width: 8),
+          Flexible(
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerRight,
+              child: Text(
+                '${remaining.toStringAsFixed(2)} DA',
+                style: TextStyle(
+                  fontSize: isSmallScreen ? 16 : 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.orange,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildFooter(bool isSmallScreen, bool isMediumScreen) {
+    return Flex(
+      direction: isMediumScreen ? Axis.vertical : Axis.horizontal,
+      mainAxisAlignment: isMediumScreen 
+          ? MainAxisAlignment.start 
+          : MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: isMediumScreen 
+          ? CrossAxisAlignment.start 
+          : CrossAxisAlignment.center,
+      children: [
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              Icons.calendar_today, 
+              size: isSmallScreen ? 12 : 14, 
+              color: Colors.grey[600]
+            ),
+            const SizedBox(width: 4),
+            Text(
+              _formatDate(bill['created_at']),
+              style: TextStyle(
+                color: Colors.grey[600], 
+                fontSize: isSmallScreen ? 11 : 12
+              ),
+            ),
+          ],
+        ),
+        if (isMediumScreen) const SizedBox(height: 8),
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'Voir détails',
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: isSmallScreen ? 12 : 14,
+              ),
+            ),
+            const SizedBox(width: 4),
+            Icon(Icons.arrow_forward_ios, size: isSmallScreen ? 12 : 14),
+          ],
+        ),
+      ],
     );
   }
 }

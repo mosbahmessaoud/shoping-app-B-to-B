@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           final appRouter = AppRouter();
 
           return MaterialApp.router(
-            title: 'E-Commerce App',
+            title: 'AB Dental',
             debugShowCheckedModeBanner: false,
             themeMode: themeProvider.themeMode,
             theme: ThemeData(

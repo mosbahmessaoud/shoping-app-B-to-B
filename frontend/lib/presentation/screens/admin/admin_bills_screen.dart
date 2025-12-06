@@ -37,7 +37,6 @@ class _AdminBillsScreenState extends State<AdminBillsScreen> {
   Future<void> _loadBills() async {
     setState(() => _loading = true);
     try {
-      // Always fetch all bills (no status filter on backend)
       final response = await _api.getAllBills();
       setState(() {
         _bills = response.data;
@@ -48,7 +47,6 @@ class _AdminBillsScreenState extends State<AdminBillsScreen> {
     }
   }
 
-  // Helper method to safely convert to double
   double _toDouble(dynamic value) {
     if (value == null) return 0.0;
     if (value is double) return value;
@@ -57,14 +55,13 @@ class _AdminBillsScreenState extends State<AdminBillsScreen> {
     return 0.0;
   }
 
-  // Calculate status based on payment amounts
   String _calculateStatus(double totalPaid, double remaining) {
     if (remaining == 0.0 && totalPaid > 0.0) {
-      return 'paid'; // Fully paid
+      return 'paid';
     } else if (totalPaid > 0.0 && remaining > 0.0) {
-      return 'partial'; // Partially paid
+      return 'partial';
     } else {
-      return 'not paid'; // Unpaid
+      return 'not paid';
     }
   }
 
@@ -108,11 +105,9 @@ class _AdminBillsScreenState extends State<AdminBillsScreen> {
     }
   }
 
-  // Filter bills based on calculated status and search query
   List<dynamic> _getFilteredBills() {
     List<dynamic> filtered = _bills;
 
-    // Filter by status
     if (_statusFilter != null) {
       filtered = filtered.where((bill) {
         final totalPaid = _toDouble(bill['total_paid']);
@@ -122,7 +117,6 @@ class _AdminBillsScreenState extends State<AdminBillsScreen> {
       }).toList();
     }
 
-    // Filter by search query (client name or phone)
     if (_searchQuery.isNotEmpty) {
       filtered = filtered.where((bill) {
         final clientName = (bill['client_name'] ?? '').toString().toLowerCase();
@@ -226,38 +220,41 @@ class _AdminBillsScreenState extends State<AdminBillsScreen> {
           if (_statusFilter != null || _searchQuery.isNotEmpty)
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              child: Row(
-                children: [
-                  Text(
-                    'Filtres actifs:',
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.grey[600],
-                      fontWeight: FontWeight.w500,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Text(
+                      'Filtres actifs:',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.grey[600],
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
-                  ),
-                  const SizedBox(width: 8),
-                  if (_statusFilter != null)
-                    Chip(
-                      label: Text(_getStatusLabel(_statusFilter)),
-                      onDeleted: () {
-                        setState(() => _statusFilter = null);
-                      },
-                      deleteIcon: const Icon(Icons.close, size: 16),
-                      visualDensity: VisualDensity.compact,
-                    ),
-                  if (_searchQuery.isNotEmpty) ...[
                     const SizedBox(width: 8),
-                    Chip(
-                      label: Text('Recherche: "$_searchQuery"'),
-                      onDeleted: () {
-                        _searchController.clear();
-                      },
-                      deleteIcon: const Icon(Icons.close, size: 16),
-                      visualDensity: VisualDensity.compact,
-                    ),
+                    if (_statusFilter != null)
+                      Chip(
+                        label: Text(_getStatusLabel(_statusFilter)),
+                        onDeleted: () {
+                          setState(() => _statusFilter = null);
+                        },
+                        deleteIcon: const Icon(Icons.close, size: 16),
+                        visualDensity: VisualDensity.compact,
+                      ),
+                    if (_searchQuery.isNotEmpty) ...[
+                      const SizedBox(width: 8),
+                      Chip(
+                        label: Text('Recherche: "$_searchQuery"'),
+                        onDeleted: () {
+                          _searchController.clear();
+                        },
+                        deleteIcon: const Icon(Icons.close, size: 16),
+                        visualDensity: VisualDensity.compact,
+                      ),
+                    ],
                   ],
-                ],
+                ),
               ),
             ),
           // Bills List
@@ -303,124 +300,22 @@ class _AdminBillsScreenState extends State<AdminBillsScreen> {
                               final totalPaid = _toDouble(bill['total_paid']);
                               final remaining = _toDouble(bill['total_remaining']);
                               final totalAmount = _toDouble(bill['total_amount']);
-                              
-                              // Calculate actual status based on amounts
                               final actualStatus = _calculateStatus(totalPaid, remaining);
                               final statusColor = _getStatusColor(actualStatus);
                               final notifSent = bill['notification_sent'] ?? false;
                               
-                              return Card(
-                                margin: const EdgeInsets.only(bottom: 12),
-                                elevation: 2,
-                                child: InkWell(
-                                  onTap: () => context.push('/admin/bill/${bill['id']}'),
-                                  borderRadius: BorderRadius.circular(12),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(12),
-                                    child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        // Header row
-                                        Row(
-                                          children: [
-                                            CircleAvatar(
-                                              backgroundColor: statusColor.withOpacity(0.2),
-                                              child: Icon(
-                                                _getStatusIcon(actualStatus),
-                                                color: statusColor,
-                                                size: 20,
-                                              ),
-                                            ),
-                                            const SizedBox(width: 12),
-                                            Expanded(
-                                              child: Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Row(
-                                                    children: [
-                                                      Text(
-                                                        'Facture #${bill['bill_number']}',
-                                                        style: const TextStyle(
-                                                          fontWeight: FontWeight.bold,
-                                                          fontSize: 16,
-                                                        ),
-                                                      ),
-                                                      if (notifSent) ...[
-                                                        const SizedBox(width: 4),
-                                                        Icon(
-                                                          Icons.notifications_active,
-                                                          size: 14,
-                                                          color: Colors.green[700],
-                                                        ),
-                                                      ],
-                                                    ],
-                                                  ),
-                                                  const SizedBox(height: 4),
-                                                  Text(
-                                                    'Client: ${bill['client_name'] ?? 'N/A'}',
-                                                    style: TextStyle(
-                                                      color: Colors.grey[600],
-                                                      fontSize: 14,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                            Chip(
-                                              label: Text(
-                                                _getStatusLabel(actualStatus),
-                                                style: TextStyle(
-                                                  color: statusColor,
-                                                  fontWeight: FontWeight.bold,
-                                                  fontSize: 12,
-                                                ),
-                                              ),
-                                              backgroundColor: statusColor.withOpacity(0.1),
-                                              side: BorderSide(color: statusColor, width: 1),
-                                            ),
-                                          ],
-                                        ),
-                                        const Divider(height: 16),
-                                        // Financial details
-                                        Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            _FinancialDetail(
-                                              label: 'Total',
-                                              value: '${totalAmount.toStringAsFixed(2)} DA',
-                                              color: Colors.blue,
-                                            ),
-                                            _FinancialDetail(
-                                              label: 'Payé',
-                                              value: '${totalPaid.toStringAsFixed(2)} DA',
-                                              color: Colors.green,
-                                            ),
-                                            _FinancialDetail(
-                                              label: 'Reste',
-                                              value: '${remaining.toStringAsFixed(2)} DA',
-                                              color: remaining > 0 ? Colors.orange : Colors.green,
-                                            ),
-                                          ],
-                                        ),
-                                        const SizedBox(height: 8),
-                                        // Date
-                                        Row(
-                                          children: [
-                                            Icon(Icons.calendar_today, size: 14, color: Colors.grey[600]),
-                                            const SizedBox(width: 4),
-                                            Text(
-                                              _formatDate(bill['created_at']),
-                                              style: TextStyle(
-                                                color: Colors.grey[600],
-                                                fontSize: 12,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
+                              return _ResponsiveBillCard(
+                                bill: bill,
+                                totalAmount: totalAmount,
+                                totalPaid: totalPaid,
+                                remaining: remaining,
+                                actualStatus: actualStatus,
+                                statusColor: statusColor,
+                                notifSent: notifSent,
+                                getStatusIcon: _getStatusIcon,
+                                getStatusLabel: _getStatusLabel,
+                                formatDate: _formatDate,
+                                onTap: () => context.push('/admin/bill/${bill['id']}'),
                               );
                             },
                           ),
@@ -432,15 +327,310 @@ class _AdminBillsScreenState extends State<AdminBillsScreen> {
   }
 }
 
+class _ResponsiveBillCard extends StatelessWidget {
+  final Map<String, dynamic> bill;
+  final double totalAmount;
+  final double totalPaid;
+  final double remaining;
+  final String actualStatus;
+  final Color statusColor;
+  final bool notifSent;
+  final IconData Function(String?) getStatusIcon;
+  final String Function(String?) getStatusLabel;
+  final String Function(String?) formatDate;
+  final VoidCallback onTap;
+
+  const _ResponsiveBillCard({
+    required this.bill,
+    required this.totalAmount,
+    required this.totalPaid,
+    required this.remaining,
+    required this.actualStatus,
+    required this.statusColor,
+    required this.notifSent,
+    required this.getStatusIcon,
+    required this.getStatusLabel,
+    required this.formatDate,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 360;
+    final isMediumScreen = screenWidth >= 360 && screenWidth < 600;
+    
+    return Card(
+      margin: const EdgeInsets.only(bottom: 12),
+      elevation: 2,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(12),
+        child: Padding(
+          padding: EdgeInsets.all(isSmallScreen ? 8 : 12),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Header row - Responsive layout
+              isSmallScreen
+                  ? _buildSmallScreenHeader()
+                  : _buildNormalHeader(),
+              Divider(height: isSmallScreen ? 12 : 16),
+              // Financial details - Responsive layout
+              _buildFinancialDetails(isSmallScreen, isMediumScreen),
+              SizedBox(height: isSmallScreen ? 6 : 8),
+              // Date
+              Row(
+                children: [
+                  Icon(Icons.calendar_today, 
+                    size: isSmallScreen ? 12 : 14, 
+                    color: Colors.grey[600]
+                  ),
+                  const SizedBox(width: 4),
+                  Text(
+                    formatDate(bill['created_at']),
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                      fontSize: isSmallScreen ? 11 : 12,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSmallScreenHeader() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            CircleAvatar(
+              radius: 16,
+              backgroundColor: statusColor.withOpacity(0.2),
+              child: Icon(
+                getStatusIcon(actualStatus),
+                color: statusColor,
+                size: 16,
+              ),
+            ),
+            const SizedBox(width: 8),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Flexible(
+                        child: Text(
+                          'Facture #${bill['bill_number']}',
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      if (notifSent) ...[
+                        const SizedBox(width: 4),
+                        Icon(
+                          Icons.notifications_active,
+                          size: 12,
+                          color: Colors.green[700],
+                        ),
+                      ],
+                    ],
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    'Client: ${bill['client_name'] ?? 'N/A'}',
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                      fontSize: 12,
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 8),
+        Chip(
+          label: Text(
+            getStatusLabel(actualStatus),
+            style: TextStyle(
+              color: statusColor,
+              fontWeight: FontWeight.bold,
+              fontSize: 11,
+            ),
+          ),
+          backgroundColor: statusColor.withOpacity(0.1),
+          side: BorderSide(color: statusColor, width: 1),
+          visualDensity: VisualDensity.compact,
+          padding: const EdgeInsets.symmetric(horizontal: 4),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildNormalHeader() {
+    return Row(
+      children: [
+        CircleAvatar(
+          backgroundColor: statusColor.withOpacity(0.2),
+          child: Icon(
+            getStatusIcon(actualStatus),
+            color: statusColor,
+            size: 20,
+          ),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Flexible(
+                    child: Text(
+                      'Facture #${bill['bill_number']}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                  if (notifSent) ...[
+                    const SizedBox(width: 4),
+                    Icon(
+                      Icons.notifications_active,
+                      size: 14,
+                      color: Colors.green[700],
+                    ),
+                  ],
+                ],
+              ),
+              const SizedBox(height: 4),
+              Text(
+                'Client: ${bill['client_name'] ?? 'N/A'}',
+                style: TextStyle(
+                  color: Colors.grey[600],
+                  fontSize: 14,
+                ),
+                overflow: TextOverflow.ellipsis,
+                maxLines: 1,
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(width: 8),
+        Chip(
+          label: Text(
+            getStatusLabel(actualStatus),
+            style: TextStyle(
+              color: statusColor,
+              fontWeight: FontWeight.bold,
+              fontSize: 12,
+            ),
+          ),
+          backgroundColor: statusColor.withOpacity(0.1),
+          side: BorderSide(color: statusColor, width: 1),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildFinancialDetails(bool isSmallScreen, bool isMediumScreen) {
+    if (isSmallScreen) {
+      // Stack layout for very small screens
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _FinancialDetail(
+            label: 'Total',
+            value: '${totalAmount.toStringAsFixed(2)} DA',
+            color: Colors.blue,
+            isCompact: true,
+          ),
+          const SizedBox(height: 4),
+          Row(
+            children: [
+              Expanded(
+                child: _FinancialDetail(
+                  label: 'Payé',
+                  value: '${totalPaid.toStringAsFixed(2)} DA',
+                  color: Colors.green,
+                  isCompact: true,
+                ),
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: _FinancialDetail(
+                  label: 'Reste',
+                  value: '${remaining.toStringAsFixed(2)} DA',
+                  color: remaining > 0 ? Colors.orange : Colors.green,
+                  isCompact: true,
+                ),
+              ),
+            ],
+          ),
+        ],
+      );
+    } else {
+      // Row layout for normal screens
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Flexible(
+            child: _FinancialDetail(
+              label: 'Total',
+              value: '${totalAmount.toStringAsFixed(2)} DA',
+              color: Colors.blue,
+              isCompact: isMediumScreen,
+            ),
+          ),
+          const SizedBox(width: 8),
+          Flexible(
+            child: _FinancialDetail(
+              label: 'Payé',
+              value: '${totalPaid.toStringAsFixed(2)} DA',
+              color: Colors.green,
+              isCompact: isMediumScreen,
+            ),
+          ),
+          const SizedBox(width: 8),
+          Flexible(
+            child: _FinancialDetail(
+              label: 'Reste',
+              value: '${remaining.toStringAsFixed(2)} DA',
+              color: remaining > 0 ? Colors.orange : Colors.green,
+              isCompact: isMediumScreen,
+            ),
+          ),
+        ],
+      );
+    }
+  }
+}
+
 class _FinancialDetail extends StatelessWidget {
   final String label;
   final String value;
   final Color color;
+  final bool isCompact;
 
   const _FinancialDetail({
     required this.label,
     required this.value,
     required this.color,
+    this.isCompact = false,
   });
 
   @override
@@ -451,7 +641,7 @@ class _FinancialDetail extends StatelessWidget {
         Text(
           label,
           style: TextStyle(
-            fontSize: 12,
+            fontSize: isCompact ? 11 : 12,
             color: Colors.grey[600],
           ),
         ),
@@ -459,10 +649,12 @@ class _FinancialDetail extends StatelessWidget {
         Text(
           value,
           style: TextStyle(
-            fontSize: 14,
+            fontSize: isCompact ? 12 : 14,
             fontWeight: FontWeight.bold,
             color: color,
           ),
+          overflow: TextOverflow.ellipsis,
+          maxLines: 1,
         ),
       ],
     );

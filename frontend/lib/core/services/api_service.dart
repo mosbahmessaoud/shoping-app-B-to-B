@@ -3,12 +3,13 @@ import 'package:dio/dio.dart';
 import 'storage_service.dart';
 
 class ApiService {
-  static const String baseUrl = 'http://127.0.0.1:8000';
+  static const String baseUrl = 'https://abdental.up.railway.app';
+  // static const String baseUrl = 'http://127.0.0.1:8000';
   final Dio _dio = Dio();
   final StorageService _storage = StorageService();
 
   ApiService() {
-    _dio.options.baseUrl = baseUrl;
+    _dio.options.baseUrl = baseUrl;   
     _dio.interceptors.add(InterceptorsWrapper(
       onRequest: (options, handler) async {
         final token = await _storage.getToken();
@@ -308,17 +309,50 @@ class ApiService {
   // Notification endpoints
   // ============================================
   
-  Future<Response> getAllNotifications({
-    bool? isSent, 
-    String? type, 
-    int skip = 0, 
-    int limit = 100
-  }) => get('/notification/', params: {
-    'is_sent': isSent, 
-    'notification_type': type, 
+
+Future<Response> getAllNotifications({
+  bool? isSent, 
+  String? type, 
+  int skip = 0, 
+  int limit = 100
+}) {
+  final params = <String, dynamic>{
     'skip': skip, 
-    'limit': limit
-  });
+    'limit': limit,
+  };
+  
+  // Only add parameters if they are not null
+  if (isSent != null) {
+    params['is_sent'] = isSent;
+  }
+  if (type != null && type.isNotEmpty) {
+    params['notification_type'] = type;
+  }
+  
+  return get('/notification/', params: params);
+}
+  
+Future<Response> getAllNotificationsAdmin({
+  bool? isSent, 
+  String? type, 
+  int skip = 0, 
+  int limit = 100
+}) {
+  final params = <String, dynamic>{
+    'skip': skip, 
+    'limit': limit,
+  };
+  
+  // Only add parameters if they are not null
+  if (isSent != null) {
+    params['is_sent'] = isSent;
+  }
+  if (type != null && type.isNotEmpty) {
+    params['notification_type'] = type;
+  }
+  
+  return get('/notification/admin', params: params);
+}
   
   Future<Response> getPendingNotifications() => 
     get('/notification/pending');
@@ -337,4 +371,101 @@ class ApiService {
   
   Future<Response> sendPendingNotifications() => 
     post('/notification/send-pending');
+//////////
+///
+///
+///
+Future<Response> createNotification(Map<String, dynamic> data) => 
+  post('/notification/', data: data);
+
+
+////
+///
+
+// Future<Response> getAllNotifications({
+//   bool? isSent, 
+//   String? type, 
+//   int skip = 0, 
+//   int limit = 100
+// }) {
+//   final params = <String, dynamic>{
+//     'skip': skip, 
+//     'limit': limit,
+//   };
+  
+//   // Only add parameters if they are not null
+//   if (isSent != null) params['is_sent'] = isSent;
+//   if (type != null) params['notification_type'] = type;
+  
+//   return get('/notification/', params: params);
+// }
+
+
+
+
+
+    // ============================================
+  // Upload endpoints (Cloudinary)
+  // ============================================
+  
+  /// Upload multiple product images to Cloudinary (1-5 images)
+  /// Returns: { "success": true, "image_urls": [...], "public_ids": [...], "count": 2 }
+  // Future<Response> uploadProductImages(List<String> imagePaths) async {
+  //   FormData formData = FormData();
+    
+  //   for (String path in imagePaths) {
+  //     formData.files.add(
+  //       MapEntry(
+  //         'files',
+  //         await MultipartFile.fromFile(
+  //           path,
+  //           filename: path.split('/').last,
+  //         ),
+  //       ),
+  //     );
+  //   }
+    
+  //   return _dio.post('/upload/product-images', data: formData);
+  // }
+  // Replace the uploadProductImages method in your api_service.dart with this:
+
+/// Upload multiple product images to Cloudinary (0-5 images)
+/// Returns: { "success": true, "image_urls": [...], "public_ids": [...], "count": 2 }
+Future<Response> uploadProductImages(List<String> imagePaths) async {
+  // Handle empty list
+  if (imagePaths.isEmpty) {
+    return Response(
+      requestOptions: RequestOptions(path: '/upload/product-images'),
+      data: {
+        "success": true,
+        "image_urls": [],
+        "public_ids": [],
+        "count": 0
+      },
+      statusCode: 200,
+    );
+  }
+  
+  FormData formData = FormData();
+  
+  for (String path in imagePaths) {
+    formData.files.add(
+      MapEntry(
+        'files',
+        await MultipartFile.fromFile(
+          path,
+          filename: path.split('/').last,
+        ),
+      ),
+    );
+  }
+  
+  return _dio.post('/upload/product-images', data: formData);
+}
+  /// Delete single image from Cloudinary
+  /// public_id example: "products/abc123"
+  Future<Response> deleteProductImage(String publicId) => 
+    delete('/upload/product-image?public_id=$publicId');
+
+
 }

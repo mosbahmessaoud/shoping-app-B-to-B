@@ -20,6 +20,7 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen> {
   List<dynamic> _lowStockProducts = [];
   List<dynamic> _unresolvedAlerts = [];
   bool _loading = true;
+  int _unreadNotifications = 0;
 
   @override
   void initState() {
@@ -27,61 +28,137 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen> {
     _loadDashboardData();
   }
 
-  Future<void> _loadDashboardData() async {
-    setState(() => _loading = true);
-    try {
-      final results = await Future.wait([
-        _api.getMonthlyBillSummary(),
-        _api.getStockAlertSummary(),
-        _api.getNotificationSummary(),
-        _api.getLowStockProducts(),
-        _api.getUnresolvedStockAlerts(),
-        _api.getProductSummary(),
-      ]);
+  void _showErrorDialog(String title, String message) {
+    if (!mounted) return;
+    
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Row(
+          children: [
+            const Icon(Icons.error_outline, color: Colors.red, size: 28),
+            const SizedBox(width: 12),
+            Expanded(child: Text(title)),
+          ],
+        ),
+        content: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(message, style: const TextStyle(fontSize: 16)),
+              const SizedBox(height: 16),
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: Colors.blue.shade50,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('💡 Solutions possibles:', 
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+                    SizedBox(height: 8),
+                    Text('• Vérifiez votre connexion internet'),
+                    Text('• Réessayez dans quelques instants'),
+                    Text('• Contactez l\'administrateur si le problème persiste'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Fermer'),
+          ),
+          ElevatedButton.icon(
+            onPressed: () {
+              Navigator.pop(context);
+              _loadDashboardData();
+            },
+            icon: const Icon(Icons.refresh),
+            label: const Text('Réessayer'),
+          ),
+        ],
+      ),
+    );
+  }
 
-      // Get current month data from monthly summary
-      final monthlyData = results[0].data as List<dynamic>;
-      final now = DateTime.now();
-      final currentMonthKey = '${now.year}-${now.month.toString().padLeft(2, '0')}';
-      
-      // Find current month's data
-      Map<String, dynamic>? currentMonth;
-      if (monthlyData.isNotEmpty) {
-        // Assuming the API returns data with a 'month' field or the last item is the most recent
-        currentMonth = monthlyData.lastWhere(
-          (item) => true, // Get the most recent month
-          orElse: () => {
-            'total_bills': 0,
-            'total_revenue': 0.0,
-            'total_paid': 0.0,
-            'total_pending': 0.0,
-          },
-        );
-      }
+// Update the _loadDashboardData method to include notifications count:
+Future<void> _loadDashboardData() async {
+  setState(() => _loading = true);
+  try {
+    final results = await Future.wait([
+      _api.getMonthlyBillSummary(),
+      _api.getStockAlertSummary(),
+      _api.getNotificationSummary(),
+      _api.getLowStockProducts(),
+      _api.getUnresolvedStockAlerts(),
+      _api.getProductSummary(),
+    ]);
 
-      setState(() {
-        _currentMonthStats = currentMonth ?? {
+    final monthlyData = results[0].data as List<dynamic>;
+    Map<String, dynamic>? currentMonth;
+    if (monthlyData.isNotEmpty) {
+      currentMonth = monthlyData.lastWhere(
+        (item) => true,
+        orElse: () => {
           'total_bills': 0,
           'total_revenue': 0.0,
           'total_paid': 0.0,
           'total_pending': 0.0,
-        };
-        _stockSummary = results[1].data;
-        _notifSummary = results[2].data;
-        _lowStockProducts = results[3].data;
-        _unresolvedAlerts = results[4].data;
-        _products = results[5].data;
-        _loading = false;
-      });
-    } catch (e) {
-      setState(() => _loading = false);
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Erreur chargement: $e')),
-        );
-      }
+        },
+      );
     }
+
+    setState(() {
+      _currentMonthStats = currentMonth ?? {
+        'total_bills': 0,
+        'total_revenue': 0.0,
+        'total_paid': 0.0,
+        'total_pending': 0.0,
+      };
+      _stockSummary = results[1].data;
+      _notifSummary = results[2].data;
+      _lowStockProducts = results[3].data;
+      _unresolvedAlerts = results[4].data;
+      _products = results[5].data;
+      
+      // Get unread notifications count from summary
+      _unreadNotifications = _notifSummary?['pending_notifications'] ?? 0;
+      
+      _loading = false;
+    });
+  } catch (e) {
+    setState(() => _loading = false);
+    
+    String errorTitle = 'Erreur de chargement';
+    String errorMessage = 'Impossible de charger les données du dashboard.';
+    
+    final errorStr = e.toString().toLowerCase();
+    if (errorStr.contains('host lookup') || 
+        errorStr.contains('failed host lookup') ||
+        errorStr.contains('socketexception')) {
+      errorTitle = 'Erreur de connexion';
+      errorMessage = 'Impossible de se connecter au serveur. Vérifiez votre connexion internet ou l\'URL du serveur.';
+    } else if (errorStr.contains('timeout')) {
+      errorTitle = 'Délai d\'attente dépassé';
+      errorMessage = 'Le serveur met trop de temps à répondre. Veuillez réessayer.';
+    } else if (errorStr.contains('401')) {
+      errorTitle = 'Session expirée';
+      errorMessage = 'Votre session a expiré. Veuillez vous reconnecter.';
+    } else if (errorStr.contains('500')) {
+      errorTitle = 'Erreur serveur';
+      errorMessage = 'Le serveur rencontre un problème. Veuillez réessayer plus tard.';
+    }
+    
+    _showErrorDialog(errorTitle, errorMessage);
   }
+}
+
 
   String _getCurrentMonthName() {
     final months = [
@@ -90,171 +167,228 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen> {
     ];
     return months[DateTime.now().month - 1];
   }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Dashboard Admin'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.refresh),
-            onPressed: _loadDashboardData,
-            tooltip: 'Actualiser',
-          ),
-          IconButton(
-            icon: const Icon(Icons.bar_chart),
-            onPressed: () => context.push('/admin/statistics'),
-            tooltip: 'Statistiques',
-          ),
-          IconButton(
-            icon: const Icon(Icons.person),
-            onPressed: () => context.push('/admin/profile'),
-          ),
-        ],
-      ),
-      drawer: _buildDrawer(),
-      body: _loading
-          ? const Center(child: CircularProgressIndicator())
-          : RefreshIndicator(
-              onRefresh: _loadDashboardData,
-              child: ListView(
-                padding: const EdgeInsets.all(16),
-                children: [
-                  _buildWelcomeCard(),
-                  const SizedBox(height: 16),
-                  _buildMonthlyStatsGrid(),
-                  const SizedBox(height: 24),
-                  if (_unresolvedAlerts.isNotEmpty) ...[
-                    _buildUrgentAlertsSection(),
-                    const SizedBox(height: 24),
-                  ],
-                  if (_lowStockProducts.isNotEmpty) ...[
-                    _buildLowStockSection(),
-                    const SizedBox(height: 24),
-                  ],
-                  _buildQuickActions(),
-                ],
-              ),
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Dashboard Admin'),
+      actions: [
+        IconButton(
+          icon: const Icon(Icons.refresh),
+          onPressed: _loadDashboardData,
+          tooltip: 'Actualiser',
+        ),
+        // Notification icon with badge
+        Stack(
+          children: [
+            IconButton(
+              icon: const Icon(Icons.notifications),
+              onPressed: () async {
+                await context.push('/admin/notifications');
+                // Reload data after returning from notifications
+                _loadDashboardData();
+              },
+              tooltip: 'Notifications',
             ),
-    );
-  }
-
-  Widget _buildDrawer() {
-    return Drawer(
-      child: ListView(
-        padding: EdgeInsets.zero,
-        children: [
-          DrawerHeader(
-            decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.primary,
-            ),
-            child: const Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Icon(Icons.medical_services, size: 48, color: Colors.white),
-                SizedBox(height: 8),
-                Text(
-                  'Medical Shop',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
+            if (_unreadNotifications > 0)
+              Positioned(
+                right: 8,
+                top: 8,
+                child: Container(
+                  padding: const EdgeInsets.all(4),
+                  decoration: BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  constraints: const BoxConstraints(
+                    minWidth: 18,
+                    minHeight: 18,
+                  ),
+                  child: Text(
+                    _unreadNotifications > 99 
+                        ? '99+' 
+                        : '$_unreadNotifications',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 10,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
                 ),
-                Text(
-                  'Administration',
-                  style: TextStyle(color: Colors.white70),
-                ),
+              ),
+          ],
+        ),
+        IconButton(
+          icon: const Icon(Icons.bar_chart),
+          onPressed: () => context.push('/admin/statistics'),
+          tooltip: 'Statistiques',
+        ),
+        IconButton(
+          icon: const Icon(Icons.person),
+          onPressed: () => context.push('/admin/profile'),
+        ),
+      ],
+    ),
+    drawer: _buildDrawer(),
+    body: _loading
+        ? const Center(child: CircularProgressIndicator())
+        : RefreshIndicator(
+            onRefresh: _loadDashboardData,
+            child: ListView(
+              padding: const EdgeInsets.all(16),
+              children: [
+                _buildWelcomeCard(),
+                const SizedBox(height: 16),
+                _buildMonthlyStatsGrid(),
+                const SizedBox(height: 24),
+                if (_unresolvedAlerts.isNotEmpty) ...[
+                  _buildUrgentAlertsSection(),
+                  const SizedBox(height: 24),
+                ],
+                if (_lowStockProducts.isNotEmpty) ...[
+                  _buildLowStockSection(),
+                  const SizedBox(height: 24),
+                ],
+                _buildQuickActions(),
               ],
             ),
           ),
-          ListTile(
-            leading: const Icon(Icons.dashboard),
-            title: const Text('Dashboard'),
-            onTap: () => Navigator.pop(context),
+  );
+}
+
+
+// Also update the drawer to include notification badge:
+Widget _buildDrawer() {
+  return Drawer(
+    child: ListView(
+      padding: EdgeInsets.zero,
+      children: [
+        DrawerHeader(
+          decoration: BoxDecoration(
+            color: Theme.of(context).colorScheme.primary,
           ),
-          ListTile(
-            leading: const Icon(Icons.bar_chart),
-            title: const Text('Statistiques'),
-            onTap: () {
-              Navigator.pop(context);
-              context.push('/admin/statistics');
-            },
+          child: const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Icon(Icons.medical_services, size: 48, color: Colors.white),
+              SizedBox(height: 8),
+              Text(
+                'Medical Shop',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'Administration',
+                style: TextStyle(color: Colors.white70),
+              ),
+            ],
           ),
-          const Divider(),
-          ListTile(
-            leading: const Icon(Icons.inventory),
-            title: const Text('Produits'),
-            onTap: () {
-              Navigator.pop(context);
-              context.push('/admin/products');
-            },
+        ),
+        ListTile(
+          leading: const Icon(Icons.dashboard),
+          title: const Text('Dashboard'),
+          onTap: () => Navigator.pop(context),
+        ),
+        ListTile(
+          leading: const Icon(Icons.bar_chart),
+          title: const Text('Statistiques'),
+          onTap: () {
+            Navigator.pop(context);
+            context.push('/admin/statistics');
+          },
+        ),
+        const Divider(),
+        ListTile(
+          leading: const Icon(Icons.inventory),
+          title: const Text('Produits'),
+          onTap: () {
+            Navigator.pop(context);
+            context.push('/admin/products');
+          },
+        ),
+        ListTile(
+          leading: const Icon(Icons.category),
+          title: const Text('Catégories'),
+          onTap: () {
+            Navigator.pop(context);
+            context.push('/admin/categories');
+          },
+        ),
+        ListTile(
+          leading: const Icon(Icons.people),
+          title: const Text('Clients'),
+          onTap: () {
+            Navigator.pop(context);
+            context.push('/admin/clients');
+          },
+        ),
+        const Divider(),
+        ListTile(
+          leading: const Icon(Icons.receipt_long),
+          title: const Text('Factures'),  
+          onTap: () {
+            Navigator.pop(context);
+            context.push('/admin/bills');
+          },
+        ),
+        ListTile(
+          leading: const Icon(Icons.payments),
+          title: const Text('Paiements'),
+          onTap: () {
+            Navigator.pop(context);
+            context.push('/admin/payments');
+          },
+        ),
+        const Divider(),
+        ListTile(
+          leading: const Icon(Icons.warning),
+          title: const Text('Alertes Stock'),
+          onTap: () {
+            Navigator.pop(context);
+            context.push('/admin/stock-alerts');
+          },
+        ),
+        ListTile(
+          leading: Badge(
+            isLabelVisible: _unreadNotifications > 0,
+            label: Text('$_unreadNotifications'),
+            child: const Icon(Icons.notifications),
           ),
-          ListTile(
-            leading: const Icon(Icons.category),
-            title: const Text('Catégories'),
-            onTap: () {
-              Navigator.pop(context);
-              context.push('/admin/categories');
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.people),
-            title: const Text('Clients'),
-            onTap: () {
-              Navigator.pop(context);
-              context.push('/admin/clients');
-            },
-          ),
-          const Divider(),
-          ListTile(
-            leading: const Icon(Icons.receipt_long),
-            title: const Text('Factures'),
-            onTap: () {
-              Navigator.pop(context);
-              context.push('/admin/bills');
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.payments),
-            title: const Text('Paiements'),
-            onTap: () {
-              Navigator.pop(context);
-              context.push('/admin/payments');
-            },
-          ),
-          const Divider(),
-          ListTile(
-            leading: const Icon(Icons.warning),
-            title: const Text('Alertes Stock'),
-            onTap: () {
-              Navigator.pop(context);
-              context.push('/admin/stock-alerts');
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.notifications),
-            title: const Text('Notifications'),
-            onTap: () {
-              Navigator.pop(context);
-              context.push('/admin/notifications');
-            },
-          ),
-          const Divider(),
-          ListTile(
-            leading: const Icon(Icons.person),
-            title: const Text('Profil'),
-            onTap: () {
-              Navigator.pop(context);
-              context.push('/admin/profile');
-            },
-          ),
-        ],
-      ),
-    );
-  }
+          title: const Text('Notifications'),
+          trailing: _unreadNotifications > 0 
+            ? Chip(
+                label: Text(
+                  '$_unreadNotifications',
+                  style: const TextStyle(fontSize: 12, color: Colors.white),
+                ),
+                backgroundColor: Colors.red,
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              )
+            : null,
+          onTap: () {
+            Navigator.pop(context);
+            context.push('/admin/notifications');
+          },
+        ),
+        const Divider(),
+        ListTile(
+          leading: const Icon(Icons.person),
+          title: const Text('Profil'),
+          onTap: () {
+            Navigator.pop(context);
+            context.push('/admin/profile');
+          },
+        ),
+      ],
+    ),
+  );
+}
 
   Widget _buildWelcomeCard() {
     return Card(
@@ -291,122 +425,119 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen> {
       ),
     );
   }
-  
-// 1. Update _buildMonthlyStatsGrid() method
-Widget _buildMonthlyStatsGrid() {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Expanded(
-            child: Text(
-              'Ce Mois (${_getCurrentMonthName()})',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-          TextButton.icon(
-            onPressed: () => context.push('/admin/statistics'),
-            icon: const Icon(Icons.bar_chart, size: 18),
-            label: const Text('Voir plus'),
-          ),
-        ],
-      ),
-      const SizedBox(height: 12),
-      LayoutBuilder(
-        builder: (context, constraints) {
-          int crossAxisCount;
-          double childAspectRatio;
-          final bool isVerySmallScreen = constraints.maxWidth < 280;
-          final bool isSmallScreen = constraints.maxWidth < 300;
-            crossAxisCount = 1;
-            childAspectRatio = 2.0;
-          
-          if (constraints.maxWidth >= 1200) {
-            crossAxisCount = 3;
-            childAspectRatio = 1.6;
-          } else if (constraints.maxWidth >= 900) {
-            crossAxisCount = 3;
-            childAspectRatio = 1.4;
-          } else if (constraints.maxWidth >= 600) {
-            crossAxisCount = 2;
-            childAspectRatio = 1.5;
 
-          } else  if (constraints.maxWidth >= 370)  {
-            crossAxisCount = 2;
-            childAspectRatio = 1.3;
-          } else {
-            crossAxisCount = 1;
-            childAspectRatio = 2.2;
-          }
-          
-          return GridView.count(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            crossAxisCount: crossAxisCount,
-            mainAxisSpacing: 12,
-            crossAxisSpacing: 12,
-            childAspectRatio: childAspectRatio,
-            children: [
-              _StatCard(
-                title: 'Factures',
-                value: '${_currentMonthStats?['total_bills'] ?? 0}',
-                subtitle: (isSmallScreen || isVerySmallScreen ) ? null : 'Ce mois',
-                icon:  isVerySmallScreen ? null : Icons.receipt_long,
-                color: Colors.blue,
-                onTap: () => context.push('/admin/bills'),
+  Widget _buildMonthlyStatsGrid() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              child: Text(
+                'Ce Mois (${_getCurrentMonthName()})',
+                style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                overflow: TextOverflow.ellipsis,
               ),
-              _StatCard(
-                title: 'Revenu',
-                value: '${(_currentMonthStats?['total_revenue'] ?? 0)} DA',
-                subtitle:  (isSmallScreen || isVerySmallScreen) ? null : 'Ce mois',
-                icon:  isVerySmallScreen ? null : Icons.attach_money,
-                color: Colors.green,
-                onTap: () => context.push('/admin/statistics'),
-              ),
-              _StatCard(
-                title: 'Payé',
-                value: '${(_currentMonthStats?['total_paid'] ?? 0)} DA',
-                subtitle:  (isSmallScreen || isVerySmallScreen) ? null : 'Ce mois',
-                icon:  isVerySmallScreen ? null : Icons.check_circle,
-                color: Colors.teal,
-                onTap: () => context.push('/admin/bills'),
-              ),
-              _StatCard(
-                title: 'Impayé',
-                value: '${(_currentMonthStats?['total_pending'] ?? 0)} DA',
-                subtitle:  (isSmallScreen || isVerySmallScreen) ? null : 'Ce mois',
-                icon:  isVerySmallScreen ? null : Icons.money_off,
-                color: Colors.orange,
-                onTap: () => context.push('/admin/bills'),
-              ),
-              _StatCard(
-                title: 'Alertes Stock',
-                value: '${_stockSummary?['total_unresolved'] ?? 0}',
-                subtitle:  (isSmallScreen || isVerySmallScreen) ? null : 'Non résolues',
-                icon:  isVerySmallScreen ? null : Icons.warning,
-                color: Colors.red,
-                onTap: () => context.push('/admin/stock-alerts'),
-              ),
-              _StatCard(
-                title: 'Produits',
-                value: '${_products?["count"] ?? 0}',
-                subtitle:  (isSmallScreen || isVerySmallScreen) ? null : 'Dans l\'inventaire',
-                icon:  isVerySmallScreen ? null : Icons.inventory,
-                color: Colors.purple,
-                onTap: () => context.push('/admin/products'),
-              ),
-            ],
-          );
-        },
-      ),
-    ],
-  );
-}
+            ),
+            TextButton.icon(
+              onPressed: () => context.push('/admin/statistics'),
+              icon: const Icon(Icons.bar_chart, size: 18),
+              label: const Text('Voir plus'),
+            ),
+          ],
+        ),
+        const SizedBox(height: 12),
+        LayoutBuilder(
+          builder: (context, constraints) {
+            int crossAxisCount;
+            double childAspectRatio;
+            final bool isVerySmallScreen = constraints.maxWidth < 280;
+            final bool isSmallScreen = constraints.maxWidth < 300;
+
+            if (constraints.maxWidth >= 1200) {
+              crossAxisCount = 3;
+              childAspectRatio = 1.6;
+            } else if (constraints.maxWidth >= 900) {
+              crossAxisCount = 3;
+              childAspectRatio = 1.4;
+            } else if (constraints.maxWidth >= 600) {
+              crossAxisCount = 2;
+              childAspectRatio = 1.5;
+            } else if (constraints.maxWidth >= 370) {
+              crossAxisCount = 2;
+              childAspectRatio = 1.3;
+            } else {
+              crossAxisCount = 1;
+              childAspectRatio = 2.2;
+            }
+
+            return GridView.count(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              crossAxisCount: crossAxisCount,
+              mainAxisSpacing: 12,
+              crossAxisSpacing: 12,
+              childAspectRatio: childAspectRatio,
+              children: [
+                _StatCard(
+                  title: 'Factures',
+                  value: '${_currentMonthStats?['total_bills'] ?? 0}',
+                  subtitle: (isSmallScreen || isVerySmallScreen) ? null : 'Ce mois',
+                  icon: isVerySmallScreen ? null : Icons.receipt_long,
+                  color: Colors.blue,
+                  onTap: () => context.push('/admin/bills'),
+                ),
+                _StatCard(
+                  title: 'Revenu',
+                  value: '${(_currentMonthStats?['total_revenue'] ?? 0)} DA',
+                  subtitle: (isSmallScreen || isVerySmallScreen) ? null : 'Ce mois',
+                  icon: isVerySmallScreen ? null : Icons.attach_money,
+                  color: Colors.green,
+                  onTap: () => context.push('/admin/statistics'),
+                ),
+                _StatCard(
+                  title: 'Payé',
+                  value: '${(_currentMonthStats?['total_paid'] ?? 0)} DA',
+                  subtitle: (isSmallScreen || isVerySmallScreen) ? null : 'Ce mois',
+                  icon: isVerySmallScreen ? null : Icons.check_circle,
+                  color: Colors.teal,
+                  onTap: () => context.push('/admin/bills'),
+                ),
+                _StatCard(
+                  title: 'Impayé',
+                  value: '${(_currentMonthStats?['total_pending'] ?? 0)} DA',
+                  subtitle: (isSmallScreen || isVerySmallScreen) ? null : 'Ce mois',
+                  icon: isVerySmallScreen ? null : Icons.money_off,
+                  color: Colors.orange,
+                  onTap: () => context.push('/admin/bills'),
+                ),
+                _StatCard(
+                  title: 'Alertes Stock',
+                  value: '${_stockSummary?['total_unresolved'] ?? 0}',
+                  subtitle: (isSmallScreen || isVerySmallScreen) ? null : 'Non résolues',
+                  icon: isVerySmallScreen ? null : Icons.warning,
+                  color: Colors.red,
+                  onTap: () => context.push('/admin/stock-alerts'),
+                ),
+                _StatCard(
+                  title: 'Produits',
+                  value: '${_products?["count"] ?? 0}',
+                  subtitle: (isSmallScreen || isVerySmallScreen) ? null : 'Dans l\'inventaire',
+                  icon: isVerySmallScreen ? null : Icons.inventory,
+                  color: Colors.purple,
+                  onTap: () => context.push('/admin/products'),
+                ),
+              ],
+            );
+          },
+        ),
+      ],
+    );
+  }
+
   Widget _buildUrgentAlertsSection() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -553,20 +684,19 @@ Widget _buildMonthlyStatsGrid() {
   }
 }
 
-// 2. Update _StatCard class to accept nullable parameters
 class _StatCard extends StatelessWidget {
   final String title;
   final String value;
-  final String? subtitle;  // Changed to nullable
-  final IconData? icon;    // Changed to nullable
+  final String? subtitle;
+  final IconData? icon;
   final Color color;
   final VoidCallback onTap;
 
   const _StatCard({
     required this.title,
     required this.value,
-    this.subtitle,  // No longer required
-    this.icon,      // No longer required
+    this.subtitle,
+    this.icon,
     required this.color,
     required this.onTap,
   });
@@ -585,8 +715,7 @@ class _StatCard extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  if (icon != null)  // Conditionally show icon
-                    Icon(icon, color: color, size: 28),
+                  if (icon != null) Icon(icon, color: color, size: 28),
                   const Spacer(),
                   Icon(Icons.arrow_forward_ios, size: 14, color: Colors.grey),
                 ],
@@ -607,7 +736,7 @@ class _StatCard extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
               ),
-              if (subtitle != null)  // Conditionally show subtitle
+              if (subtitle != null)
                 Text(
                   subtitle!,
                   style: Theme.of(context).textTheme.bodySmall?.copyWith(

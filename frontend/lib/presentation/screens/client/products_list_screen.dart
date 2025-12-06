@@ -97,45 +97,73 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
   }
 
   Widget _buildSearchBar() {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 360;
+
     return Padding(
-      padding: const EdgeInsets.all(16),
+      padding: EdgeInsets.all(isSmallScreen ? 12 : 16),
       child: TextField(
         decoration: InputDecoration(
           hintText: 'Rechercher un produit...',
+          hintStyle: TextStyle(fontSize: isSmallScreen ? 13 : 14),
           prefixIcon: const Icon(Icons.search),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
           filled: true,
+          contentPadding: EdgeInsets.symmetric(
+            horizontal: isSmallScreen ? 12 : 16,
+            vertical: isSmallScreen ? 10 : 16,
+          ),
         ),
+        style: TextStyle(fontSize: isSmallScreen ? 13 : 14),
         onChanged: (val) => setState(() => _searchQuery = val),
       ),
     );
   }
 
   Widget _buildCategoryFilter() {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 360;
+
     return Container(
-      height: 50,
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      height: isSmallScreen ? 45 : 50,
+      padding: EdgeInsets.symmetric(horizontal: isSmallScreen ? 12 : 16),
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
           FilterChip(
-            label: const Text('Tous'),
+            label: Text(
+              'Tous',
+              style: TextStyle(fontSize: isSmallScreen ? 12 : 14),
+            ),
             selected: _selectedCategory == null,
             onSelected: (selected) {
               setState(() => _selectedCategory = null);
               _loadData();
             },
+            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            padding: EdgeInsets.symmetric(
+              horizontal: isSmallScreen ? 8 : 12,
+              vertical: isSmallScreen ? 6 : 8,
+            ),
           ),
           const SizedBox(width: 8),
           ...(_categories.map((cat) => Padding(
                 padding: const EdgeInsets.only(right: 8),
                 child: FilterChip(
-                  label: Text(cat['name'] ?? ''),
+                  label: Text(
+                    cat['name'] ?? '',
+                    style: TextStyle(fontSize: isSmallScreen ? 12 : 14),
+                  ),
                   selected: _selectedCategory == cat['id'],
                   onSelected: (selected) {
                     setState(() => _selectedCategory = selected ? cat['id'] : null);
                     _loadData();
                   },
+                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: isSmallScreen ? 8 : 12,
+                    vertical: isSmallScreen ? 6 : 8,
+                  ),
                 ),
               ))),
         ],
@@ -144,13 +172,17 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
   }
 
   Widget _buildGridView() {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final crossAxisCount = screenWidth < 360 ?  1 : screenWidth < 600 ? 2  :screenWidth < 950 ?  3 : 4;
+    final isSmallScreen = screenWidth < 360;
+
     return GridView.builder(
-      padding: const EdgeInsets.all(16),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
+      padding: EdgeInsets.all(isSmallScreen ? 12 : 16),
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: crossAxisCount,
         childAspectRatio: 0.7,
-        crossAxisSpacing: 12,
-        mainAxisSpacing: 12,
+        crossAxisSpacing: isSmallScreen ? 8 : 12,
+        mainAxisSpacing: isSmallScreen ? 8 : 12,
       ),
       itemCount: _filteredProducts.length,
       itemBuilder: (ctx, i) => _ProductGridCard(product: _filteredProducts[i]),
@@ -158,8 +190,11 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
   }
 
   Widget _buildListView() {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 360;
+
     return ListView.builder(
-      padding: const EdgeInsets.all(16),
+      padding: EdgeInsets.all(isSmallScreen ? 12 : 16),
       itemCount: _filteredProducts.length,
       itemBuilder: (ctx, i) => _ProductListCard(product: _filteredProducts[i]),
     );
@@ -171,11 +206,25 @@ class _ProductGridCard extends StatelessWidget {
 
   const _ProductGridCard({required this.product});
 
+  String? get _imageUrl {
+    final imageUrls = product['image_urls'];
+    if (imageUrls == null) return null;
+    
+    if (imageUrls is List && imageUrls.isNotEmpty) {
+      return imageUrls[0].toString();
+    }
+    
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
     final inStock = (product['quantity_in_stock'] ?? 0) > 0;
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 360;
     
     return Card(
+      clipBehavior: Clip.antiAlias,
       child: InkWell(
         onTap: () => context.push('/client/product/${product['id']}'),
         child: Column(
@@ -186,25 +235,65 @@ class _ProductGridCard extends StatelessWidget {
               child: Stack(
                 children: [
                   Container(
+                    width: double.infinity,
                     decoration: BoxDecoration(
                       color: Colors.grey[200],
-                      borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
                     ),
-                    child: Center(
-                      child: Icon(Icons.medical_services, size: 48, color: Colors.grey[400]),
-                    ),
+                    child: _imageUrl != null
+                        ? Image.network(
+                            _imageUrl!,
+                            fit: BoxFit.cover,
+                            errorBuilder: (context, error, stackTrace) {
+                              return Center(
+                                child: Icon(
+                                  Icons.medical_services,
+                                  size: isSmallScreen ? 36 : 48,
+                                  color: Colors.grey[400],
+                                ),
+                              );
+                            },
+                            loadingBuilder: (context, child, loadingProgress) {
+                              if (loadingProgress == null) return child;
+                              return Center(
+                                child: CircularProgressIndicator(
+                                  value: loadingProgress.expectedTotalBytes != null
+                                      ? loadingProgress.cumulativeBytesLoaded /
+                                          loadingProgress.expectedTotalBytes!
+                                      : null,
+                                  strokeWidth: 2,
+                                ),
+                              );
+                            },
+                          )
+                        : Center(
+                            child: Icon(
+                              Icons.medical_services,
+                              size: isSmallScreen ? 36 : 48,
+                              color: Colors.grey[400],
+                            ),
+                          ),
                   ),
+                  
                   if (!inStock)
                     Positioned.fill(
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.black54,
-                          borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
                         ),
-                        child: const Center(
+                        child: Center(
                           child: Chip(
-                            label: Text('Rupture de stock', style: TextStyle(fontSize: 10)),
+                            label: Text(
+                              'Rupture de stock',
+                              style: TextStyle(
+                                fontSize: isSmallScreen ? 9 : 10,
+                                color: Colors.white,
+                              ),
+                            ),
                             backgroundColor: Colors.red,
+                            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: isSmallScreen ? 6 : 8,
+                            ),
                           ),
                         ),
                       ),
@@ -212,39 +301,95 @@ class _ProductGridCard extends StatelessWidget {
                 ],
               ),
             ),
-            Expanded(
-              flex: 2,
-              child: Padding(
-                padding: const EdgeInsets.all(8),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      product['name'] ?? '',
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+            Padding(
+              padding: EdgeInsets.all(isSmallScreen ? 6 : 8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    product['name'] ?? '',
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: isSmallScreen ? 12 : 14,
                     ),
-                    const Spacer(),
-                    Row(
+                  ),
+                  const SizedBox(height: 4),
+Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          '${product['price']} DA',
-                          style: TextStyle(
-                            color: Theme.of(context).colorScheme.primary,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
+                        Flexible(
+                          child: FittedBox(
+                            fit: BoxFit.scaleDown,
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              '${product['price']} DA',
+                              style: TextStyle(
+                                color: Theme.of(context).colorScheme.primary,
+                                fontWeight: FontWeight.bold,
+                                fontSize: isSmallScreen ? 14 : 16,
+                              ),
+                            ),
                           ),
                         ),
                         if (inStock)
-                          const Icon(Icons.add_shopping_cart, size: 20),
+                          Icon(
+                            Icons.add_shopping_cart,
+                            size: isSmallScreen ? 18 : 20,
+                          ),
                       ],
-                    ),
-                  ],
-                ),
+                    ),                ],
               ),
             ),
+            // Expanded(
+            //   flex: 2,
+            //   child: Padding(
+            //     padding: EdgeInsets.all(isSmallScreen ? 6 : 8),
+            //     child: Column(
+            //       crossAxisAlignment: CrossAxisAlignment.start,
+            //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //       children: [
+            //         Flexible(
+            //           child: Text(
+            //             product['name'] ?? '',
+            //             maxLines: 2,
+            //             overflow: TextOverflow.ellipsis,
+            //             style: TextStyle(
+            //               fontWeight: FontWeight.bold,
+            //               fontSize: isSmallScreen ? 12 : 13,
+            //             ),
+            //           ),
+            //         ),
+            //         const SizedBox(height: 1),
+            //         Row(
+            //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //           children: [
+            //             Flexible(
+            //               child: FittedBox(
+            //                 fit: BoxFit.scaleDown,
+            //                 alignment: Alignment.centerLeft,
+            //                 child: Text(
+            //                   '${product['price']} DA',
+            //                   style: TextStyle(
+            //                     color: Theme.of(context).colorScheme.primary,
+            //                     fontWeight: FontWeight.bold,
+            //                     fontSize: isSmallScreen ? 14 : 16,
+            //                   ),
+            //                 ),
+            //               ),
+            //             ),
+            //             if (inStock)
+            //               Icon(
+            //                 Icons.add_shopping_cart,
+            //                 size: isSmallScreen ? 18 : 20,
+            //               ),
+            //           ],
+            //         ),
+            //       ],
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),
@@ -257,60 +402,134 @@ class _ProductListCard extends StatelessWidget {
 
   const _ProductListCard({required this.product});
 
+  String? get _imageUrl {
+    final imageUrls = product['image_urls'];
+    if (imageUrls == null) return null;
+    
+    if (imageUrls is List && imageUrls.isNotEmpty) {
+      return imageUrls[0].toString();
+    }
+    
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
     final inStock = (product['quantity_in_stock'] ?? 0) > 0;
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 360;
+    final isMediumScreen = screenWidth < 600;
     
     return Card(
-      margin: const EdgeInsets.only(bottom: 12),
-      child: ListTile(
+      margin: EdgeInsets.only(bottom: isSmallScreen ? 8 : 12),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
         onTap: () => context.push('/client/product/${product['id']}'),
-        leading: Container(
-          width: 60,
-          height: 60,
-          decoration: BoxDecoration(
-            color: Colors.grey[200],
-            borderRadius: BorderRadius.circular(8),
+        child: Padding(
+          padding: EdgeInsets.all(isSmallScreen ? 8 : 12),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Image
+              Container(
+                width: isSmallScreen ? 50 : (isMediumScreen ? 60 : 70),
+                height: isSmallScreen ? 50 : (isMediumScreen ? 60 : 70),
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                clipBehavior: Clip.antiAlias,
+                child: _imageUrl != null
+                    ? Image.network(
+                        _imageUrl!,
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) {
+                          return Icon(
+                            Icons.medical_services,
+                            size: isSmallScreen ? 24 : 28,
+                            color: Colors.grey[400],
+                          );
+                        },
+                      )
+                    : Icon(
+                        Icons.medical_services,
+                        size: isSmallScreen ? 24 : 28,
+                        color: Colors.grey[400],
+                      ),
+              ),
+              SizedBox(width: isSmallScreen ? 10 : 12),
+              
+              // Content
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      product['name'] ?? '',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: isSmallScreen ? 13 : 15,
+                      ),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    if (product['description'] != null) ...[
+                      SizedBox(height: isSmallScreen ? 2 : 4),
+                      Text(
+                        product['description'],
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: isSmallScreen ? 11 : 13,
+                          color: Colors.grey[700],
+                        ),
+                      ),
+                    ],
+                    SizedBox(height: isSmallScreen ? 2 : 4),
+                    Text(
+                      product['category_name'] ?? 'Sans catégorie',
+                      style: TextStyle(
+                        color: Colors.grey[600],
+                        fontSize: isSmallScreen ? 10 : 12,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              
+              SizedBox(width: isSmallScreen ? 8 : 12),
+              
+              // Price and stock
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      '${product['price']} DA',
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.primary,
+                        fontWeight: FontWeight.bold,
+                        fontSize: isSmallScreen ? 14 : 16,
+                      ),
+                    ),
+                  ),
+                  if (!inStock) ...[
+                    const SizedBox(height: 4),
+                    Text(
+                      'Rupture',
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontSize: isSmallScreen ? 10 : 11,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            ],
           ),
-          child: Icon(Icons.medical_services, color: Colors.grey[400]),
-        ),
-        title: Text(
-          product['name'] ?? '',
-          style: const TextStyle(fontWeight: FontWeight.bold),
-        ),
-        subtitle: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            if (product['description'] != null)
-              Text(
-                product['description'],
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-              ),
-            Text(
-              product['category_name'] ?? 'Sans catégorie',
-              style: TextStyle(color: Colors.grey[600], fontSize: 12),
-            ),
-          ],
-        ),
-        trailing: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Text(
-              '${product['price']} DA',
-              style: TextStyle(
-                color: Theme.of(context).colorScheme.primary,
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-              ),
-            ),
-            if (!inStock)
-              const Text(
-                'Rupture',
-                style: TextStyle(color: Colors.red, fontSize: 11),
-              ),
-          ],
         ),
       ),
     );

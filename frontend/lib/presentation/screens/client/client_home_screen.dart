@@ -17,6 +17,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
   List<dynamic> _myBills = [];
   int _allmyBillsCount = 0;
   int _unpaidBillsCount = 0;
+  int _unreadNotificationsCount = 0;
   bool _loading = true;
 
   @override
@@ -28,14 +29,14 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
   Future<void> _loadHomeData() async {
     setState(() => _loading = true);
     try {
+      // Load essential data first
       final results = await Future.wait([
         _api.getClientProfile(),
         _api.getAllCategories(limit: 6),
         _api.getAllProducts(isActive: true, limit: 8),
         _api.getMyBills(limit: 3),
-        _api.getAllMyBills(), // For quick stats
-        _api.getAllUnpaidBills(), // For quick stats
-
+        _api.getAllMyBills(),
+        _api.getAllUnpaidBills(),
       ]);
 
       setState(() {
@@ -45,11 +46,29 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
         _myBills = results[3].data;
         _allmyBillsCount = results[4].data['count'] ?? 0;
         _unpaidBillsCount = results[5].data['count_unpaid'] ?? 0;
-
         _loading = false;
       });
+
+      // Load notifications separately (non-blocking)
+      _loadNotificationCount();
     } catch (e) {
       setState(() => _loading = false);
+    }
+  }
+
+  Future<void> _loadNotificationCount() async {
+    try {
+      final response = await _api.getAllNotifications(isSent: false, limit: 100);
+      setState(() {
+        _unreadNotificationsCount = (response.data as List).length;
+      });
+    } catch (e) {
+      // Silently fail - notifications are optional
+      // You can uncomment this for debugging:
+      // print('Failed to load notifications: $e');
+      setState(() {
+        _unreadNotificationsCount = 0;
+      });
     }
   }
 
@@ -57,8 +76,48 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Medical Shop'),
+        title: const Text('AB Dental'),
         actions: [
+          // Notification icon with badge
+          Stack(
+            children: [
+              IconButton(
+                icon: const Icon(Icons.notifications),
+                onPressed: () async {
+                  await context.push('/client/notifications');
+                  // Reload data after returning from notifications
+                  _loadHomeData();
+                },
+              ),
+              if (_unreadNotificationsCount > 0)
+                Positioned(
+                  right: 8,
+                  top: 8,
+                  child: Container(
+                    padding: const EdgeInsets.all(4),
+                    decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    constraints: const BoxConstraints(
+                      minWidth: 18,
+                      minHeight: 18,
+                    ),
+                    child: Text(
+                      _unreadNotificationsCount > 99 
+                          ? '99+' 
+                          : '$_unreadNotificationsCount',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 10,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+            ],
+          ),
           IconButton(
             icon: const Icon(Icons.shopping_cart),
             onPressed: () => context.push('/client/cart'),
@@ -158,6 +217,18 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
               context.push('/client/bills');
             },
           ),
+          ListTile(
+            leading: Badge(
+              isLabelVisible: _unreadNotificationsCount > 0,
+              label: Text('$_unreadNotificationsCount'),
+              child: const Icon(Icons.notifications),
+            ),
+            title: const Text('Notifications'),
+            onTap: () {
+              Navigator.pop(context);
+              context.push('/client/notifications');
+            },
+          ),
           const Divider(),
           ListTile(
             leading: const Icon(Icons.person),
@@ -173,18 +244,21 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
   }
 
   Widget _buildWelcomeCard() {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 360;
+
     return Card(
       color: Theme.of(context).colorScheme.primaryContainer,
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(isSmallScreen ? 12 : 16),
         child: Row(
           children: [
             Icon(
               Icons.medical_services,
-              size: 48,
+              size: isSmallScreen ? 36 : 48,
               color: Theme.of(context).colorScheme.primary,
             ),
-            const SizedBox(width: 16),
+            SizedBox(width: isSmallScreen ? 12 : 16),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -193,10 +267,16 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
                     'Bonjour, ${_profile?['username'] ?? 'Client'}!',
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
                           fontWeight: FontWeight.bold,
+                          fontSize: isSmallScreen ? 18 : null,
                         ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
                   const SizedBox(height: 4),
-                  const Text('Trouvez vos produits médicaux'),
+                  Text(
+                    'Trouvez vos produits médicaux',
+                    style: TextStyle(fontSize: isSmallScreen ? 13 : 14),
+                  ),
                 ],
               ),
             ),
@@ -207,8 +287,6 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
   }
 
   Widget _buildQuickStats() {
-    // final unpaidBills = _myBills.where((b) => b['status'] != 'paid').length;
-    
     return Row(
       children: [
         Expanded(
@@ -241,11 +319,15 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              'Catégories',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
+            Expanded(
+              child: Text(
+                'Catégories',
+                style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
             TextButton(
               onPressed: () => context.push('/client/products'),
@@ -267,17 +349,24 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
   }
 
   Widget _buildProductsSection() {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final crossAxisCount = screenWidth < 360 ?  1 : screenWidth < 600 ? 2  :screenWidth < 950 ?  3 : 4;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              'Produits Disponibles',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
+            Expanded(
+              child: Text(
+                'Produits Disponibles',
+                style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
             TextButton(
               onPressed: () => context.push('/client/products'),
@@ -289,8 +378,8 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
         GridView.builder(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: crossAxisCount,
             childAspectRatio: 0.75,
             crossAxisSpacing: 12,
             mainAxisSpacing: 12,
@@ -309,11 +398,15 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              'Factures Récentes',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
+            Expanded(
+              child: Text(
+                'Factures Récentes',
+                style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
             TextButton(
               onPressed: () => context.push('/client/bills'),
@@ -327,13 +420,26 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
               child: ListTile(
                 leading: CircleAvatar(
                   backgroundColor: _getBillColor(bill['status']),
-                  child: const Icon(Icons.receipt, color: Colors.white),
+                  child: const Icon(Icons.receipt, color: Colors.white, size: 20),
                 ),
-                title: Text('Facture #${bill['bill_number']}'),
-                subtitle: Text('${bill['total_amount']} DA'),
+                title: Text(
+                  'Facture #${bill['bill_number']}',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                subtitle: Text(
+                  '${bill['total_amount']} DA',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
                 trailing: Chip(
-                  label: Text(_getBillStatus(bill['status'])),
+                  label: Text(
+                    _getBillStatus(bill['status']),
+                    style: const TextStyle(fontSize: 11),
+                  ),
                   backgroundColor: _getBillColor(bill['status']).withOpacity(0.2),
+                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  padding: const EdgeInsets.symmetric(horizontal: 6),
                 ),
                 onTap: () => context.push('/client/bill/${bill['id']}'),
               ),
@@ -376,17 +482,36 @@ class _StatCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 360;
+
     return Card(
       child: InkWell(
         onTap: onTap,
         child: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: EdgeInsets.all(isSmallScreen ? 12 : 16),
           child: Column(
             children: [
-              Icon(icon, color: color, size: 32),
-              const SizedBox(height: 8),
-              Text(value, style: Theme.of(context).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold)),
-              Text(label, style: Theme.of(context).textTheme.bodySmall),
+              Icon(icon, color: color, size: isSmallScreen ? 28 : 32),
+              SizedBox(height: isSmallScreen ? 6 : 8),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  value,
+                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        fontSize: isSmallScreen ? 24 : null,
+                      ),
+                ),
+              ),
+              const SizedBox(height: 2),
+              Text(
+                label,
+                style: Theme.of(context).textTheme.bodySmall,
+                textAlign: TextAlign.center,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
             ],
           ),
         ),
@@ -402,8 +527,11 @@ class _CategoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final cardWidth = screenWidth < 360 ? 100.0 : 120.0;
+
     return Container(
-      width: 120,
+      width: cardWidth,
       margin: const EdgeInsets.only(right: 12),
       child: Card(
         child: InkWell(
@@ -413,14 +541,15 @@ class _CategoryCard extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Icon(Icons.category, size: 32, color: Theme.of(context).colorScheme.primary),
-                // const SizedBox(height: 8),
                 Text(
                   category['name'] ?? '',
                   textAlign: TextAlign.center,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(fontWeight: FontWeight.w600),
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: screenWidth < 360 ? 12 : 14,
+                  ),
                 ),
               ],
             ),
@@ -436,27 +565,102 @@ class _ProductCard extends StatelessWidget {
 
   const _ProductCard({required this.product});
 
+  String? get _imageUrl {
+    final imageUrls = product['image_urls'];
+    if (imageUrls == null) return null;
+    
+    if (imageUrls is List && imageUrls.isNotEmpty) {
+      return imageUrls[0].toString();
+    }
+    
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
+    final inStock = (product['quantity_in_stock'] ?? 0) > 0;
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 360;
+    
     return Card(
+      clipBehavior: Clip.antiAlias,
       child: InkWell(
         onTap: () => context.push('/client/product/${product['id']}'),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
-                ),
-                child: Center(
-                  child: Icon(Icons.medical_services, size: 48, color: Colors.grey[400]),
-                ),
+              child: Stack(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                    ),
+                    child: _imageUrl != null
+                        ? Image.network(
+                            _imageUrl!,
+                            fit: BoxFit.cover,
+                            errorBuilder: (context, error, stackTrace) {
+                              return Center(
+                                child: Icon(
+                                  Icons.medical_services,
+                                  size: isSmallScreen ? 36 : 48,
+                                  color: Colors.grey[400],
+                                ),
+                              );
+                            },
+                            loadingBuilder: (context, child, loadingProgress) {
+                              if (loadingProgress == null) return child;
+                              return Center(
+                                child: CircularProgressIndicator(
+                                  value: loadingProgress.expectedTotalBytes != null
+                                      ? loadingProgress.cumulativeBytesLoaded /
+                                          loadingProgress.expectedTotalBytes!
+                                      : null,
+                                  strokeWidth: 2,
+                                ),
+                              );
+                            },
+                          )
+                        : Center(
+                            child: Icon(
+                              Icons.medical_services,
+                              size: isSmallScreen ? 36 : 48,
+                              color: Colors.grey[400],
+                            ),
+                          ),
+                  ),
+                  
+                  if (!inStock)
+                    Positioned.fill(
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          color: Colors.black54,
+                        ),
+                        child: Center(
+                          child: Chip(
+                            label: Text(
+                              'Rupture',
+                              style: TextStyle(
+                                fontSize: isSmallScreen ? 9 : 10,
+                                color: Colors.white,
+                              ),
+                            ),
+                            backgroundColor: Colors.red,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: isSmallScreen ? 6 : 8,
+                            ),
+                            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          ),
+                        ),
+                      ),
+                    ),
+                ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8),
+              padding: EdgeInsets.all(isSmallScreen ? 6 : 8),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -464,15 +668,22 @@ class _ProductCard extends StatelessWidget {
                     product['name'] ?? '',
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: isSmallScreen ? 12 : 14,
+                    ),
                   ),
                   const SizedBox(height: 4),
-                  Text(
-                    '${product['price']} DA',
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.primary,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      '${product['price']} DA',
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.primary,
+                        fontWeight: FontWeight.bold,
+                        fontSize: isSmallScreen ? 14 : 16,
+                      ),
                     ),
                   ),
                 ],

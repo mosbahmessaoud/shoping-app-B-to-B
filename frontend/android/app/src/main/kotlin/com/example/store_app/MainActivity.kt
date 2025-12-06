@@ -1,4 +1,4 @@
-package com.example.store_app
+package iTriDevel.AB_Dental
 
 import io.flutter.embedding.android.FlutterActivity
 

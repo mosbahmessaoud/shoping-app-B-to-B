@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:dio/dio.dart';
 import '../../../core/services/auth_service.dart';
+import '../../../core/services/api_service.dart';
 import '../../widgets/common/custom_text_field.dart';
 import '../../widgets/common/custom_button.dart';
-// ADD these imports at the top:
-import 'package:dio/dio.dart';
-import '../../../core/services/api_service.dart';
-
-// ADD these state variables in _LoginScreenState:
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -21,9 +18,9 @@ class _LoginScreenState extends State<LoginScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _authService = AuthService();
+  final _apiService = ApiService();
   bool _isLoading = false;
   bool _obscurePassword = true;
-  final _apiService = ApiService();
 
   @override
   void dispose() {
@@ -32,21 +29,57 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 
+  void _showError(String title, String message) {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: Row(
+          children: [
+            const Icon(Icons.error_outline, color: Colors.red, size: 28),
+            const SizedBox(width: 12),
+            Expanded(child: Text(title, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold))),
+          ],
+        ),
+        content: Text(message, style: const TextStyle(fontSize: 15, height: 1.4)),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('OK', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _showSuccess(String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Row(
+          children: [
+            const Icon(Icons.check_circle, color: Colors.white),
+            const SizedBox(width: 12),
+            Expanded(child: Text(message, style: const TextStyle(fontSize: 15))),
+          ],
+        ),
+        backgroundColor: Colors.green,
+        behavior: SnackBarBehavior.floating,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      ),
+    );
+  }
+
   Future<void> _login() async {
     if (!_formKey.currentState!.validate()) return;
 
     setState(() => _isLoading = true);
 
     try {
-      // Unified login that automatically detects user type
       await _authService.login(_emailController.text, _passwordController.text);
-      
-      // Get the user type to determine redirect
       final userType = await _authService.getUserType();
       
       if (!mounted) return;
       
-      // Redirect based on user type
       if (userType == 'admin') {
         context.go('/admin/dashboard');
       } else if (userType == 'client') {
@@ -54,605 +87,216 @@ class _LoginScreenState extends State<LoginScreen> {
       } else {
         throw Exception('Type d\'utilisateur invalide');
       }
-    } catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Erreur: ${e.toString()}'),
-            backgroundColor: Colors.red,
-          ),
-        );
+    } on DioException catch (e) {
+      if (!mounted) return;
+      String title = 'Erreur de Connexion';
+      String message = 'Une erreur est survenue.';
+
+      if (e.type == DioExceptionType.connectionError || e.type == DioExceptionType.unknown) {
+        title = 'Serveur Inaccessible';
+        message = 'Impossible de se connecter au serveur.\n\n'
+            '• Vérifiez que le serveur est démarré\n'
+            '• Vérifiez votre connexion internet\n'
+            '• Vérifiez l\'adresse du serveur';
+      } else if (e.type == DioExceptionType.connectionTimeout) {
+        title = 'Délai d\'attente dépassé';
+        message = 'La connexion a pris trop de temps.\n\nVérifiez votre connexion internet.';
+      } else if (e.response?.statusCode == 401 || e.response?.statusCode == 403) {
+        title = 'Authentification échouée';
+        message = 'Email ou mot de passe incorrect.\n\nVeuillez vérifier vos identifiants.';
+      } else if (e.response?.statusCode == 404) {
+        title = 'Compte introuvable';
+        message = 'Aucun compte n\'existe avec cet email.';
+      } else if (e.response?.statusCode == 500) {
+        title = 'Erreur Serveur';
+        message = 'Le serveur a rencontré une erreur.\n\nVeuillez réessayer plus tard.';
       }
+
+      _showError(title, message);
+    } catch (e) {
+      if (!mounted) return;
+      _showError('Erreur', e.toString());
     } finally {
       if (mounted) setState(() => _isLoading = false);
     }
   }
 
+  Future<void> _showForgotPasswordDialog() async {
+    final emailCtrl = TextEditingController();
+    final otpCtrl = TextEditingController();
+    final passCtrl = TextEditingController();
+    final confirmCtrl = TextEditingController();
+    
+    int step = 1; // 1=email, 2=otp, 3=password
+    bool loading = false;
 
-
-// In your login_screen.dart, replace the entire _showForgotPasswordDialog method with:
-
-Future<void> _showForgotPasswordDialog() async {
-  await showImprovedForgotPasswordDialog(context, _apiService);
-}
-
-Future<void> showImprovedForgotPasswordDialog(BuildContext context, apiService) async {
-  final emailController = TextEditingController();
-  final otpController = TextEditingController();
-  final newPasswordController = TextEditingController();
-  final confirmPasswordController = TextEditingController();
-  
-  bool isOtpSent = false;
-  bool isOtpVerified = false;
-  bool isSendingOtp = false;
-  bool isVerifyingOtp = false;
-  bool isResettingPassword = false;
-
-  // Helper function to show error dialog
-  void showErrorDialog(BuildContext context, String title, String message) {
-    showDialog(
+    await showDialog(
       context: context,
-      builder: (context) => AlertDialog(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        title: Row(
-          children: [
-            Icon(Icons.error_outline, color: Colors.red, size: 28),
-            SizedBox(width: 12),
-            Expanded(
-              child: Text(
-                title,
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-            ),
-          ],
-        ),
-        content: Text(
-          message,
-          style: TextStyle(fontSize: 15, height: 1.4),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: Text('OK', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
+      barrierDismissible: false,
+      builder: (ctx) => StatefulBuilder(
+        builder: (context, setState) => AlertDialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          title: Row(
+            children: [
+              Icon(Icons.lock_reset, color: Theme.of(context).colorScheme.primary),
+              const SizedBox(width: 12),
+              const Text('Réinitialiser', style: TextStyle(fontSize: 18)),
+            ],
           ),
-        ],
-      ),
-    );
-  }
-
-  // Helper function to show success message
-  void showSuccessSnackbar(BuildContext context, String message) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Row(
-          children: [
-            Icon(Icons.check_circle, color: Colors.white),
-            SizedBox(width: 12),
-            Expanded(child: Text(message, style: TextStyle(fontSize: 15))),
-          ],
-        ),
-        backgroundColor: Colors.green,
-        behavior: SnackBarBehavior.floating,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        duration: Duration(seconds: 3),
-      ),
-    );
-  }
-
-  await showDialog(
-    context: context,
-    barrierDismissible: false,
-    builder: (BuildContext dialogContext) {
-      return StatefulBuilder(
-        builder: (context, setDialogState) {
-          final theme = Theme.of(context);
-          
-          return AlertDialog(
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-            title: Row(
+          content: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
-                Container(
-                  padding: EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: theme.colorScheme.primaryContainer,
-                    borderRadius: BorderRadius.circular(8),
+                // Step 1: Email
+                if (step == 1) ...[
+                  TextField(
+                    controller: emailCtrl,
+                    decoration: const InputDecoration(
+                      labelText: 'Email',
+                      prefixIcon: Icon(Icons.email),
+                      border: OutlineInputBorder(),
+                    ),
                   ),
-                  child: Icon(Icons.lock_reset, color: theme.colorScheme.primary),
-                ),
-                SizedBox(width: 12),
-                Text('Reset Password', style: TextStyle(fontSize: 20)),
+                  const SizedBox(height: 16),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: loading ? null : () async {
+                        if (emailCtrl.text.isEmpty || !emailCtrl.text.contains('@')) {
+                          _showError('Email invalide', 'Veuillez entrer un email valide.');
+                          return;
+                        }
+                        setState(() => loading = true);
+                        try {
+                          await _apiService.sendOTP({'email': emailCtrl.text, 'otp_type': 'password_reset'});
+                          setState(() {
+                            step = 2;
+                            loading = false;
+                          });
+                          _showSuccess('Code envoyé à ${emailCtrl.text}');
+                        } on DioException catch (e) {
+                          setState(() => loading = false);
+                          if (e.response?.statusCode == 404) {
+                            _showError('Compte introuvable', 'Aucun compte avec cet email.');
+                          } else if (e.type == DioExceptionType.connectionError) {
+                            _showError('Erreur de connexion', 'Serveur inaccessible.');
+                          } else {
+                            _showError('Erreur', 'Impossible d\'envoyer le code.');
+                          }
+                        }
+                      },
+                      child: loading 
+                          ? const SizedBox(height: 20, width: 20, child: CircularProgressIndicator(strokeWidth: 2))
+                          : const Text('Envoyer Code'),
+                    ),
+                  ),
+                ],
+                
+                // Step 2: OTP
+                if (step == 2) ...[
+                  TextField(
+                    controller: otpCtrl,
+                    keyboardType: TextInputType.number,
+                    maxLength: 6,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, letterSpacing: 8),
+                    decoration: const InputDecoration(
+                      hintText: '● ● ● ● ● ●',
+                      counterText: '',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: loading ? null : () {
+                        if (otpCtrl.text.length != 6) {
+                          _showError('Code invalide', 'Le code doit contenir 6 chiffres.');
+                          return;
+                        }
+                        setState(() {
+                          step = 3;
+                          loading = false;
+                        });
+                        _showSuccess('Code vérifié!');
+                      },
+                      child: const Text('Vérifier'),
+                    ),
+                  ),
+                ],
+                
+                // Step 3: New Password
+                if (step == 3) ...[
+                  TextField(
+                    controller: passCtrl,
+                    obscureText: true,
+                    decoration: const InputDecoration(
+                      labelText: 'Nouveau mot de passe',
+                      prefixIcon: Icon(Icons.lock),
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  TextField(
+                    controller: confirmCtrl,
+                    obscureText: true,
+                    decoration: const InputDecoration(
+                      labelText: 'Confirmer',
+                      prefixIcon: Icon(Icons.lock),
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: loading ? null : () async {
+                        if (passCtrl.text.length < 6) {
+                          _showError('Mot de passe trop court', 'Minimum 6 caractères.');
+                          return;
+                        }
+                        if (passCtrl.text != confirmCtrl.text) {
+                          _showError('Erreur', 'Les mots de passe ne correspondent pas.');
+                          return;
+                        }
+                        setState(() => loading = true);
+                        try {
+                          await _apiService.resetPassword({
+                            'email': emailCtrl.text,
+                            'otp_code': otpCtrl.text,
+                            'new_password': passCtrl.text,
+                          });
+                          Navigator.pop(ctx);
+                          _showSuccess('Mot de passe réinitialisé avec succès!');
+                        } on DioException catch (e) {
+                          setState(() => loading = false);
+                          if (e.response?.statusCode == 400) {
+                            _showError('Code expiré', 'Le code OTP a expiré.');
+                          } else {
+                            _showError('Erreur', 'Échec de la réinitialisation.');
+                          }
+                        }
+                      },
+                      child: loading 
+                          ? const SizedBox(height: 20, width: 20, child: CircularProgressIndicator(strokeWidth: 2))
+                          : const Text('Réinitialiser'),
+                    ),
+                  ),
+                ],
               ],
             ),
-            content: SingleChildScrollView(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // Progress Indicator
-                  Row(
-                    children: [
-                      _buildStepIndicator(1, 'Email', !isOtpSent, theme),
-                      Expanded(child: Divider(thickness: 2)),
-                      _buildStepIndicator(2, 'OTP', isOtpSent && !isOtpVerified, theme),
-                      Expanded(child: Divider(thickness: 2)),
-                      _buildStepIndicator(3, 'Password', isOtpVerified, theme),
-                    ],
-                  ),
-                  SizedBox(height: 24),
-                  
-                  // Step 1: Email & Send OTP
-                  if (!isOtpVerified) ...[
-                    if (!isOtpSent) ...[
-                      Text(
-                        'Enter your email address',
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                          color: theme.colorScheme.onSurface,
-                        ),
-                      ),
-                      SizedBox(height: 8),
-                      Text(
-                        'We\'ll send you a verification code',
-                        style: TextStyle(
-                          fontSize: 13,
-                          color: theme.colorScheme.onSurfaceVariant,
-                        ),
-                      ),
-                      SizedBox(height: 16),
-                    ],
-                    
-                    // Email field
-                    TextField(
-                      controller: emailController,
-                      keyboardType: TextInputType.emailAddress,
-                      enabled: !isOtpSent,
-                      decoration: InputDecoration(
-                        labelText: 'Email',
-                        hintText: 'your.email@example.com',
-                        prefixIcon: Icon(Icons.email_outlined),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                        filled: true,
-                        fillColor: isOtpSent ? Colors.grey[100] : null,
-                      ),
-                    ),
-                    SizedBox(height: 16),
-                    
-                    // Send OTP Button
-                    if (!isOtpSent)
-                      SizedBox(
-                        width: double.infinity,
-                        height: 48,
-                        child: ElevatedButton.icon(
-                          onPressed: isSendingOtp ? null : () async {
-                            final email = emailController.text.trim();
-                            
-                            // Validation
-                            if (email.isEmpty) {
-                              showErrorDialog(
-                                context,
-                                'Email Required',
-                                'Please enter your email address to continue.',
-                              );
-                              return;
-                            }
-                            
-                            if (!email.contains('@') || !email.contains('.')) {
-                              showErrorDialog(
-                                context,
-                                'Invalid Email',
-                                'Please enter a valid email address (e.g., user@example.com).',
-                              );
-                              return;
-                            }
-
-                            setDialogState(() => isSendingOtp = true);
-
-                            try {
-                              final response = await apiService.sendOTP({
-                                'email': email,
-                                'otp_type': 'password_reset',
-                              });
-   
-                              setDialogState(() {
-                                isOtpSent = true;
-                                isSendingOtp = false;
-                              });
-
-                              showSuccessSnackbar(context, 'OTP sent to $email');
-                            } on DioException catch (e) {
-                              setDialogState(() => isSendingOtp = false);
-                              
-                              String title = 'Error';
-                              String message = 'Failed to send OTP. Please try again.';
-                              
-                              if (e.response?.statusCode == 404) {
-                                title = 'Account Not Found';
-                                message = 'No account exists with this email address.\n\nPlease check your email or create a new account.';
-                              } else if (e.response?.statusCode == 400) {
-                                title = 'Invalid Request';
-                                final detail = e.response?.data['detail'];
-                                message = detail ?? 'The email address format is invalid.';
-                              } else if (e.type == DioExceptionType.connectionTimeout) {
-                                title = 'Connection Timeout';
-                                message = 'The request took too long.\n\nPlease check your internet connection and try again.';
-                              } else if (e.type == DioExceptionType.connectionError) {
-                                title = 'Connection Error';
-                                message = 'Cannot connect to the server.\n\nPlease ensure:\n• The backend server is running\n• You have internet connection\n• The server address is correct';
-                              } else if (e.response?.statusCode == 500) {
-                                title = 'Server Error';
-                                message = 'The server encountered an error.\n\nThis might be an email service issue. Please try again in a few moments.';
-                              }
-                              
-                              showErrorDialog(context, title, message);
-                            } catch (e) {
-                              setDialogState(() => isSendingOtp = false);
-                              showErrorDialog(
-                                context,
-                                'Unexpected Error',
-                                'An unexpected error occurred:\n\n${e.toString()}\n\nPlease try again or contact support if the issue persists.',
-                              );
-                            }
-                          },
-                          icon: isSendingOtp
-                              ? SizedBox(
-                                  width: 20,
-                                  height: 20,
-                                  child: CircularProgressIndicator(
-                                    strokeWidth: 2,
-                                    color: Colors.white,
-                                  ),
-                                )
-                              : Icon(Icons.send),
-                          label: Text(
-                            isSendingOtp ? 'Sending OTP...' : 'Send OTP',
-                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-                          ),
-                          style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                          ),
-                        ),
-                      ),
-                  ],
-                  
-                  // Step 2: Verify OTP
-                  if (isOtpSent && !isOtpVerified) ...[
-                    Text(
-                      'Enter verification code',
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w600,
-                        color: theme.colorScheme.onSurface,
-                      ),
-                    ),
-                    SizedBox(height: 8),
-                    Text(
-                      'Check your email for the 6-digit code',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: theme.colorScheme.onSurfaceVariant,
-                      ),
-                    ),
-                    SizedBox(height: 16),
-                    TextField(
-                      controller: otpController,
-                      keyboardType: TextInputType.number,
-                      maxLength: 6,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        letterSpacing: 12,
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      decoration: InputDecoration(
-                        hintText: '● ● ● ● ● ●',
-                        counterText: '',
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                        filled: true,
-                      ),
-                    ),
-                    SizedBox(height: 16),
-                    SizedBox(
-                      width: double.infinity,
-                      height: 48,
-                      child: ElevatedButton.icon(
-                        onPressed: isVerifyingOtp ? null : () async {
-                          final otp = otpController.text.trim();
-                          
-                          if (otp.isEmpty) {
-                            showErrorDialog(
-                              context,
-                              'OTP Required',
-                              'Please enter the 6-digit code sent to your email.',
-                            );
-                            return;
-                          }
-                          
-                          if (otp.length != 6) {
-                            showErrorDialog(
-                              context,
-                              'Invalid OTP',
-                              'The verification code must be exactly 6 digits.\n\nPlease check your email and try again.',
-                            );
-                            return;
-                          }
-
-                          setDialogState(() => isVerifyingOtp = true);
-
-                          try {
-                            // Directly reset password without separate verification
-                            // The resetPassword endpoint will verify the OTP internally
-                            setDialogState(() {
-                              isOtpVerified = true;
-                              isVerifyingOtp = false;
-                            });
-
-                            showSuccessSnackbar(context, 'OTP verified! Now set your new password.');
-                          } on DioException catch (e) {
-                            setDialogState(() => isVerifyingOtp = false);
-                            
-                            String title = 'Verification Failed';
-                            String message = 'The OTP code is invalid or expired.';
-                            
-                            if (e.response?.statusCode == 400) {
-                              title = 'Invalid OTP';
-                              message = 'The verification code is incorrect or has expired.\n\nPlease check your email or request a new code.';
-                            }
-                            
-                            showErrorDialog(context, title, message);
-                          } catch (e) {
-                            setDialogState(() => isVerifyingOtp = false);
-                            showErrorDialog(
-                              context,
-                              'Verification Error',
-                              'Failed to verify OTP:\n\n${e.toString()}',
-                            );
-                          }
-                        },
-                        icon: isVerifyingOtp
-                            ? SizedBox(
-                                width: 20,
-                                height: 20,
-                                child: CircularProgressIndicator(
-                                  strokeWidth: 2,
-                                  color: Colors.white,
-                                ),
-                              )
-                            : Icon(Icons.verified),
-                        label: Text(
-                          isVerifyingOtp ? 'Verifying...' : 'Verify OTP',
-                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.green,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                  
-                  // Step 3: New Password
-                  if (isOtpVerified) ...[
-                    Text(
-                      'Create new password',
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w600,
-                        color: theme.colorScheme.onSurface,
-                      ),
-                    ),
-                    SizedBox(height: 8),
-                    Text(
-                      'Password must be at least 6 characters',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: theme.colorScheme.onSurfaceVariant,
-                      ),
-                    ),
-                    SizedBox(height: 16),
-                    TextField(
-                      controller: newPasswordController,
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        labelText: 'New Password',
-                        hintText: 'Enter new password',
-                        prefixIcon: Icon(Icons.lock_outline),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                        filled: true,
-                      ),
-                    ),
-                    SizedBox(height: 12),
-                    TextField(
-                      controller: confirmPasswordController,
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        labelText: 'Confirm Password',
-                        hintText: 'Re-enter password',
-                        prefixIcon: Icon(Icons.lock_outline),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                        filled: true,
-                      ),
-                    ),
-                    SizedBox(height: 16),
-                    SizedBox(
-                      width: double.infinity,
-                      height: 48,
-                      child: ElevatedButton.icon(
-                        onPressed: isResettingPassword ? null : () async {
-                          final newPassword = newPasswordController.text;
-                          final confirmPassword = confirmPasswordController.text;
-                          
-                          // Validation
-                          if (newPassword.isEmpty) {
-                            showErrorDialog(
-                              context,
-                              'Password Required',
-                              'Please enter a new password.',
-                            );
-                            return;
-                          }
-
-                          if (newPassword.length < 6) {
-                            showErrorDialog(
-                              context,
-                              'Password Too Short',
-                              'Your password must be at least 6 characters long.\n\nPlease choose a stronger password.',
-                            );
-                            return;
-                          }
-
-                          if (newPassword != confirmPassword) {
-                            showErrorDialog(
-                              context,
-                              'Passwords Don\'t Match',
-                              'The passwords you entered do not match.\n\nPlease make sure both fields contain the same password.',
-                            );
-                            return;
-                          }
-
-                          setDialogState(() => isResettingPassword = true);
-
-                          try {
-                            await apiService.resetPassword({
-                              'email': emailController.text.trim(),
-                              'otp_code': otpController.text.trim(),
-                              'new_password': newPassword,
-                            });
-
-                            Navigator.of(dialogContext).pop();
-                            
-                            showDialog(
-                              context: context,
-                              builder: (context) => AlertDialog(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(16),
-                                ),
-                                title: Row(
-                                  children: [
-                                    Icon(Icons.check_circle, color: Colors.green, size: 32),
-                                    SizedBox(width: 12),
-                                    Text('Success!'),
-                                  ],
-                                ),
-                                content: Text(
-                                  'Your password has been reset successfully.\n\nYou can now login with your new password.',
-                                  style: TextStyle(fontSize: 15, height: 1.4),
-                                ),
-                                actions: [
-                                  ElevatedButton(
-                                    onPressed: () => Navigator.pop(context),
-                                    child: Text('OK', style: TextStyle(fontSize: 16)),
-                                  ),
-                                ],
-                              ),
-                            );
-                          } on DioException catch (e) {
-                            setDialogState(() => isResettingPassword = false);
-                            
-                            String title = 'Reset Failed';
-                            String message = 'Failed to reset password. Please try again.';
-                            
-                            if (e.response?.statusCode == 400) {
-                              title = 'Invalid Request';
-                              message = 'The OTP has expired or is invalid.\n\nPlease start the process again.';
-                            } else if (e.response?.statusCode == 404) {
-                              title = 'Account Not Found';
-                              message = 'Unable to find your account.\n\nPlease try again or contact support.';
-                            }
-                            
-                            showErrorDialog(context, title, message);
-                          } catch (e) {
-                            setDialogState(() => isResettingPassword = false);
-                            showErrorDialog(
-                              context,
-                              'Reset Error',
-                              'An error occurred while resetting your password:\n\n${e.toString()}',
-                            );
-                          }
-                        },
-                        icon: isResettingPassword
-                            ? SizedBox(
-                                width: 20,
-                                height: 20,
-                                child: CircularProgressIndicator(
-                                  strokeWidth: 2,
-                                  color: Colors.white,
-                                ),
-                              )
-                            : Icon(Icons.check),
-                        label: Text(
-                          isResettingPassword ? 'Resetting...' : 'Reset Password',
-                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: theme.colorScheme.primary,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ],
-              ),
-            ),
-            actions: [
-              TextButton(
-                onPressed: () => Navigator.of(dialogContext).pop(),
-                style: TextButton.styleFrom(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                ),
-                child: Text(
-                  'Cancel',
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
-                ),
-              ),
-            ],
-          );
-        },
-      );
-    },
-  );
-}
-
-// Helper widget for step indicators
-Widget _buildStepIndicator(int step, String label, bool isActive, ThemeData theme) {
-  return Column(
-    children: [
-      Container(
-        width: 36,
-        height: 36,
-        decoration: BoxDecoration(
-          color: isActive ? theme.colorScheme.primary : Colors.grey[300],
-          shape: BoxShape.circle,
-        ),
-        child: Center(
-          child: Text(
-            '$step',
-            style: TextStyle(
-              color: isActive ? Colors.white : Colors.grey[600],
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
-            ),
           ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(ctx),
+              child: const Text('Annuler'),
+            ),
+          ],
         ),
       ),
-      SizedBox(height: 4),
-      Text(
-        label,
-        style: TextStyle(
-          fontSize: 11,
-          color: isActive ? theme.colorScheme.primary : Colors.grey[600],
-          fontWeight: isActive ? FontWeight.w600 : FontWeight.normal,
-        ),
-      ),
-    ],
-  );
-}
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -668,37 +312,20 @@ Widget _buildStepIndicator(int step, String label, bool isActive, ThemeData them
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // Medical Icon
                   Container(
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: theme.colorScheme.primaryContainer,
                       shape: BoxShape.circle,
                     ),
-                    child: Icon(
-                      Icons.local_hospital,
-                      size: 60,
-                      color: theme.colorScheme.primary,
-                    ),
+                    child: Icon(Icons.local_hospital, size: 60, color: theme.colorScheme.primary),
                   ),
                   const SizedBox(height: 24),
-                  
-                  Text(
-                    'Medical Store',
-                    style: theme.textTheme.headlineMedium?.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+                  Text('Medical Store', style: theme.textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold)),
                   const SizedBox(height: 8),
-                  Text(
-                    'Connexion',
-                    style: theme.textTheme.bodyLarge?.copyWith(
-                      color: theme.colorScheme.onSurfaceVariant,
-                    ),
-                  ),
+                  Text('Connexion', style: theme.textTheme.bodyLarge?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
                   const SizedBox(height: 40),
                   
-                  // Email Field
                   CustomTextField(
                     label: 'Email',
                     controller: _emailController,
@@ -708,7 +335,6 @@ Widget _buildStepIndicator(int step, String label, bool isActive, ThemeData them
                   ),
                   const SizedBox(height: 16),
                   
-                  // Password Field
                   CustomTextField(
                     label: 'Mot de passe',
                     controller: _passwordController,
@@ -722,7 +348,6 @@ Widget _buildStepIndicator(int step, String label, bool isActive, ThemeData them
                   ),
                   const SizedBox(height: 32),
                   
-                  // Login Button
                   SizedBox(
                     width: double.infinity,
                     child: CustomButton(
@@ -738,21 +363,10 @@ Widget _buildStepIndicator(int step, String label, bool isActive, ThemeData them
                     onPressed: () => context.push('/register'),
                     child: const Text("Pas de compte? S'inscrire"),
                   ),
-
-                  
-                  // ADD:
                   TextButton(
                     onPressed: _showForgotPasswordDialog,
-                    child: Text(
-                      'Mot de passe oublié?',
-                      style: TextStyle(
-                        color: theme.colorScheme.primary,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
+                    child: Text('Mot de passe oublié?', style: TextStyle(color: theme.colorScheme.primary, fontWeight: FontWeight.w600)),
                   ),
-                  const SizedBox(height: 8),
-
                 ],
               ),
             ),

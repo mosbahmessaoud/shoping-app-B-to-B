@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class OTPService {
-  static const String baseUrl = 'http://127.0.0.1:8000';
+  static const String baseUrl = 'https://adventurous-charm-production.up.railway.app';
   
   // Send OTP for registration
   Future<Map<String, dynamic>> sendRegistrationOTP(String email) async {

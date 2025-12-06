@@ -20,6 +20,7 @@ import 'package:store_app/presentation/screens/admin/admin_stock_alerts_screen.d
 import 'package:store_app/presentation/screens/client/bill_detail_screen.dart';
 import 'package:store_app/presentation/screens/client/cart_screen.dart';
 import 'package:store_app/presentation/screens/client/client_home_screen.dart';
+import 'package:store_app/presentation/screens/client/client_notifications.dart';
 import 'package:store_app/presentation/screens/client/client_profile_screen.dart';
 import 'package:store_app/presentation/screens/client/my_bills_screen.dart';
 import 'package:store_app/presentation/screens/client/product_detail_screen.dart';
@@ -59,6 +60,8 @@ class AppRouter {
       return null;
     },
     routes: [
+
+
       // Splash Screen
       GoRoute(
         path: '/splash',
@@ -109,6 +112,10 @@ class AppRouter {
           final id = state.pathParameters['id']!;
           return BillDetailScreen(billId: id);
         }
+      ),
+      GoRoute(
+        path: '/client/notifications',
+        builder: (context, state) => const ClientNotificationsScreen(),
       ),
 
       // Admin Routes
@@ -169,6 +176,10 @@ class AppRouter {
       GoRoute(path: '/admin/statistics',
         builder: (context, state) => const AdminStatisticsScreen()
       ),
+      //       GoRoute(
+      //   path: '/admin/notifications',
+      //   builder: (context, state) => const AdminNotificationsScreen(),
+      // ),
     ],
   );
 }
